@@ -27,7 +27,7 @@ The site needs to have every page listed in the site architecture on your chosen
 9. Make adjustments based on the feedback you gather from peers and teachers.
 10. Submit here on Teams.
 
-## Delivery
+## Delivery.
 
 - Please include a link to your live site, deployed on Netlify or GitHub Pages in your submission.
 - Please include a link to your public GitHub repo containing your code in your submission.
