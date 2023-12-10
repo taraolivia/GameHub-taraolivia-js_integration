@@ -6,14 +6,263 @@
 /* Feel free to add as many of these imports as you need */
 
 body {
-  color: var(--color-primary);
-  background-color: var(--color-secondary);
+  background-color: #F1EBF5;
+  width: 1440;
+  display: grid;
+  grid-gap: 0cap;
 }
 
 .centered {
-  display: flex;
+    /* Positioning */
+    /* Display & Box Model */
+  display: flex;  
   justify-content: center;
-  align-items: center;
-  justify-content: center;
+  width: 1440;
+    /* Color */
+    /* Text */
   text-align: center;
+    /* Other */
 }
+
+.topnav {
+    /* Positioning */
+    /* Display & Box Model */
+    /* Color */
+    /* Text */
+    /* Other */
+  display: flex;
+  padding: 70px 457px 75px 457px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 40px;
+  flex-shrink: 0;
+  width: 1440;
+
+}
+
+.hero {
+    /* Positioning */
+  align-items: center;
+    /* Display & Box Model */
+  display: flex;
+  flex-direction: column;
+    /* Color */
+    /* Text */
+    /* Other */
+
+  background-image: url("/assets/images/unsplash_ln5drpv_ImIhero-section-universe.png");
+  background-repeat:no-repeat;
+  background-position: center top;
+  background-size: auto;
+  margin: 0%;
+  height: 740px;
+  width: 100vw;
+  background-color:#0E0D12;
+}
+
+
+
+.hero h1 {
+    /* Positioning */
+    /* Display & Box Model */
+    /* Color */
+    /* Text */
+    /* Other */
+  color: white;
+  font-size: 81.14px;
+  font-family: Audiowide;
+  font-weight: 400;
+  line-height: 105.49px;
+  word-wrap: break-word;
+  text-align: center;
+  margin-top: 0%;
+  margin-bottom: -0.5%;
+}
+
+.hero h2 {
+  /* Positioning */
+    /* Display & Box Model */
+    /* Color */
+    /* Text */
+    /* Other */
+  margin-top: 0%;
+  color: white;
+  font-size: 30px;
+  font-family: Audiowide;
+  font-weight: 400;
+  word-wrap: break-word;
+  text-align: center;
+
+}
+
+.hero p {
+  /* Positioning */
+    /* Display & Box Model */
+    /* Color */
+    /* Text */
+    /* Other */
+  color: white;
+  font-size: 30px;
+  font-family: Audiowide;
+  font-weight: 400;
+  line-height: 40px;
+  word-wrap: break-word;
+  text-align: center;
+  margin: 0%;
+  padding-top: 50px;
+  padding-bottom: 0%;
+  font-weight: 0;
+}
+
+.topnav a {
+  /* Positioning */
+    /* Display & Box Model */
+    /* Color */
+    /* Text */
+    /* Other */
+  color: #FFF;
+  text-decoration: none;
+  text-align: center;
+  font-family: Orbitron;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.topnav a:hover {
+  /* Positioning */
+    /* Display & Box Model */
+    /* Color */
+    /* Text */
+    /* Other */
+  animation: glow 1s ease-in-out infinite alternate;
+  text-shadow: 0 0 10px #fff, 0 0 30px #e60073, 0 0 40px #e60073;
+}
+
+
+ .START {
+  /* Positioning */
+    /* Display & Box Model */
+    /* Color */
+    /* Text */
+    /* Other */
+    width: 200px;
+    height: 70px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    margin-top: 45px;
+    margin-bottom: 150px;
+    background: linear-gradient(90deg, #D1008A 0%, #563182 100%);
+    color: #FFF;
+    cursor: pointer;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    border: 0cap;
+    font-family:"press start 2p";
+    transition: all .2s ease-in-out;
+
+  }
+
+  .START:hover {
+    /* Positioning */
+    /* Display & Box Model */
+    /* Color */
+    /* Text */
+    /* Other */
+    animation: glow 1s ease-in-out infinite alternate;
+    box-shadow: 0 0 30px #e60073;
+  }
+
+  .game-of-the-month {
+    /* Positioning */
+    /* Display & Box Model */
+    /* Color */
+    /* Text */
+    /* Other */
+    background-color:#0E0D12;
+    color: #FFF;
+    font-family: audiowide;
+    font-size: 35;
+    margin: auto;
+    padding-top: 100px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding-left: 350px;
+    padding-right: 350px;
+  }
+
+  .game-of-the-month img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    max-width: 1440px;
+    align-self: center;
+  
+  }
+
+  .game-of-the-month h3 {
+    /* Positioning */
+    text-align: left;
+    /* Display & Box Model */
+    /* Color */
+    /* Text */
+    /* Other */
+  }
+
+  .discover-pixel-heart {
+    /* Positioning */
+    /* Display & Box Model */
+    /* Color */
+    /* Text */
+    /* Other */
+    width: 464px; height: 70px; left: 0px; top: 0px;
+    background: linear-gradient(90deg, #D1008A 0%, #563182 100%); 
+    border-radius: 13px;
+    color: white;
+    font-size: 18px;
+    font-family: "Press Start 2P";
+    font-weight: 400;
+    word-wrap: break-word;
+    float: right;
+    margin: 20px;
+    border: 0cap;
+  }
+
+  .discover-pixel-heart:hover {
+    /* Positioning */
+    /* Display & Box Model */
+    /* Color */
+    /* Text */
+    /* Other */
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+    /* Other */
+    cursor: pointer;
+  }
+
+  .slogan {
+    /* Positioning */
+    /* Display & Box Model */
+    /* Color */
+    /* Text */
+    /* Other */
+    color: #563182;
+    text-align: center;
+    font-family: Audiowide;
+    font-size: 30px;
+  }
+
+    /* Positioning */
+    /* Display & Box Model */
+    /* Color */
+    /* Text */
+    /* Other */
+
+    @media (min-width: 600px) {
+      .slogan {
+        color: #0E0D12;
+      }
+    }
