@@ -1,7 +1,78 @@
 /* Use this file to store your useful variables */
 /* This could be colors, fonts, or padding sizes! */
 
-:root {
-  --color-primary: #7be447;
-  --color-secondary: #1f1f1f;
+
+
+body {
+  background-color:#f1ebf5;
+  display: grid;
+  text-align: center;
+  font-weight: 400;
+  word-wrap: break-word;
+  text-align: center;
 }
+
+h1 {
+  color: #563182;
+  font-family: audiowide;
+  font-size: 35;
+}
+
+h2 {
+  color: #563182;
+  font-family: orbitron;
+  font-size: 30;
+}
+
+p {
+  color: #563182;
+  font-family: roboto condenced;
+  font-size: 22;
+}
+
+button {
+  font-family: "press start 2p";
+  cursor: pointer;
+  font-size: 18px;
+  height: 70px;
+  background: linear-gradient(90deg, #D1008A 0%, #563182 100%);
+  color: #FFF;
+  border-radius: 13px;
+  margin: 20px;
+  width: 470px;
+  border: 0cap;
+  text-transform:uppercase;
+}
+button:hover {
+  animation: glow 1s ease-in-out infinite alternate;
+  box-shadow: 0 0 30px #e60073;
+  transition: all .2s ease-in-out;
+}
+
+.topnav {
+  background-color: #DCD1E8;
+  display: flex;
+  padding: 70px 457px 75px 457px;
+  gap: 40px;
+}
+
+.topnav a {
+  color: #563182;
+  font-family: Orbitron;
+  font-size: 25px;
+}
+
+.topnav a:hover {
+  animation: glow 1s ease-in-out infinite alternate;
+  text-shadow: 0 0 10px #fff;
+}
+
+  a {
+    text-decoration: none;
+  }
+
+header {
+    background-color: #E7DEEF;
+    text-align: center;
+  }
+
