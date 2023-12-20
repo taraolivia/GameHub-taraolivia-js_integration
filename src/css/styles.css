@@ -5,6 +5,16 @@
 @import url("./_variables.css");
 /* Feel free to add as many of these imports as you need */
 
+*{
+  box-sizing: border-box;
+  min-height: 100vh;
+  margin: 0;
+}
+
+:root{
+  --clr-background: #ffffff;
+}
+
 .hero {
   align-items: center;
   display: flex;

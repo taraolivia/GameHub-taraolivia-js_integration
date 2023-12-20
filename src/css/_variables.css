@@ -5,11 +5,11 @@
 
 body {
   background-color:#f1ebf5;
-  display: grid;
   text-align: center;
-  font-weight: 400;
   word-wrap: break-word;
-  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -22,6 +22,7 @@ h2 {
   color: #563182;
   font-family: orbitron;
   font-size: 30;
+  font-weight: 400;
 }
 
 p {
@@ -76,3 +77,102 @@ header {
     text-align: center;
   }
 
+
+footer {
+  background-color: #8C74AD;
+}
+
+footer a {
+  color: #FFF;
+  font-family: roboto-condensed;
+  font-size: 30;
+  font-weight: 700;
+}
+
+footer a:hover {
+  animation: glow 1s ease-in-out infinite alternate;
+  text-shadow: 0 0 1px #fff;  
+}
+
+.footer-links {
+  display: flex; 
+
+  padding: 70px 457px 75px 457px;
+  gap: 125px;
+}
+
+.footer-text {
+  color: #FFF;
+}
+
+.social-media-icons {
+  display: flex;
+  flex-direction: row;
+}
+
+.small {
+  width: 160px;
+  height: 40px;
+  font-size: 14px;
+}
+
+.category-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.category-single {
+  display: flex;
+  flex-direction: column;
+  background-color: #DCD1E8;
+  margin: 10px;
+  width: 320px;
+  height: 420px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.games-display{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+.game-single {
+  display: flex;
+  flex-direction: column;
+  background-color: #DCD1E8;
+  margin: 10px;
+  width: 320px;
+  height: 420px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.from-our-blog {
+  background-color: #8C74AD;
+}
+
+.blog-post-display {
+  display: flex;
+  flex-direction: row;
+}
+
+.from-our-blog h2 {
+  color: #FFF;
+}
+
+.blog-post-single {
+  display: flex;
+  flex-direction: column;
+  background-color: #DCD1E8;
+  margin: 10px;
+  width: 362px;
+  height: 290px;
+  flex-shrink: 0;
+  border-radius: 5px;
+}
