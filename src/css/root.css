@@ -1,0 +1,67 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+
+:root {
+    /* Light Theme Primary Color Scheme */
+    --theme-light-color-primary: #E7DEEF;
+    --theme-light-color-secondary: #DCD1E8;
+    --theme-light-color-accent: #8C74AD;
+    --theme-light-color-background: #F1EBF5;
+    --theme-light-color-text: #563182;
+    --theme-light-color-text-secondary: #000000;
+    --theme-light-color-text-lighter: #fff;
+
+  
+    /* Light Theme Typography */
+     /* Font Families */
+    --theme-light-font-logo: 'Audiowide';
+    --theme-light-font-heading-primary: 'Audiowide';
+    --theme-light-font-slogan: 'Audiowide';
+    --theme-light-font-heading-secondary: 'Orbitron';
+    --theme-light-font-button: 'Press Start 2P';
+    --theme-light-font-base: 'Roboto Condensed';
+
+     /* Font Sizes */ 
+    --theme-light-font-size-logo: 2.5rem;
+    --theme-light-font-size-heading-primary: 2rem;
+    --theme-light-font-size-slogan: 2rem;
+    --theme-light-font-size-heading-secondary: 1.5rem;
+    --theme-light-font-size-button: 22px;
+    --theme-light-font-size-base: 1rem;
+    --theme-light-font-weight: 400
+  
+
+    /* Primary Button Styles */
+    --button-primary-height: 70px;
+
+
+    /* Secondary Button Styles */
+    --button-secondary-height: 60px;
+
+    /* Common Button Properties */
+    --button-font-family: "Press Start 2P";
+    --button-text-color: #ffffff; /* Text color */
+    --button-bg-color: linear-gradient(90deg, #D1008A 0%, #563182 100%); /* Background color */
+    --button-font-size: var(--theme-light-font-size-button) /* Font size */
+    --button-border-radius: 0; /* Border radius */
+    --button-transition: background-color 1s, color 1s; /* Transition for hover effect */
+    --button-border: 0cap; /* Border */
+    --button-hover-box-shadow: 0 0 30px #e60073;
+    --button-hover-transition: all 0.2s ease-in-out;
+    --button-hover-animation: glow 1s ease-in-out infinite alternate;
+    --button-text-transform: uppercase;
+    --button-cursor: pointer;
+    --button-margin: 20px;
+    --button-padding-horizontal: 20px;
+
+
+    --central-align: center;
+
+}
+
+
+

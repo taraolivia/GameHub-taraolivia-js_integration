@@ -1,0 +1,625 @@
+@import url(root.css);
+
+/* This is for trying to implement my root into an html file */
+
+body {
+    font-family: var(--theme-light-font-base);
+    color: var(--theme-light-color-text);
+    background: var(--theme-light-color-background);
+    margin: 0px auto;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, p {
+max-width: 75ch;
+}
+
+h1 {
+    font-family: var(--theme-light-font-heading-primary);
+    font-size: 3.5rem;
+}
+
+h1, h2, h3{
+    text-align: center;
+}
+
+h2, h3 {
+    font-family: var(--theme-light-font-heading-secondary);
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+header, .footer__social-media {
+    padding: 40px 100px;
+}
+
+
+
+.navbar {
+    background: var(--theme-light-color-secondary);
+    padding: 50px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header {
+    margin-top: 150px;
+}
+
+.navbar__content {
+    display: flex;
+    gap: 300px;
+    align-items: center;
+    margin: 0px auto;
+}
+
+.navbar__links a,
+.footer__nav-links a{
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.navbar__links a {
+    color: var(--theme-light-color-text);
+}
+
+.navbar__links li {
+    font-size: 22px;
+}
+
+.navbar__links {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-inner);
+}
+
+.navbar__checkbox {
+    display: none;
+}
+
+.navbar__hamburger {
+    display: none;
+}
+
+#hamburger {
+    fill: var(--theme-light-color-text);
+}
+.header {
+    background: var(--theme-light-color-primary);
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.button {
+    font-family: var(--button-font-family);
+    color: var(--button-text-color);
+    background: var(--button-bg-color);
+    font-size: var(--button-font-size);
+    border-radius: 15px;
+    transition: var(--button-transition);
+    border: var(--button-border);
+    text-transform: var(--button-text-transform);
+    cursor: var(--button-cursor);
+    margin: var(--button-margin);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--button-padding-horizontal);
+}
+
+.button:hover {
+    box-shadow: var(--button-hover-box-shadow);
+    transition: var(--button-hover-transition);
+    animation: var(--button-hover-animation);
+}
+
+.button--primary {
+    height: 70px;
+    min-width: 200px;
+}
+
+.button--secondary {
+    height: var(--button-secondary-height);
+}
+
+
+:root {
+    --spacing-inner: 40px;
+}
+
+
+
+
+.blog-carousel, .footer {
+    background-color: var(--theme-light-color-accent);
+    color: var(--theme-light-color-text-lighter);
+}
+
+.decorative-line {
+    height: 2px;
+    background: white;
+    margin-top: 40px;
+}
+
+.social-media__icons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 40px;
+}
+
+.footer__nav-links {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 125px;
+    justify-content: center;
+    padding: 60px;
+    font-size: 35px;
+}
+
+
+
+
+
+.main-content__section {
+    margin: 0 auto;
+    max-width: 120rem;
+}
+
+.button {
+    font-family: var(--button-font-family);
+    color: var(--button-text-color);
+    background: var(--button-bg-color);
+    font-size: 22px;
+    border-radius: 15px;
+    transition: var(--button-transition);
+    border: var(--button-border);
+    text-transform: var(--button-text-transform);
+    cursor: var(--button-cursor);
+    margin-bottom: 0px;
+    padding: var(--button-padding-horizontal);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .button:hover {
+    box-shadow: var(--button-hover-box-shadow);
+    transition: var(--button-hover-transition);
+    animation: var(--button-hover-animation);
+  
+  }
+  
+  .button--primary {
+    height: 70px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .all-games-wrap {
+    display: flex;
+    width: 100%;
+    gap: 80px;
+    padding: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .game-card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    position: relative;
+    background: #DCD1E8;
+    border-radius: 5px;
+    max-width: 300px;
+    padding: 1px;
+  }
+  
+  .game-card-text-flex {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    position: relative;
+    gap: 10px;
+    text-align: center;
+    padding: 20px 10px;
+  }
+  
+  .game-image {
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .game-card-button {
+    display: flex;
+    padding: 0 0 0 0;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    border-radius: 5px;
+  }
+  
+  .game-card-title {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  
+  .game-card-price {
+    font-size: 20px;
+    font-family: var(--theme-light-font-base);
+  }
+  
+  .blog-carousel-wrap {
+    display: flex;
+    width: 100%;
+    gap: 50px;
+    padding: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    position: relative;
+    background: #DCD1E8;
+    border-radius: 10px;
+    max-width: 350px;
+    padding: 20px;
+  }
+  
+  
+  .blog-post-title {
+    font-size: 22px;
+    color: var(--theme-light-color-text);
+    display: flex;
+    margin-top: 15px;
+  }
+  
+  .button--blog {
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 80px;
+  }
+
+  .blog-carousel {
+    padding: 50px 0px;
+  }
+
+  .header-breadcrumbs {
+    padding-top: 30px;
+    padding-bottom: 25px;
+    margin-bottom: 0px;
+
+  }
+
+  .breadcrumb {
+    list-style: none;
+    margin: 0% auto;
+    max-width: 120rem;
+  }
+
+  .breadcrumb-item {
+    display: inline;
+    font-size: 20px;
+  }
+
+  .breadcrumb-item a {
+    font-size: 20px;
+    color: var(--theme-light-color-text);
+}
+
+  .breadcrumb li+li:before{
+    padding: 10px;
+    color: var(--theme-light-color-text);
+    content: ">";
+  }
+
+
+  .game-page-top-wrapper {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10%;
+    flex-wrap: wrap;
+    margin: 0% auto;
+    max-width: 120rem;
+    margin-top: 10px;
+  }
+
+  .game-page-pictures {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .game-page-primary,
+  .game-page-text,
+  .game-page-secondary {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    text-align: left;
+  }
+
+
+  .game-brag {
+    background-color: var(--theme-light-color-secondary);
+    display: flex;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: fit-content;
+    min-width: 300px;
+  }
+
+  .game-brag-text {
+    color: var(--theme-light-color-text);
+  }
+
+.main-content__section-game-page {
+    max-width: 120rem;
+    margin: auto;
+}
+
+.main-content__section {
+    margin: auto;
+}
+
+.blog-post {
+    max-width: 120rem;
+}
+
+
+.aside {
+    padding-right: 100px;
+}
+
+.blog-post-section {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: var(--theme-light-color-background);
+}
+
+.main-content__main {
+    background-color: var(--theme-light-color-secondary);
+}
+
+
+.blog-post-wrap {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-page-card {
+    display: flex;
+    flex-direction: row;
+    background: var(--theme-light-color-primary);
+    max-width: 1000px;
+    border-radius: 18px;
+    margin: 30px auto;
+    padding: 8px;
+}
+
+.blog-post-image {
+    max-width: 100rem;
+    height: auto;
+}
+
+.text-left {
+    flex-direction: row-reverse;
+}
+
+.blog-page-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex: 2;
+}
+
+.blog-page-title {
+    text-align: left;
+    padding: 20px 25px;
+    color: var(--theme-light-color-text);
+}
+
+.blog-page-title:hover{
+    text-decoration: underline;
+}
+
+.blog-page-paragraph {
+    padding: 10px 25px;
+}
+
+.blog-page-image {
+    flex: 3;
+    height: auto;
+}
+
+
+.hero {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-image: url("/assets/images/unsplash_ln5drpv_ImIhero-section-universe.png");
+    background-repeat:no-repeat;
+    background-position: center top;
+    background-size: auto;
+    margin: 0%;
+    height: 740px;
+    width: 100vw;
+    background-color:#09090c;
+    color: #FFF;
+  }
+  
+  .hero-topnav {
+    display: flex;
+    padding: 70px 457px 75px 457px;
+    gap: 40px;
+  }
+  
+  .hero-topnav a {
+    color: #FFF;
+    font-family: Orbitron;
+    font-size: 25px;
+    flex-direction: column;
+
+  }
+  
+  .hero-topnav a:hover {
+    animation: glow 1s ease-in-out infinite alternate;
+    text-shadow: 0 0 10px #fff, 0 0 30px #e60073, 0 0 40px #e60073;
+  }
+  
+  .hero h1 {
+    color: white;
+    font-size: 80px;
+    line-height: 105px;
+    margin-top: 0%;
+    margin-bottom: -0.5%;
+    font-weight: 400;
+  }
+  
+  .hero h2 {
+    margin-top: 0%;
+    color: white;
+    font-size: 30px;
+    font-family: Audiowide;
+    font-weight: 400;
+  
+  }
+  
+  .hero p {
+    color: white;
+    font-size: 30px;
+    font-family: Audiowide;
+    line-height: 50px;
+    padding-top: 150px;
+    padding-bottom: 0%;
+  }
+  
+    .game-of-the-month {
+      background-color:#09090c;
+      padding-top: 50px;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .game-of-the-month h2 {
+      color: #FFF;
+    }
+  
+    .game-of-the-month img {
+      display: flex;
+      width: 80vw;
+      max-width: 1440px;
+      align-self: center;
+    }
+  
+    .slogan {
+      font-family: Audiowide;
+      font-size: 30px;
+    }
+
+
+
+@media (max-width: 750px) {
+
+    .navbar__hamburger {
+        display: flex;
+    }
+
+    .navbar__content {
+        gap: 50px;
+        display: flex; 
+        justify-content: space-between;
+   }
+
+
+
+    .navbar__links,
+    .navbar__cart {
+        display: none;
+        position: absolute;
+    }
+
+    .navbar__checkbox:checked + .navbar__hamburger + .navbar__links {
+        display: block;
+        background: var(--theme-light-color-secondary);
+    }
+
+    .blog-page-card {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+    }
+
+
+
+    .footer__nav-links {
+        flex-direction: column;
+        row-gap: 40px;
+        display: flex;
+    }
+
+    .footer__nav-links li:nth-child(3) {
+        order: -1;
+    }
+
+    .social-media__icons {
+        flex-wrap: wrap;
+        padding-top: 30px;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+
+
+
+}
+
+@media (max-width: 1000px) {
+    .blog-page-text {
+        flex: 1;
+    }
+    
+    .blog-page-title {
+        text-align: left;
+    }
+    
+    .blog-page-image {
+        flex: 1;
+        height: auto;
+    }
+}

@@ -6,9 +6,9 @@
 /* Feel free to add as many of these imports as you need */
 
 *{
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
-  min-height: 100vh;
-  margin: 0;
 }
 
 :root{
@@ -77,6 +77,7 @@
 
  .START {
     width: 200px;
+    margin: 40px;
   }
 
   .game-of-the-month {
