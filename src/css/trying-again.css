@@ -124,7 +124,7 @@ a {
     align-items: center;
     display: flex;
     flex-direction: column;
-    background-image: url("/assets/images/unsplash_ln5drpv_ImIhero-section-universe.png");
+    background-image: url("/assets/images/header.png");
     background-repeat:no-repeat;
     background-size: cover;
     margin: 0%;
@@ -358,6 +358,8 @@ a {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    max-width: 1600px;
+    margin: auto;
   }
 
   .testimonial-card {
@@ -391,6 +393,12 @@ a {
 
   .show-more-cards {
     display: none; /* Hide by default */
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#show-more-cards {
+    scroll-margin-top: 500px; /* Adjust as needed */
 }
 
 #show-more-cards:target {
