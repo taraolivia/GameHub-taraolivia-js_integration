@@ -27,11 +27,12 @@ h1 {
 
 h1, h2, h3{
     text-align: center;
+    margin: auto;
 }
 
 h2, h3 {
     font-family: var(--theme-light-font-heading-secondary);
-    font-size: 30px;
+    font-size: 25px;
 }
 
 p {
@@ -211,8 +212,6 @@ a {
     text-transform: var(--button-text-transform);
     cursor: var(--button-cursor);
     margin: var(--button-margin);
-    text-align: center;
-    display: inline-block;
     font-size: 22px;
     display: block;
 }
@@ -229,13 +228,19 @@ a {
     padding: 0 100px;
     max-width: fit-content;
     line-height: 70px;
+    height: 70px;
+    border-radius: 15px;
 }
+
+
 
 .button--secondary {
     height: var(--button-secondary-height);
     line-height: var(--button-secondary-height);
     max-width: fit-content;
     padding: 0 50px;
+    border-radius: 15px;
+    margin-top: 40px;
 }
 
 .button--blog {
@@ -299,9 +304,7 @@ a {
 
 
 
-  .button--primary {
-    height: 70px;
-  }
+
 
   a {
     text-decoration: none;
@@ -310,11 +313,12 @@ a {
 
   .all-games-wrap {
     display: flex;
-    width: 100%;
     gap: 80px;
     padding: 50px 0px;
     justify-content: center;
     flex-wrap: wrap;
+    margin: auto;
+    max-width: 1800px;
   }
 
   .game-card {
@@ -409,6 +413,10 @@ a {
     order: 2;
 }
 
+#show-more-cards:target + #show-more-button {
+    display: none;
+}
+
 
 
   .blog-carousel-wrap {
@@ -443,6 +451,7 @@ a {
     padding-left: 5%;
     padding-right: 5%;
     height: 80px;
+    border-radius: 15px;
   }
 
   .blog-carousel {
@@ -616,8 +625,10 @@ a {
 
 .about-card {
     display: flex;
-    background: var(--theme-light-color-primary);
-    margin: 100px 0px;
+    max-width: 1200px;
+    margin: 100px auto;
+    padding-top: 0%;
+
 }
 
 
@@ -628,24 +639,28 @@ a {
     flex-direction: column;
     justify-content: start;
     flex: 1,5;
+    max-width: 550px;
+    max-width: 75ch;
 }
 
 .about-card-title {
-    text-align: center;
-    padding: 20px 20px;
+    padding: 0px 0px;
+    margin-top: 0%;
+    margin-bottom: 20px;
     color: var(--theme-light-color-text);
 }
 
-
-
 .about-card-paragraph {
     padding: 10px 35px;
-    max-width: 65ch;}
+    max-width: 55ch;
+    align-items: flex-start;
+}
 
 .about-card-image {
     flex: 1;
     height: auto;
-    max-height:max-content
+    max-height: 500px;
+    max-width: 500px;
 }
 
 
