@@ -261,6 +261,33 @@ a {
 
 
 
+.contact-card {
+    background-color: var(--theme-light-color-accent);
+    color: #FFF;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.contact-card-title {
+
+}
+
+.contact-card-mid-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact-card-info {
+
+}
+
+.contact-card-form {
+
+}
 
 
 
