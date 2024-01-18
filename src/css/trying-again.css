@@ -387,10 +387,6 @@ flex: 1;
     background: var(--theme-light-color-primary);
 }
 
-section {
-    padding-bottom: 50px;
-
-}
 
 .trending-games-wrap {
     display: flex;
