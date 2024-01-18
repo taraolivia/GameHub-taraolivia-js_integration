@@ -77,10 +77,10 @@
 
                 <div class="contact-card">
 
-                        <h2 class="contact-card-title">
+                        <h2 class="contact-card-title left-align">
                             Hey, gamer!
                         </h2>
-                        <h2 class="contact-card-title">
+                        <h2 class="contact-card-title right-align">
                             Send us a message!
                         </h2>
                 
@@ -94,10 +94,19 @@
                         </div>
 
                         <div class="contact-card-form">
-                            <p>your name</p>
-                            <p>your email</p>
-                            <p>your message</p>
-                            <a href="/" class="button button--primary">send message</a>
+                            <form autocomplete="on">
+                                <label for="name" class="form-text-label">Your name</label><br>
+                                <input type="text" name="name" id="name" class="form-text-input">
+                                <div class="decorative-line-form"></div>
+                                <label for="email" class="form-text-label">Your email</label><br>
+                                <input type="text" email="name" id="email" class="form-text-input"><br>
+                                <div class="decorative-line-form"></div>
+                                <label for="message" class="form-text-label">Your message</label><br>
+                                <input type="text" name="message" id="message" class="form-text-input bigger"><br>
+                                <div class="decorative-line-form"></div>
+                                <input type="submit" value="Send message" class="button button--form">
+                            </form>
+
                         </div>
                     </div>
                         

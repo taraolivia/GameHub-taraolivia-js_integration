@@ -259,6 +259,15 @@ a {
     margin-top: auto;
 }
 
+.button--form {
+    height: 50px;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 10px;
+    margin: 0%;
+    margin-top: 20px;
+}
+
 
 
 .contact-card {
@@ -267,11 +276,22 @@ a {
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    padding: 50px;
+    padding: 30px;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 50px;
 }
 
 .contact-card-title {
+    margin: 0%;
+}
 
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
 }
 
 .contact-card-mid-wrapper {
@@ -279,15 +299,47 @@ a {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    padding-top: 50px;
 }
 
 .contact-card-info {
-
+flex: 1;
 }
 
 .contact-card-form {
-
+    text-align: left;
+    flex: 1;
 }
+
+.form-text-input {
+    padding: 10px;
+    background: none;
+    border: none;
+    margin-top: 10px;
+    color: #FFF;
+    width: 100%;
+    font-family: var(--theme-light-font-base);
+    font-size: 20px;
+word-break: break-all;}
+
+.decorative-line-form {
+    height: 2px;
+    background: white;
+    margin-bottom: 50px;
+}
+
+.form-text-label {
+    font-family: var(--theme-light-font-base);
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+
+.bigger {
+    padding: 40px 5px;
+}
+
 
 
 
