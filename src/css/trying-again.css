@@ -12,7 +12,6 @@ body {
 
 main {
     margin: auto;
-    padding: 50px 0px;
 }
 
 h1, h2, h3, p {
@@ -321,7 +320,7 @@ flex: 1;
     flex: 1;
 }
 
-.form-text-input {
+.form-text-input, textarea {
     padding: 10px;
     background: none;
     border: none;
@@ -330,7 +329,8 @@ flex: 1;
     width: 100%;
     font-family: var(--theme-light-font-base);
     font-size: 20px;
-word-break: break-all;}
+    word-break: break-all;
+}
 
 .decorative-line-form {
     height: 2px;
