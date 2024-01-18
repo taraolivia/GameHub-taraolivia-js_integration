@@ -382,6 +382,11 @@ flex: 1;
     font-size: 35px;
 }
 
+.footer__nav-links-division {
+    display: flex;
+    gap: 125px;
+}
+
 
 .background-primary {
     background: var(--theme-light-color-primary);
@@ -1203,6 +1208,16 @@ aside img {
     .game-page-secondary,
     .game-page-pictures {
         margin: auto;
+    }
+
+    .footer__nav-links-division {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__logo {
+        margin-top: 500px;
+        position: relative;
     }
 
 }
