@@ -123,7 +123,7 @@ a {
     align-items: center;
     display: flex;
     flex-direction: column;
-    background-image: url("/assets/images/header.PNG");
+    background-image: url(/assets/images/header.png);
     background-repeat:no-repeat;
     background-size: cover;
     margin: 0%;
@@ -507,17 +507,17 @@ flex: 1;
 
 
   .show-more-cards {
-    display: none; /* Hide by default */
+    display: none;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
 #show-more-cards {
-    scroll-margin-top: 500px; /* Adjust as needed */
+    scroll-margin-top: 500px;
 }
 
 #show-more-cards:target {
-    display: flex; /* Show when targeted */
+    display: flex;
 }
 
 .show-more-cards a {
