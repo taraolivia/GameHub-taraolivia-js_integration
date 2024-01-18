@@ -12,6 +12,7 @@ body {
 
 main {
     margin: auto;
+    padding: 50px 0px;
 }
 
 h1, h2, h3, p {
@@ -367,6 +368,8 @@ word-break: break-all;}
     justify-content: center;
     gap: 50px;
     padding: 40px;
+    vertical-align: middle;
+
 }
 
 .footer__nav-links {
@@ -385,7 +388,7 @@ word-break: break-all;}
 }
 
 section {
-    padding: 50px;
+    padding-bottom: 50px;
 
 }
 
@@ -1197,13 +1200,13 @@ aside img {
 }
 
 
-@media (max-width: 1630px) {
+@media (max-width: 1145px) {
 
     .game-page-primary,
     .game-page-text,
     .game-page-secondary,
     .game-page-pictures {
-    margin: auto;
+        margin: auto;
     }
 
 }
