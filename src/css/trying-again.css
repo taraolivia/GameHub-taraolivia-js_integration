@@ -11,9 +11,8 @@ body {
 }
 
 main {
-    width: 80%;
     margin: auto;
-    padding-bottom: 30px;
+    padding: 50px 0px;
 }
 
 h1, h2, h3, p {
@@ -27,11 +26,12 @@ h1 {
 
 h1, h2, h3{
     text-align: center;
+    margin: auto;
 }
 
 h2, h3 {
     font-family: var(--theme-light-font-heading-secondary);
-    font-size: 30px;
+    font-size: 25px;
 }
 
 p {
@@ -195,6 +195,7 @@ a {
 
 .text-left {
     text-align: left;
+    margin: 0%;
 }
 
 .text-right {
@@ -211,8 +212,6 @@ a {
     text-transform: var(--button-text-transform);
     cursor: var(--button-cursor);
     margin: var(--button-margin);
-    text-align: center;
-    display: inline-block;
     font-size: 22px;
     display: block;
 }
@@ -229,13 +228,19 @@ a {
     padding: 0 100px;
     max-width: fit-content;
     line-height: 70px;
+    height: 70px;
+    border-radius: 15px;
 }
+
+
 
 .button--secondary {
     height: var(--button-secondary-height);
     line-height: var(--button-secondary-height);
     max-width: fit-content;
     padding: 0 50px;
+    border-radius: 15px;
+    margin-top: 40px;
 }
 
 .button--blog {
@@ -254,7 +259,94 @@ a {
     margin-top: auto;
 }
 
+.button--form {
+    height: 50px;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 10px;
+    margin: 0%;
+    margin-top: 20px;
+}
 
+.button-discover {
+    margin-right: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+.contact-card {
+    background-color: var(--theme-light-color-accent);
+    color: #FFF;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.contact-card-title {
+    margin: 0%;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.contact-card-mid-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+
+.contact-card-info {
+flex: 1;
+}
+
+.contact-card-form {
+    text-align: left;
+    flex: 1;
+}
+
+.form-text-input {
+    padding: 10px;
+    background: none;
+    border: none;
+    margin-top: 10px;
+    color: #FFF;
+    width: 100%;
+    font-family: var(--theme-light-font-base);
+    font-size: 20px;
+word-break: break-all;}
+
+.decorative-line-form {
+    height: 2px;
+    background: white;
+    margin-bottom: 50px;
+}
+
+.form-text-label {
+    font-family: var(--theme-light-font-base);
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+
+.bigger {
+    padding: 40px 5px;
+}
 
 
 
@@ -276,6 +368,8 @@ a {
     justify-content: center;
     gap: 50px;
     padding: 40px;
+    vertical-align: middle;
+
 }
 
 .footer__nav-links {
@@ -289,7 +383,22 @@ a {
 }
 
 
+.background-primary {
+    background: var(--theme-light-color-primary);
+}
 
+section {
+    padding-bottom: 50px;
+
+}
+
+.trending-games-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px;
+    flex-wrap: wrap;
+    gap: 50px;
+}
 
 
 .main-content__section {
@@ -297,11 +406,15 @@ a {
     margin: 0 auto;
 }
 
+.main-content__section-80 {
+    max-width: 90%;
+    margin: auto;
+    max-width: 1000px;
+}
 
 
-  .button--primary {
-    height: 70px;
-  }
+
+
 
   a {
     text-decoration: none;
@@ -310,11 +423,12 @@ a {
 
   .all-games-wrap {
     display: flex;
-    width: 100%;
     gap: 80px;
     padding: 50px 0px;
     justify-content: center;
     flex-wrap: wrap;
+    margin: auto;
+    max-width: 1800px;
   }
 
   .game-card {
@@ -409,6 +523,20 @@ a {
     order: 2;
 }
 
+#show-more-cards:target + #show-more-button {
+    display: none;
+}
+
+.testimonial-card-mini {
+    background: linear-gradient(180deg, #D1008A 0%, #563182 64.58%);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 300px;
+    border-radius: 10px;
+    margin: 50px 0px;
+}
+
 
 
   .blog-carousel-wrap {
@@ -443,6 +571,7 @@ a {
     padding-left: 5%;
     padding-right: 5%;
     height: 80px;
+    border-radius: 15px;
   }
 
   .blog-carousel {
@@ -524,22 +653,26 @@ a {
 
 
 .blog-post {
-    max-width: 120rem;
+    padding: 50px 100px;
+
 }
 
 
 .aside {
-    padding-right: 100px;
+    background: var(--theme-light-color-primary);
+    padding: 40px;
+}
+
+aside img {
+    width: 100%;
 }
 
 .blog-post-section {
     display: flex;
     flex-direction: row-reverse;
-    background-color: var(--theme-light-color-background);
-}
-
-.main-content__main {
-    background-color: var(--theme-light-color-secondary);
+    max-width: 80%;
+    margin: auto;
+    justify-content: center;
 }
 
 
@@ -553,8 +686,10 @@ a {
 
 
 .blog-post-image {
-    max-width: 100rem;
+    max-width: 60%;
     height: auto;
+    width: 100%;
+    max-width: 850px;
 }
 
 .blog-page-wrap {
@@ -616,8 +751,10 @@ a {
 
 .about-card {
     display: flex;
-    background: var(--theme-light-color-primary);
-    margin: 100px 0px;
+    max-width: 1200px;
+    margin: 100px auto;
+    padding-top: 0%;
+
 }
 
 
@@ -628,24 +765,28 @@ a {
     flex-direction: column;
     justify-content: start;
     flex: 1,5;
+    max-width: 550px;
+    max-width: 75ch;
 }
 
 .about-card-title {
-    text-align: center;
-    padding: 20px 20px;
+    padding: 0px 0px;
+    margin-top: 0%;
+    margin-bottom: 20px;
     color: var(--theme-light-color-text);
 }
 
-
-
 .about-card-paragraph {
     padding: 10px 35px;
-    max-width: 65ch;}
+    max-width: 55ch;
+    align-items: flex-start;
+}
 
 .about-card-image {
     flex: 1;
     height: auto;
-    max-height:max-content
+    max-height: 500px;
+    max-width: 500px;
 }
 
 
@@ -669,18 +810,21 @@ a {
 
 .game-of-the-month h2 {
       color: #FFF;
+      margin: 0%;
     }
 
 .game-of-the-month img {
       display: flex;
-      width: 80vw;
       max-width: 1440px;
       align-self: center;
+      width: 100%;
     }
 
 .slogan {
       font-family: Audiowide;
       font-size: 30px;
+      text-align: center;
+      margin: 50px auto;
     }
 
 
@@ -1056,13 +1200,13 @@ a {
 }
 
 
-@media (max-width: 1630px) {
+@media (max-width: 1145px) {
 
     .game-page-primary,
     .game-page-text,
     .game-page-secondary,
     .game-page-pictures {
-    margin: auto;
+        margin: auto;
     }
 
 }
@@ -1073,41 +1217,3 @@ a {
 
 
 
-
-
-
-
-
-.ida-wrap {
-    font-size: 70px;
-    color: #FFF;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: space-evenly;
-}
-
-.section-1 {
-    background:#e60073;
-    flex-direction: column;
-}
-
-.section-2 {
-    background:lightgreen;
-}
-
-.section-3 {
-    background:blue;
-}
-
-.section-4 {
-    background:lightblue;
-}
-
-.footer-bottom {
-    font-size: 70px;
-    color: #FFF;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
