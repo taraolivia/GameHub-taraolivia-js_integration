@@ -11,9 +11,7 @@ body {
 }
 
 main {
-    width: 80%;
     margin: auto;
-    padding-bottom: 30px;
 }
 
 h1, h2, h3, p {
@@ -268,6 +266,14 @@ a {
     margin-top: 20px;
 }
 
+.button-discover {
+    margin-right: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
 
 
 .contact-card {
@@ -373,12 +379,33 @@ word-break: break-all;}
 }
 
 
+.background-primary {
+    background: var(--theme-light-color-primary);
+}
 
+section {
+    padding: 50px;
+
+}
+
+.trending-games-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px;
+    flex-wrap: wrap;
+    gap: 50px;
+}
 
 
 .main-content__section {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.main-content__section-80 {
+    max-width: 90%;
+    margin: auto;
+    max-width: 1000px;
 }
 
 
@@ -494,6 +521,16 @@ word-break: break-all;}
 
 #show-more-cards:target + #show-more-button {
     display: none;
+}
+
+.testimonial-card-mini {
+    background: linear-gradient(180deg, #D1008A 0%, #563182 64.58%);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 300px;
+    border-radius: 10px;
+    margin: 50px 0px;
 }
 
 
@@ -763,18 +800,21 @@ word-break: break-all;}
 
 .game-of-the-month h2 {
       color: #FFF;
+      margin: 0%;
     }
 
 .game-of-the-month img {
       display: flex;
-      width: 80vw;
       max-width: 1440px;
       align-self: center;
+      width: 100%;
     }
 
 .slogan {
       font-family: Audiowide;
       font-size: 30px;
+      text-align: center;
+      margin: 50px auto;
     }
 
 
@@ -1167,41 +1207,3 @@ word-break: break-all;}
 
 
 
-
-
-
-
-
-.ida-wrap {
-    font-size: 70px;
-    color: #FFF;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: space-evenly;
-}
-
-.section-1 {
-    background:#e60073;
-    flex-direction: column;
-}
-
-.section-2 {
-    background:lightgreen;
-}
-
-.section-3 {
-    background:blue;
-}
-
-.section-4 {
-    background:lightblue;
-}
-
-.footer-bottom {
-    font-size: 70px;
-    color: #FFF;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
