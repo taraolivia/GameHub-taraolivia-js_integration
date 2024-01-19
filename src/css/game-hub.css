@@ -2,17 +2,106 @@
 
 /* This is for trying to implement my root into an html file */
 
-body {
+body,
+.form-text-input,
+textarea,
+.contact-card-form__label,
+.game-card-price {
   font-family: var(--theme-light-font-base);
-  color: var(--theme-light-color-text);
-  background: var(--theme-light-color-background);
-  margin: 0px auto;
-  box-sizing: border-box;
 }
 
+.about-card__title,
+.blog-page-title,
+.blog-post-title,
+.breadcrumbs__item,
+.breadcrumbs__list li:not(:first-child)::before,
+.game-brag-text,
+.navbar__links a,
+body {
+  color: var(--theme-light-color-text);
+}
+
+.navbar__content,
+body {
+  margin: 0px auto;
+}
+
+.about-us-wrap,
+.all-games-wrap,
+.blog-page-wrap,
+.blog-post-section,
+.contact-card,
+.game-page-pictures,
+.game-page-primary,
+.game-page-primary,
+.game-page-text,
+.header__content,
+.hero__description,
+.main-content__section-80,
+.navbar__logo--small,
+.testimonial-card-text,
+.testimonials-wrap,
+h1,
+h2,
+h3,
 main {
   margin: auto;
 }
+
+.footer__nav-links,
+.hero__subtitle,
+.navbar__hero-list-item,
+h1 {
+  font-size: 35px;
+}
+
+.about-card__title,
+.contact-card-mid-wrapper,
+.game-card-text-flex,
+.hero__description,
+.navbar__logo--small,
+.slogan,
+.testimonial-card-text,
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+.navbar__hero-list,
+h2,
+h3,
+.header__subtitle,
+p {
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+.contact-card,
+.form-text-input,
+.game-of-the-month h2,
+.hero__background,
+.hero__description,
+.hero__subtitle,
+.hero__title,
+.navbar__hero-list,
+.testimonial-card-text,
+::placeholder,
+textarea {
+  color: #fff;
+}
+
+-------------------------------------------------------- body {
+  background: var(--theme-light-color-background);
+
+  box-sizing: border-box;
+}
+
+
 
 h1,
 h2,
@@ -23,20 +112,13 @@ p {
 
 h1 {
   font-family: var(--theme-light-font-heading-primary);
-  font-size: 35px;
 }
 
-h1,
-h2,
-h3 {
-  text-align: center;
-  margin: auto;
-}
+
 
 h2,
 h3 {
   font-family: var(--theme-light-font-heading-secondary);
-  font-size: 25px;
 }
 
 h2 {
@@ -47,9 +129,7 @@ p {
   font-size: 24px;
 }
 
-a {
-  text-decoration: none;
-}
+
 
 section {
   padding-bottom: 40px;
@@ -75,7 +155,6 @@ section {
 .header__content {
   max-width: 1200px;
   width: 70%;
-  margin: auto;
 }
 
 .header__subtitle {
@@ -105,7 +184,7 @@ section {
 .navbar__content {
   display: flex;
   align-items: center;
-  margin: 0px auto;
+
   max-width: 1500px;
   width: 90%;
   justify-content: space-between;
@@ -121,13 +200,10 @@ section {
 
 .navbar__links a,
 .footer__nav-links a {
-  text-decoration: none;
   font-size: 30px;
 }
 
-.navbar__links a {
-  color: var(--theme-light-color-text);
-}
+
 
 .navbar__links {
   display: flex;
@@ -173,16 +249,14 @@ section {
 .navbar__hero-list {
   color: #fff;
   font-family: Orbitron;
-  font-size: 25px;
+
   list-style: none;
   display: flex;
   gap: 40px;
   justify-content: center;
 }
 
-.navbar__hero-list-item {
-  font-size: 35px;
-}
+
 
 .navbar__hero-list-item a:hover {
   animation: glow 1s ease-in-out infinite alternate;
@@ -190,25 +264,20 @@ section {
 }
 
 .hero__title {
-  color: white;
   font-size: 80px;
   line-height: 105px;
   margin-bottom: -0.5%;
 }
 
 .hero__subtitle {
-  color: white;
-  font-size: 35px;
   font-family: Audiowide;
 }
 
 .hero__description {
-  color: white;
   font-size: 30px;
   font-family: Audiowide;
   line-height: 50px;
-  margin: auto;
-  text-align: center;
+
   margin-top: 100px;
 }
 
@@ -304,7 +373,7 @@ section {
   flex-direction: column;
   padding: 30px;
   max-width: 1000px;
-  margin: auto;
+
   margin-top: 50px;
 }
 
@@ -325,7 +394,7 @@ section {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  text-align: center;
+
   flex-wrap: wrap;
   padding-top: 50px;
 }
@@ -347,26 +416,22 @@ textarea {
   margin-top: 10px;
   color: #fff;
   width: 100%;
-  font-family: var(--theme-light-font-base);
   font-size: 20px;
   word-break: break-all;
 }
 
-.decorative-line-form {
+.decorative-line--form {
   height: 2px;
   background: white;
   margin-bottom: 50px;
 }
 
-.form-text-label {
-  font-family: var(--theme-light-font-base);
+.contact-card-form__label {
   font-size: 22px;
   padding-bottom: 10px;
 }
 
-.bigger {
-  padding: 40px 5px;
-}
+
 
 .blog-carousel,
 .footer {
@@ -395,7 +460,6 @@ textarea {
   gap: 125px;
   justify-content: center;
   padding: 60px;
-  font-size: 35px;
 }
 
 .footer__nav-links-division {
@@ -422,14 +486,11 @@ textarea {
 
 .main-content__section-80 {
   width: 80%;
-  margin: auto;
+
   max-width: 1000px;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-}
+
 
 .all-games-wrap {
   display: flex;
@@ -437,7 +498,7 @@ a {
   padding: 50px 0px;
   justify-content: center;
   flex-wrap: wrap;
-  margin: auto;
+
   max-width: 1800px;
 }
 
@@ -458,7 +519,7 @@ a {
   flex-basis: 100%;
   position: relative;
   gap: 10px;
-  text-align: center;
+
   padding: 20px 10px;
 }
 
@@ -474,7 +535,6 @@ a {
 
 .game-card-price {
   font-size: 20px;
-  font-family: var(--theme-light-font-base);
 }
 
 .testimonials-wrap {
@@ -482,7 +542,6 @@ a {
   justify-content: space-evenly;
   flex-wrap: wrap;
   max-width: 1600px;
-  margin: auto;
 }
 
 .testimonial-card {
@@ -503,12 +562,10 @@ a {
 }
 
 .testimonial-card-text {
-  color: white;
   display: flex;
   padding: 30px;
   padding-top: 80px;
-  text-align: center;
-  margin: auto;
+
   max-width: 400px;
 }
 
@@ -566,7 +623,7 @@ a {
 
 .blog-post-title {
   font-size: 22px;
-  color: var(--theme-light-color-text);
+
   display: flex;
   margin-top: 15px;
 }
@@ -603,13 +660,12 @@ a {
 
 .breadcrumbs__item {
   font-size: 20px;
-  color: var(--theme-light-color-text);
 }
 
 .breadcrumbs__list li:not(:first-child)::before {
   content: " > ";
   padding: 0 5px;
-  color: var(--theme-light-color-text);
+
   font-size: 22px;
 }
 
@@ -627,17 +683,14 @@ a {
 }
 
 .game-page-primary,
-.game-page-text,
-.game-page-secondary {
+.game-page-text {
   display: flex;
   flex-direction: column;
   max-width: 500px;
   text-align: left;
 }
 
-.game-page-primary {
-  margin: auto;
-}
+
 
 .game-brag {
   background-color: var(--theme-light-color-secondary);
@@ -648,9 +701,7 @@ a {
   min-width: 300px;
 }
 
-.game-brag-text {
-  color: var(--theme-light-color-text);
-}
+
 
 .blog-post {
   padding: 50px 100px;
@@ -669,7 +720,7 @@ aside img {
   display: flex;
   flex-direction: row-reverse;
   max-width: 80%;
-  margin: auto;
+
   justify-content: center;
 }
 
@@ -689,7 +740,6 @@ aside img {
 }
 
 .blog-page-wrap {
-  margin: auto;
   display: flex;
   flex-direction: column;
 }
@@ -713,7 +763,6 @@ aside img {
 .blog-page-title {
   text-align: left;
   padding: 20px 25px;
-  color: var(--theme-light-color-text);
 }
 
 .blog-page-title:hover {
@@ -730,7 +779,6 @@ aside img {
 }
 
 .about-us-wrap {
-  margin: auto;
   display: flex;
   flex-direction: column;
 }
@@ -752,14 +800,13 @@ aside img {
   max-width: 75ch;
 }
 
-.about-card-title {
+.about-card__title {
   padding: 0px 0px;
   margin-top: 0%;
   margin-bottom: 20px;
-  color: var(--theme-light-color-text);
 }
 
-.about-card-paragraph {
+.about-card__paragraph {
   padding: 10px 35px;
   max-width: 55ch;
   align-items: flex-start;
@@ -796,14 +843,14 @@ aside img {
 .slogan {
   font-family: Audiowide;
   font-size: 30px;
-  text-align: center;
+
   margin: 50px auto;
 }
 
 .navbar__content {
   display: flex;
-  align-items: center; /* This aligns items vertically in the center */
-  justify-content: space-between; /* This separates the logo and hamburger menu on two ends */
+  align-items: center; 
+  justify-content: space-between; 
 }
 
 .navbar__logo {
@@ -813,144 +860,10 @@ aside img {
   order: 2;
 }
 .navbar__links {
-  order: 3; /* This makes sure the links come after the hamburger menu when they are displayed */
+  order: 3; 
 }
 
-@media screen and (max-width: 650px) {
-  .navbar,
-  .navbar-primary {
-    width: 100%;
-    padding: 10px 0px;
-  }
 
-  .navbar__content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-    row-gap: 0;
-    width: 90%;
-  }
-
-  .navbar__logo--small {
-    display: block;
-    display: flex;
-    order: 2;
-    text-align: center;
-    padding: 0%;
-    margin: auto;
-    justify-content: center;
-    padding-left: 75px;
-  }
-
-  #alternate-logo {
-    fill: var(--theme-light-color-text);
-  }
-
-  .navbar__logo {
-    display: none;
-  }
-
-  .navbar__hamburger {
-    order: 3;
-    display: block;
-  }
-
-  #hamburger {
-    -webkit-transform: scaleX(-1, 1);
-    transform: scaleX(-1);
-  }
-
-  .navbar__links {
-    display: none;
-  }
-
-  .header__content {
-    width: 85%;
-    margin: auto;
-  }
-
-  .breadcrumbs {
-    padding-top: 95px;
-    padding-bottom: 20px;
-  }
-
-  .breadcrumbs__list {
-    width: 90%;
-  }
-
-  .header {
-    height: fit-content;
-  }
-
-  .blog-page-card {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 30px auto;
-  }
-
-  .footer__nav-links {
-    flex-direction: column;
-    row-gap: 40px;
-    display: flex;
-  }
-
-  .footer__nav-links li:nth-child(3) {
-    order: -1;
-  }
-
-  .social-media__icons {
-    flex-wrap: wrap;
-    padding-top: 30px;
-    justify-content: flex-start;
-    flex-direction: row;
-  }
-
-  .about-us-wrap {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-
-  .about-card {
-    display: flex;
-    flex-direction: column-reverse;
-    background: var(--theme-light-color-primary);
-    padding: 0px 0px;
-    margin: 20px auto;
-    width: 100%;
-  }
-
-  .about-card-text {
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    place-self: center;
-    padding-bottom: 30px;
-  }
-
-  .about-card-title {
-    text-align: center;
-    color: var(--theme-light-color-text);
-  }
-
-  .about-card-paragraph {
-    padding: 10px 35px;
-    max-width: 75ch;
-  }
-
-  .about-card-image {
-    height: auto;
-    place-self: center;
-  }
-
-  .main-content {
-    width: 90%;
-  }
-}
 
 @media (min-width: 651px) and (max-width: 1000px) {
   .navbar {
@@ -1056,13 +969,13 @@ aside img {
     flex: 1, 5;
   }
 
-  .about-card-title {
+  .about-card__title {
     text-align: center;
     padding: 20px 20px;
     color: var(--theme-light-color-text);
   }
 
-  .about-card-paragraph {
+  .about-card__paragraph {
     padding: 10px 35px;
     max-width: 65ch;
   }
@@ -1099,12 +1012,12 @@ aside img {
       padding-bottom: 30px;
     }
 
-    .about-card-title {
+    .about-card__title {
       text-align: center;
       color: var(--theme-light-color-text);
     }
 
-    .about-card-paragraph {
+    .about-card__paragraph {
       padding: 10px 35px;
       max-width: 75ch;
     }
@@ -1119,7 +1032,6 @@ aside img {
 @media (max-width: 1145px) {
   .game-page-primary,
   .game-page-text,
-  .game-page-secondary,
   .game-page-pictures {
     margin: auto;
   }
@@ -1134,3 +1046,5 @@ aside img {
     position: relative;
   }
 }
+
+
