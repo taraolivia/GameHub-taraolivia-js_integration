@@ -51,7 +51,7 @@ section {
 
 ::placeholder {
     color: #FFF;
-    opacity: 1;
+    opacity: 0.75;
 }
 
 .social-media__icons-smaller svg{
