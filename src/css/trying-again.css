@@ -58,6 +58,10 @@ section {
     height: 70%;
 }
 
+.social-media__icons-dark svg {
+    fill: var(--theme-light-color-accent);
+}
+
 
 .footer__social-media {
     padding: 40px 100px;
@@ -111,7 +115,7 @@ section {
 .navbar__links a,
 .footer__nav-links a{
     text-decoration: none;
-    font-size: 24px;
+    font-size: 30px;
 }
 
 .navbar__links a {
@@ -245,6 +249,8 @@ section {
     line-height: 70px;
     height: 70px;
     border-radius: 15px;
+    margin-bottom: 40px;
+    margin-top: 40px;
 }
 
 
