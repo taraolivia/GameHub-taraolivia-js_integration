@@ -33,12 +33,29 @@ h2, h3 {
     font-size: 25px;
 }
 
+h2 {
+    padding-top: 40px;
+}
+
 p {
     font-size: 22px;
 }
 
 a {
     text-decoration: none;
+}
+
+section {
+    padding-bottom: 40px;
+}
+
+::placeholder {
+    color: #FFF;
+    opacity: 1;
+}
+
+.social-media__icons-smaller svg{
+    height: 70%;
 }
 
 
@@ -65,6 +82,8 @@ a {
     top: 0;
     left: 0;
 }
+
+
 
 .navbar__hero {
     background: none;
@@ -182,7 +201,6 @@ a {
     margin: auto;
     text-align: center;
     margin-top: 100px;
-    margin-bottom: 00px;
   }
 
 
@@ -406,7 +424,7 @@ flex: 1;
 }
 
 .main-content__section-80 {
-    max-width: 80%;
+    width: 80%;
     margin: auto;
     max-width: 1000px;
 }
@@ -805,6 +823,7 @@ aside img {
       width: 100vw;
       display: flex;
       flex-direction: column;
+      padding-top: 100px;
     }
 
 .game-of-the-month h2 {
