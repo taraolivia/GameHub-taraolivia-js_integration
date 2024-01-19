@@ -419,7 +419,9 @@ textarea {
   font-size: 20px;
   word-break: break-all;
   cursor: pointer;
+  resize: none;
 }
+
 
 .decorative-line--form {
   height: 2px;
