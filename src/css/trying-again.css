@@ -123,11 +123,12 @@ a {
     align-items: center;
     display: flex;
     flex-direction: column;
-    background-image: url(/assets/images/header.png);
+    background-image: url(/assets/images/hero-image-night-sky.jpg);
     background-repeat:no-repeat;
     background-size: cover;
+    background-position: bottom;
     margin: 0%;
-    height: 800px;
+    height: 600px;
     width: 100vw;
     background-color:#09090c;
     color: #FFF;
@@ -137,8 +138,8 @@ a {
     display: flex;
     gap: 40px;
     display: flex;
-    margin: auto;
     flex-direction: column;
+    margin: 40px 0px;
   }
 
   .navbar__hero-list {
@@ -164,14 +165,12 @@ a {
     color: white;
     font-size: 80px;
     line-height: 105px;
-    margin-top: 0%;
     margin-bottom: -0.5%;
   }
 
   .hero__subtitle {
-    margin-top: 0%;
     color: white;
-    font-size: 30px;
+    font-size: 35px;
     font-family: Audiowide;
   }
 
@@ -180,10 +179,10 @@ a {
     font-size: 30px;
     font-family: Audiowide;
     line-height: 50px;
-    padding-top: 150px;
-    padding-bottom: 5%;
     margin: auto;
     text-align: center;
+    margin-top: 100px;
+    margin-bottom: 00px;
   }
 
 
@@ -194,7 +193,6 @@ a {
 
 .text-left {
     text-align: left;
-    margin: 0%;
 }
 
 .text-right {
@@ -408,7 +406,7 @@ flex: 1;
 }
 
 .main-content__section-80 {
-    max-width: 90%;
+    max-width: 80%;
     margin: auto;
     max-width: 1000px;
 }
@@ -802,7 +800,7 @@ aside img {
 
 
 .game-of-the-month {
-      background-color:#09090c;
+      background-color:#020204;
       padding-top: 50px;
       width: 100vw;
       display: flex;
