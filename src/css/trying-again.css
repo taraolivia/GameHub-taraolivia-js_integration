@@ -113,7 +113,7 @@ section {
 }
 
 .navbar__logo {
-  padding-right: 100px;
+  padding-right: 5%;
 }
 
 .navbar__logo--small {
@@ -425,12 +425,17 @@ caret-color: #e60073;
   margin-top: 40px;
 }
 
-.social-media__icons {
+.social-media__icons{
   display: flex;
-  justify-content: center;
   gap: 50px;
   padding: 40px;
-  vertical-align: middle;
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.social-media__icons a{
+  margin: auto;
 }
 
 .footer__nav-links {
@@ -441,6 +446,7 @@ caret-color: #e60073;
   justify-content: center;
   padding: 60px;
   font-size: 35px;
+  align-items: center;
 }
 
 .footer__nav-links-division {
@@ -847,8 +853,8 @@ aside img {
 
 .navbar__content {
   display: flex;
-  align-items: center; /* This aligns items vertically in the center */
-  justify-content: space-between; /* This separates the logo and hamburger menu on two ends */
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar__logo {
@@ -858,8 +864,10 @@ aside img {
   order: 2;
 }
 .navbar__links {
-  order: 3; /* This makes sure the links come after the hamburger menu when they are displayed */
+order: 3;
 }
+
+
 
 @media screen and (max-width: 650px) {
   .navbar,
@@ -993,7 +1001,7 @@ aside img {
   }
 
   .main-content {
-    width: 90%;
+    width: 80%;
   }
 }
 
@@ -1161,7 +1169,7 @@ aside img {
   }
 }
 
-@media (max-width: 1145px) {
+@media (max-width: 1200px) {
   .game-page-primary,
   .game-page-text,
   .game-page-secondary,
@@ -1175,7 +1183,22 @@ aside img {
   }
 
   .footer__logo {
-    margin-top: 500px;
-    position: relative;
+    place-self: center;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

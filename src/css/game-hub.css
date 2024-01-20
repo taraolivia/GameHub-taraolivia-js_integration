@@ -1028,3 +1028,704 @@ aside img {
     position: relative;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 650px) {
+  .navbar,
+  .navbar-primary {
+    width: 100%;
+    padding: 10px 0px;
+  }
+
+  .navbar__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    row-gap: 0;
+    width: 90%;
+  }
+
+  .navbar__logo--small {
+    display: block;
+    display: flex;
+    order: 2;
+    text-align: center;
+    padding: 0%;
+    margin: auto;
+    justify-content: center;
+    padding-left: 75px;
+  }
+
+  #alternate-logo {
+    fill: var(--theme-light-color-text);
+  }
+
+  .navbar__logo {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    order: 3;
+    display: block;
+  }
+
+  #hamburger {
+    -webkit-transform: scaleX(-1, 1);
+    transform: scaleX(-1);
+  }
+
+  .navbar__links {
+    display: none;
+  }
+
+  .header__content {
+    width: 85%;
+    margin: auto;
+  }
+
+  .breadcrumbs {
+    padding-top: 95px;
+    padding-bottom: 20px;
+  }
+
+  .breadcrumbs__list {
+    width: 90%;
+  }
+
+  .header {
+    height: fit-content;
+  }
+
+  .blog-page-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 30px auto;
+  }
+
+  .footer__nav-links {
+    flex-direction: column;
+    row-gap: 40px;
+    display: flex;
+  }
+
+  .footer__nav-links li:nth-child(3) {
+    order: -1;
+  }
+
+  .social-media__icons {
+    flex-wrap: wrap;
+    padding-top: 30px;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+
+  .about-us-wrap {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .about-card {
+    display: flex;
+    flex-direction: column-reverse;
+    background: var(--theme-light-color-primary);
+    padding: 0px 0px;
+    margin: 20px auto;
+    width: 100%;
+  }
+
+  .about-card-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+    padding-bottom: 30px;
+  }
+
+  .about-card-title {
+    text-align: center;
+    color: var(--theme-light-color-text);
+  }
+
+  .about-card-paragraph {
+    padding: 10px 35px;
+    max-width: 75ch;
+  }
+
+  .about-card-image {
+    height: auto;
+    place-self: center;
+  }
+
+  .main-content {
+    width: 90%;
+  }
+}
+
+@media (min-width: 651px) and (max-width: 1000px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px auto;
+    width: 95%;
+    row-gap: 20px;
+  }
+
+  .navbar__logo {
+    padding-right: 0%;
+    display: none;
+  }
+
+  .navbar__logo--small {
+    display: block;
+    padding-top: 10px;
+  }
+
+  .breadcrumbs {
+    padding-bottom: 0px;
+    padding-top: 110px;
+  }
+
+  .breadcrumbs__list {
+    width: 90%;
+  }
+
+  .main-content {
+    width: 90%;
+  }
+
+  .main-content__section {
+    width: 90%;
+  }
+
+  .blog-page-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 30px auto;
+  }
+
+  .footer__nav-links {
+    flex-direction: column;
+    row-gap: 40px;
+    display: flex;
+  }
+
+  .footer__nav-links li:nth-child(3) {
+    order: -1;
+  }
+
+  .social-media__icons {
+    flex-wrap: wrap;
+    padding-top: 30px;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+
+  .header__content {
+    width: 85%;
+    margin: auto;
+  }
+
+  .blog-page-text {
+    flex: 1;
+  }
+
+  .blog-page-title {
+    text-align: left;
+  }
+
+  .blog-page-image {
+    flex: 1;
+    height: auto;
+  }
+
+  .about-us-wrap {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .about-card {
+    display: flex;
+    background: var(--theme-light-color-primary);
+    margin: 100px 0px;
+  }
+
+  .about-card-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex: 1, 5;
+  }
+
+  .about-card-title {
+    text-align: center;
+    padding: 20px 20px;
+    color: var(--theme-light-color-text);
+  }
+
+  .about-card-paragraph {
+    padding: 10px 35px;
+    max-width: 65ch;
+  }
+
+  .about-card-image {
+    flex: 1;
+    height: auto;
+    max-height: max-content;
+    max-width: 400px;
+  }
+
+  @media screen and (max-width: 850px) {
+    .about-us-wrap {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    .about-card {
+      display: flex;
+      flex-direction: column-reverse;
+      background: var(--theme-light-color-primary);
+      padding: 40px 0px;
+      margin: 40px auto;
+      width: 100%;
+    }
+
+    .about-card-text {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      place-self: center;
+      padding-bottom: 30px;
+    }
+
+    .about-card-title {
+      text-align: center;
+      color: var(--theme-light-color-text);
+    }
+
+    .about-card-paragraph {
+      padding: 10px 35px;
+      max-width: 75ch;
+    }
+
+    .about-card-image {
+      height: auto;
+      place-self: center;
+    }
+  }
+}
+
+@media (max-width: 1145px) {
+  .game-page-primary,
+  .game-page-text,
+  .game-page-secondary,
+  .game-page-pictures {
+    margin: auto;
+  }
+
+  .footer__nav-links-division {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__logo {
+    margin-top: 500px;
+    position: relative;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mobile to small tablet */
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .navbar,
+  .navbar-primary {
+    width: 100%;
+    padding: 10px 0px;
+  }
+
+  .navbar__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    row-gap: 0;
+    width: 90%;
+  }
+
+  .navbar__logo--small {
+    display: block;
+    display: flex;
+    order: 2;
+    text-align: center;
+    padding: 0%;
+    margin: auto;
+    justify-content: center;
+    padding-left: 75px;
+  }
+
+  #alternate-logo {
+    fill: var(--theme-light-color-text);
+  }
+
+  .navbar__logo {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    order: 3;
+    display: block;
+  }
+
+  #hamburger {
+    -webkit-transform: scaleX(-1, 1);
+    transform: scaleX(-1);
+  }
+
+  .navbar__links {
+    display: none;
+  }
+
+  .header__content {
+    width: 85%;
+    margin: auto;
+  }
+
+  .breadcrumbs {
+    padding-top: 95px;
+    padding-bottom: 20px;
+  }
+
+  .breadcrumbs__list {
+    width: 90%;
+  }
+
+  .header {
+    height: fit-content;
+  }
+
+  .blog-page-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 30px auto;
+  }
+
+  .footer__nav-links {
+    flex-direction: column;
+    row-gap: 40px;
+    display: flex;
+  }
+
+  .footer__nav-links li:nth-child(3) {
+    order: -1;
+  }
+
+  .social-media__icons {
+    flex-wrap: wrap;
+    padding-top: 30px;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+
+  .about-us-wrap {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .about-card {
+    display: flex;
+    flex-direction: column-reverse;
+    background: var(--theme-light-color-primary);
+    padding: 0px 0px;
+    margin: 20px auto;
+    width: 100%;
+  }
+
+  .about-card-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+    padding-bottom: 30px;
+  }
+
+  .about-card-title {
+    text-align: center;
+    color: var(--theme-light-color-text);
+  }
+
+  .about-card-paragraph {
+    padding: 10px 35px;
+    max-width: 75ch;
+  }
+
+  .about-card-image {
+    height: auto;
+    place-self: center;
+  }
+
+  .main-content {
+    width: 90%;
+  }
+
+
+}
+
+
+
+
+
+
+
+ 
+/* tablet and small laptops */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px auto;
+    width: 95%;
+    row-gap: 20px;
+  }
+
+  .navbar__logo {
+    padding-right: 0%;
+    display: none;
+  }
+
+  .navbar__logo--small {
+    display: block;
+    padding-top: 10px;
+  }
+
+  .breadcrumbs {
+    padding-bottom: 0px;
+    padding-top: 110px;
+  }
+
+  .breadcrumbs__list {
+    width: 90%;
+  }
+
+  .main-content {
+    width: 90%;
+  }
+
+  .main-content__section {
+    width: 90%;
+  }
+
+  .blog-page-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 30px auto;
+  }
+
+  .footer__nav-links {
+    flex-direction: column;
+    row-gap: 40px;
+    display: flex;
+  }
+
+  .footer__nav-links li:nth-child(3) {
+    order: -1;
+  }
+
+  .social-media__icons {
+    flex-wrap: wrap;
+    padding-top: 30px;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+
+  .header__content {
+    width: 85%;
+    margin: auto;
+  }
+
+  .blog-page-text {
+    flex: 1;
+  }
+
+  .blog-page-title {
+    text-align: left;
+  }
+
+  .blog-page-image {
+    flex: 1;
+    height: auto;
+  }
+
+  .about-us-wrap {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .about-card {
+    display: flex;
+    background: var(--theme-light-color-primary);
+    margin: 100px 0px;
+  }
+
+  .about-card-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex: 1, 5;
+  }
+
+  .about-card-title {
+    text-align: center;
+    padding: 20px 20px;
+    color: var(--theme-light-color-text);
+  }
+
+  .about-card-paragraph {
+    padding: 10px 35px;
+    max-width: 65ch;
+  }
+
+  .about-card-image {
+    flex: 1;
+    height: auto;
+    max-height: max-content;
+    max-width: 400px;
+  }
+
+
+
+}
+
+
+
+
+
+ 
+/* laptop to larger desktops */
+@media screen and (min-width: 901px) and (max-width: 1300px) {
+
+
+  .about-us-wrap {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .about-card {
+    display: flex;
+    flex-direction: column-reverse;
+    background: var(--theme-light-color-primary);
+    padding: 40px 0px;
+    margin: 40px auto;
+    width: 100%;
+  }
+
+  .about-card-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+    padding-bottom: 30px;
+  }
+
+  .about-card-title {
+    text-align: center;
+    color: var(--theme-light-color-text);
+  }
+
+  .about-card-paragraph {
+    padding: 10px 35px;
+    max-width: 75ch;
+  }
+
+  .about-card-image {
+    height: auto;
+    place-self: center;
+  }
+
+}
+
+
+
+
+
+ 
+/* larger monitors */
+@media screen and (min-width: 1301px) {
+
+  .game-page-primary,
+  .game-page-text,
+  .game-page-secondary,
+  .game-page-pictures {
+    margin: auto;
+  }
+
+  .footer__nav-links-division {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__logo {
+    margin-top: 500px;
+    position: relative;
+  }
+}
