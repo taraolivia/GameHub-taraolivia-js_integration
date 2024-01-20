@@ -62,6 +62,7 @@ section {
 
 .social-media__icons-smaller svg {
   height: 70%;
+  margin-top: 30px;
 }
 
 .social-media__icons-dark svg {
@@ -119,6 +120,8 @@ section {
   display: none;
 }
 
+
+
 .navbar__links a,
 .footer__nav-links a {
   text-decoration: none;
@@ -127,6 +130,27 @@ section {
 
 .navbar__links a {
   color: var(--theme-light-color-text);
+  transition: 0.2 ease-in;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+
+
+.navbar__links a:hover,
+.breadcrumbs a:hover {
+  animation: glow 0.2s ease-in;
+  text-shadow: 0 0 30px #e60073;
+  color: #e60073;
+}
+
+.active a{
+  font-weight: bolder;
+}
+
+.active a:hover {
+  text-shadow: none;
+  animation: none;
+  color: currentColor;
 }
 
 .navbar__links {
@@ -184,7 +208,8 @@ section {
   font-size: 35px;
 }
 
-.navbar__hero-list-item a:hover {
+.navbar__hero-list-item a:hover,
+.footer__nav-links a:hover {
   animation: glow 1s ease-in-out infinite alternate;
   text-shadow: 0 0 10px #fff, 0 0 30px #e60073, 0 0 40px #e60073;
 }
@@ -285,31 +310,17 @@ section {
   height: 50px;
   border-radius: 10px;
   width: fit-content;
-  padding: 10px;
+  padding: 20px;
   margin: 0%;
   margin-top: 20px;
+  font-size: 16px;
+  line-height: 16px;
 }
 
 .button-discover {
   margin-right: 0;
   margin-top: 30px;
   margin-bottom: 30px;
-}
-
-.contact-card {
-  background-color: var(--theme-light-color-accent);
-  color: #fff;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
-  max-width: 1000px;
-  margin: auto;
-  margin-top: 50px;
-}
-
-.contact-card-title {
-  margin: 0%;
 }
 
 .left-align {
@@ -320,6 +331,23 @@ section {
   text-align: right;
 }
 
+.contact-card {
+  background-color: var(--theme-light-color-accent);
+  color: #fff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 80px;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.contact-card-title {
+  margin: 0%;
+}
+
+
+
 .contact-card-mid-wrapper {
   display: flex;
   flex-direction: row;
@@ -328,11 +356,21 @@ section {
   text-align: center;
   flex-wrap: wrap;
   padding-top: 50px;
+  margin-top: 20px;
 }
 
 .contact-card-info {
   flex: 1;
+  padding-bottom: 60px;
+
 }
+
+.contact-card-info-line {
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+}
+
 
 .contact-card-form {
   text-align: left;
@@ -350,12 +388,19 @@ textarea {
   font-family: var(--theme-light-font-base);
   font-size: 20px;
   word-break: break-all;
+  caret-color: #e60073;
 }
 
-.decorative-line-form {
+.form-text-input,
+textarea {
+caret-color: #e60073;
+}
+
+.decorative-line--form {
   height: 2px;
   background: white;
   margin-bottom: 50px;
+  color: #fff;
 }
 
 .form-text-label {

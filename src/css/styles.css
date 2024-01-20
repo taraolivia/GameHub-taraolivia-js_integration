@@ -5,13 +5,13 @@
 @import url("./_variables.css");
 /* Feel free to add as many of these imports as you need */
 
-*{
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --clr-background: #ffffff;
 }
 
@@ -20,14 +20,14 @@
   display: flex;
   flex-direction: column;
   background-image: url("/assets/images/unsplash_ln5drpv_ImIhero-section-universe.png");
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-position: center top;
   background-size: auto;
   margin: 0%;
   height: 740px;
   width: 100vw;
-  background-color:#09090c;
-  color: #FFF;
+  background-color: #09090c;
+  color: #fff;
 }
 
 .hero-topnav {
@@ -38,7 +38,7 @@
 }
 
 .hero-topnav a {
-  color: #FFF;
+  color: #fff;
   font-family: Orbitron;
   font-size: 25px;
 }
@@ -63,7 +63,6 @@
   font-size: 30px;
   font-family: Audiowide;
   font-weight: 400;
-
 }
 
 .hero p {
@@ -75,35 +74,34 @@
   padding-bottom: 0%;
 }
 
- .START {
-    width: 200px;
-    margin: 40px;
-  }
+.START {
+  width: 200px;
+  margin: 40px;
+}
 
-  .game-of-the-month {
-    background-color:#09090c;
-    padding-top: 50px;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-  }
+.game-of-the-month {
+  background-color: #09090c;
+  padding-top: 50px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
 
-  .game-of-the-month h2 {
-    color: #FFF;
-  }
+.game-of-the-month h2 {
+  color: #fff;
+}
 
-  .game-of-the-month img {
-    display: flex;
-    width: 80vw;
-    max-width: 1440px;
-    align-self: center;
-  }
+.game-of-the-month img {
+  display: flex;
+  width: 80vw;
+  max-width: 1440px;
+  align-self: center;
+}
 
-  .slogan {
-    font-family: Audiowide;
-    font-size: 30px;
-  }
+.slogan {
+  font-family: Audiowide;
+  font-size: 30px;
+}
 
-    @media (min-width: 600px) {
-
-    }
+@media (min-width: 600px) {
+}
