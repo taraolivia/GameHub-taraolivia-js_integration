@@ -330,6 +330,12 @@ section {
   margin: 50px auto;
 }
 
+
+
+.hero__subtitle {
+  padding-top: 0%;
+}
+
 .contact-card-title {
   margin: 0%;
   line-height: 2;
