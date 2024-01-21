@@ -501,8 +501,7 @@ a {
   gap: 10px;
   text-align: center;
   padding: 20px 10px;
-  color: var
-  ;
+  color: var(--theme-light-color-text);
 }
 
 .game-image {
@@ -678,7 +677,14 @@ a {
   flex-direction: column;
   max-width: 500px;
   text-align: left;
+  margin-left: 0;
 }
+
+.game-page-text {
+  padding-top: 5%;
+
+}
+
 
 .game-page-primary {
   margin: auto;
@@ -689,12 +695,17 @@ a {
   display: flex;
   border-radius: 10px;
   margin-top: 20px;
-  width: fit-content;
-  min-width: 300px;
+  min-width: 400px;
+  margin-top: 5%;
+  justify-content: flex-start;
+  max-width: fit-content;
+
 }
 
 .game-brag-text {
   color: var(--theme-light-color-text);
+  padding-left: 10%;
+
 }
 
 .blog-post {
@@ -1280,6 +1291,10 @@ flex-wrap: wrap;
   .game-page-secondary,
   .game-page-pictures {
     margin: auto;
+  }
+
+  .game-page-pictures img{
+    max-width: 100%;
   }
 
   .footer__nav-links-division {
