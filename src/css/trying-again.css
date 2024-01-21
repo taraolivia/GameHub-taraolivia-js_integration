@@ -33,7 +33,11 @@ h3 {
   margin: auto;
 }
 
-h2,
+h2 {
+  font-family: var(--theme-light-font-heading-secondary);
+}
+
+
 h3 {
   font-family: var(--theme-light-font-heading-secondary);
   font-size: 25px;
@@ -145,6 +149,7 @@ section {
   color: var(--theme-light-color-text);
   transition: 0.2 ease-in;
   animation: glow 1s ease-in-out infinite alternate;
+  font-family: var(--theme-light-font-heading-secondary);
 }
 
 .navbar__links a:hover,
@@ -496,6 +501,8 @@ a {
   gap: 10px;
   text-align: center;
   padding: 20px 10px;
+  color: var
+  ;
 }
 
 .game-image {
@@ -759,7 +766,7 @@ margin: auto;
 .about-card-secondary {
 display: flex;
 max-width: 1200px;
-margin: 50px 0px auto;
+margin: 50px auto;
 gap: 50px;
 flex-wrap: wrap;
 }
