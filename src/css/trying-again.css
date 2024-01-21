@@ -122,8 +122,6 @@ section {
   text-shadow: 0 0 10px #fff, 0 0 30px #e60073, 0 0 40px #e60073;
 }
 
-
-
 .navbar__content {
   display: flex;
   align-items: center;
@@ -133,13 +131,9 @@ section {
   justify-content: space-between;
 }
 
-
-
 .navbar__logo--small {
   display: none;
 }
-
-
 
 .navbar__links a,
 .footer__nav-links a {
@@ -153,14 +147,12 @@ section {
   animation: glow 1s ease-in-out infinite alternate;
 }
 
-
-
 .navbar__links a:hover,
 .breadcrumbs a:hover {
   text-shadow: 0 0 30px #e60073;
 }
 
-.active a{
+.active a {
   font-weight: bolder;
 }
 
@@ -189,10 +181,8 @@ section {
 }
 
 #hamburger-white {
-  fill:#fff;
+  fill: #fff;
 }
-
-
 
 .hero__background {
   align-items: center;
@@ -208,8 +198,6 @@ section {
   background-color: #09090c;
   color: #fff;
 }
-
-
 
 .hero__title {
   color: white;
@@ -345,10 +333,8 @@ section {
 }
 
 .no-padding {
-padding: 0%;
+  padding: 0%;
 }
-
-
 
 .contact-card-mid-wrapper {
   display: flex;
@@ -373,7 +359,6 @@ padding: 0%;
   height: 30px;
 }
 
-
 .contact-card-form {
   text-align: left;
   flex: 1;
@@ -391,12 +376,9 @@ textarea {
   font-size: 20px;
   word-break: break-all;
   caret-color: #e60073;
+  resize: none;
 }
 
-.form-text-input,
-textarea {
-caret-color: #e60073;
-}
 
 .decorative-line--form {
   height: 2px;
@@ -427,7 +409,7 @@ caret-color: #e60073;
   margin-top: 40px;
 }
 
-.social-media__icons{
+.social-media__icons {
   display: flex;
   gap: 50px;
   padding: 40px;
@@ -436,7 +418,7 @@ caret-color: #e60073;
   margin: auto;
 }
 
-.social-media__icons a{
+.social-media__icons a {
   margin: auto;
 }
 
@@ -709,9 +691,14 @@ a {
 }
 
 .blog-post {
-  padding: 50px 0px;
   padding-left: 100px;
   width: 90%;
+}
+
+article {
+  padding: 50px 0px;
+  max-width: 90%;
+  margin: auto;
 }
 
 .aside {
@@ -752,9 +739,75 @@ aside img {
 }
 
 .blog-post-p li {
-  text-decoration: dotted;
-list-style: circle;
+  list-style: circle;
+  font-size: 22px;
 }
+
+.blog-post-quiz li{
+  list-style: upper-latin;
+  font-size: 22px;
+  padding: 4%;
+}
+
+
+.blog-post-secondary {
+display: flex;
+justify-content: center;
+margin: auto;
+}
+
+.about-card-secondary {
+display: flex;
+max-width: 1200px;
+margin: 50px 0px auto;
+gap: 50px;
+flex-wrap: wrap;
+}
+
+.aside-secondary {
+  display: flex;
+  max-width: 100%;
+  padding: 20px;
+  background: var(--theme-light-color-secondary);
+}
+
+.aside-secondary img {
+  max-height: 200px;
+  max-width: 200px;
+  flex: 1;
+}
+
+.aside__content-secondary {
+  display: flex;
+  margin: auto;
+}
+
+
+.aside__content-secondary-text {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  flex: 2;
+}
+
+.blog-post-question {
+  margin-top: 5%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
+
+
 
 .blog-page-wrap {
   margin: auto;
@@ -881,10 +934,8 @@ list-style: circle;
   order: 2;
 }
 .navbar__links {
-order: 3;
+  order: 3;
 }
-
-
 
 @media screen and (max-width: 650px) {
   .navbar,
@@ -1021,11 +1072,9 @@ order: 3;
 }
 
 @media (min-width: 651px) and (max-width: 1000px) {
-
-.navbar__hero-list {
-  font-size: 28px;
-}
-
+  .navbar__hero-list {
+    font-size: 28px;
+  }
 
   .navbar {
     padding: 10px;
@@ -1144,97 +1193,79 @@ order: 3;
     max-height: max-content;
     max-width: 400px;
   }
-
-
-
-
-
-
-
-
 }
 
-
-
-  @media screen and (max-width: 850px) {
-
-.navbar__hero-list {
-  display: none;
-}
-
-#hamburger-white {
-  display: block;
-}
-
-    .about-us-wrap {
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      max-width: 100%;
-    }
-
-    .about-card {
-      display: flex;
-      flex-direction: column-reverse;
-      padding: 40px 0px;
-      margin: 40px auto;
-      width: 100%;
-    }
-
-    .about-card-text {
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      place-self: center;
-      padding-bottom: 30px;
-    }
-
-    .about-card-title {
-      text-align: center;
-      color: var(--theme-light-color-text);
-    }
-
-    .about-card-paragraph {
-      padding: 10px 35px;
-      max-width: 75ch;
-    }
-
-    .about-card-image {
-      height: auto;
-      place-self: center;
-      max-width: 100%;
-    }
-
-    .footer__nav-links {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .footer__nav-links li:nth-child(2) {
-      order: -1;
-    }
-
-    .footer__nav-links-division {
-      gap: 50px;
-    }
-  
-    .button--primary {
-      font-size: 16px;
-      padding: 0 5%;
-    }
-
-    .main-content__section {
-      margin: auto;
-    }
- 
-
+@media screen and (max-width: 850px) {
+  .navbar__hero-list {
+    display: none;
   }
 
+  #hamburger-white {
+    display: block;
+  }
 
+  .about-us-wrap {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
 
+  .about-card {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 40px 0px;
+    margin: 40px auto;
+    width: 100%;
+  }
 
+  .about-card-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+    padding-bottom: 30px;
+  }
 
+  .about-card-title {
+    text-align: center;
+    color: var(--theme-light-color-text);
+  }
+
+  .about-card-paragraph {
+    padding: 10px 35px;
+    max-width: 75ch;
+  }
+
+  .about-card-image {
+    height: auto;
+    place-self: center;
+    max-width: 100%;
+  }
+
+  .footer__nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__nav-links li:nth-child(2) {
+    order: -1;
+  }
+
+  .footer__nav-links-division {
+    gap: 50px;
+  }
+
+  .button--primary {
+    font-size: 16px;
+    padding: 0 5%;
+  }
+
+  .main-content__section {
+    margin: auto;
+  }
+}
 
 @media (max-width: 1200px) {
   .game-page-primary,
@@ -1281,7 +1312,7 @@ order: 3;
     background: var(--theme-light-color-secondary);
   }
 
-  .aside img{
+  .aside img {
     max-height: 200px;
     max-width: 200px;
     flex: 1;
@@ -1297,12 +1328,7 @@ order: 3;
     padding: 5%;
     flex: 2;
   }
-
-
-
 }
-
-
 
 /* HAMBURGER */
 #navbar-toggle:checked ~ .navbar__links {
@@ -1326,25 +1352,6 @@ order: 3;
   display: none;
 }
 
-
 .navbar__logo--small {
   z-index: 3; /* Above the hamburger menu and backdrop */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
