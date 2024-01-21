@@ -157,9 +157,7 @@ section {
 
 .navbar__links a:hover,
 .breadcrumbs a:hover {
-  animation: glow 0.2s ease-in;
   text-shadow: 0 0 30px #e60073;
-  color: #e60073;
 }
 
 .active a{
@@ -549,6 +547,8 @@ a {
   position: relative;
   max-width: fit-content;
   min-width: 400px;
+  min-height: 400px;
+  padding: 10px 0px;
   border-radius: 10px;
   margin: 100px 40px 100px 40px;
 }
