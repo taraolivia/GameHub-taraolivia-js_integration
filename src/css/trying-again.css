@@ -545,8 +545,8 @@ a {
   flex-direction: column;
   position: relative;
   max-width: fit-content;
-  min-width: 400px;
-  min-height: 400px;
+  min-width: 300px;
+  min-height: 350px;
   padding: 10px 0px;
   border-radius: 10px;
   margin: 100px 40px 100px 40px;
@@ -749,6 +749,11 @@ aside img {
 
 .blog-post-p {
   margin: 5% 0%;
+}
+
+.blog-post-p li {
+  text-decoration: dotted;
+list-style: circle;
 }
 
 .blog-page-wrap {
@@ -1166,6 +1171,7 @@ order: 3;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
+      max-width: 100%;
     }
 
     .about-card {
@@ -1197,6 +1203,7 @@ order: 3;
     .about-card-image {
       height: auto;
       place-self: center;
+      max-width: 100%;
     }
 
     .footer__nav-links {
@@ -1212,7 +1219,14 @@ order: 3;
       gap: 50px;
     }
   
+    .button--primary {
+      font-size: 16px;
+      padding: 0 5%;
+    }
 
+    .main-content__section {
+      margin: auto;
+    }
  
 
   }
