@@ -38,13 +38,10 @@ h2 {
   padding-top: 40px;
 }
 
-
 h3 {
   font-family: var(--theme-light-font-heading-secondary);
   font-size: 25px;
 }
-
-
 
 p {
   font-size: 24px;
@@ -139,14 +136,14 @@ section {
 }
 
 .navbar__links a,
+.navbar__hamburger-links,
 .footer__nav-links a {
   text-decoration: none;
   font-size: 30px;
 }
 
-
-
-.navbar__links a {
+.navbar__links a,
+.navbar__hamburger-links a {
   color: var(--theme-light-color-text);
   transition: 0.2 ease-in;
   animation: glow 1s ease-in-out infinite alternate;
@@ -155,6 +152,7 @@ section {
 }
 
 .navbar__links a:hover,
+.navbar__hamburger-links a:hover,
 .breadcrumbs a:hover {
   text-shadow: 0 0 30px #e60073;
 }
@@ -169,7 +167,8 @@ section {
   color: currentColor;
 }
 
-.navbar__links {
+.navbar__links,
+.navbar__hamburger-links {
   display: flex;
   list-style: none;
   gap: var(--spacing-inner);
@@ -185,10 +184,6 @@ section {
 
 #hamburger {
   fill: var(--theme-light-color-text);
-}
-
-#hamburger-white {
-  fill: #fff;
 }
 
 .hero__background {
@@ -211,6 +206,7 @@ section {
   font-size: 80px;
   line-height: 105px;
   margin-bottom: -0.5%;
+  max-width: 100%;
 }
 
 .hero__subtitle {
@@ -332,8 +328,6 @@ section {
   margin: 50px auto;
 }
 
-
-
 .hero__subtitle {
   padding-top: 0%;
 }
@@ -391,7 +385,6 @@ textarea {
   caret-color: #e60073;
   resize: none;
 }
-
 
 .decorative-line--form {
   height: 2px;
@@ -690,9 +683,7 @@ a {
 
 .game-page-text {
   padding-top: 5%;
-
 }
-
 
 .game-page-primary {
   margin: auto;
@@ -770,25 +761,24 @@ aside img {
   font-size: 22px;
 }
 
-.blog-post-quiz li{
+.blog-post-quiz li {
   list-style: upper-latin;
   font-size: 22px;
   padding: 4%;
 }
 
-
 .blog-post-secondary {
-display: flex;
-justify-content: center;
-margin: auto;
+  display: flex;
+  justify-content: center;
+  margin: auto;
 }
 
 .about-card-secondary {
-display: flex;
-max-width: 1200px;
-margin: 50px auto;
-gap: 50px;
-flex-wrap: wrap;
+  display: flex;
+  max-width: 1200px;
+  margin: 50px auto;
+  gap: 50px;
+  flex-wrap: wrap;
 }
 
 .aside-secondary {
@@ -808,7 +798,6 @@ flex-wrap: wrap;
   display: flex;
   margin: auto;
 }
-
 
 .aside__content-secondary-text {
   display: flex;
@@ -831,10 +820,6 @@ flex-wrap: wrap;
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-
-
-
-
 
 .blog-page-wrap {
   margin: auto;
@@ -960,7 +945,8 @@ flex-wrap: wrap;
 .navbar__hamburger {
   order: 2;
 }
-.navbar__links {
+.navbar__links,
+.navbar__hamburger-links {
   order: 3;
 }
 
@@ -969,6 +955,10 @@ flex-wrap: wrap;
   .navbar-primary {
     width: 100%;
     padding: 10px 0px;
+  }
+
+  .hero__title {
+    font-size: 60px;
   }
 
   .navbar__content {
@@ -999,12 +989,14 @@ flex-wrap: wrap;
     display: none;
   }
 
-  .navbar__hamburger {
+  .navbar__hamburger,
+  .navbar__hamburger-white {
     order: 3;
     display: block;
   }
 
-  #hamburger {
+  #hamburger,
+  #hamburger-white {
     -webkit-transform: scaleX(-1, 1);
     transform: scaleX(-1);
   }
@@ -1097,11 +1089,48 @@ flex-wrap: wrap;
   .main-content {
     width: 80%;
   }
+
+  .contact-card {
+    padding: 30px;
+    margin: 50px auto;
+  }
+
+  .contact-card-info-line {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-card-info-line img {
+    height: 15%;
+    width: 15%;
+    margin: auto;
+  }
+
+  .button--form {
+    margin: auto;
+  }
 }
 
-@media (min-width: 651px) and (max-width: 1000px) {
+#hamburger-white {
+  fill: #fff;
+}
+
+.navbar__hamburger-white {
+  display: block;
+}
+
+.navbar__hamburger-links {
+  display: none;
+}
+
+@media screen and (min-width: 651px) and (max-width: 1000px) {
   .navbar__hero-list {
     font-size: 28px;
+  }
+
+  .navbar__hamburger-links {
+    display: none;
   }
 
   .navbar {
@@ -1225,13 +1254,8 @@ flex-wrap: wrap;
 }
 
 @media screen and (max-width: 850px) {
-  .navbar__hero-list {
-    display: none;
-  }
 
-  #hamburger-white {
-    display: block;
-  }
+  
 
   .about-us-wrap {
     margin: auto;
@@ -1240,6 +1264,10 @@ flex-wrap: wrap;
     flex-wrap: wrap;
     max-width: 100%;
     margin-bottom: 100px;
+  }
+
+  .navbar__hamburger-links {
+    display: none;
   }
 
   .about-card {
@@ -1295,6 +1323,54 @@ flex-wrap: wrap;
   .main-content__section {
     margin: auto;
   }
+
+
+
+  .navbar__hamburger-links,
+  .navbar__hamburger-white {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--theme-light-color-secondary);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #navbar-toggle:checked ~ .navbar__hamburger-links {
+    display: flex;
+  }
+
+  .navbar__hamburger-links {
+    display: none;
+  }
+
+  #navbar-toggle:checked ~ .navbar__hamburger-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: var(--theme-light-color-secondary);
+  }
+
+  #navbar-toggle:checked + .navbar__hamburger-white {
+    display: block;
+  }
+
+  .navbar__hero-list {
+    display: none;
+  }
+
+
+
 }
 
 @media (max-width: 1200px) {
@@ -1305,7 +1381,7 @@ flex-wrap: wrap;
     margin: auto;
   }
 
-  .game-page-pictures img{
+  .game-page-pictures img {
     max-width: 100%;
   }
 
@@ -1382,10 +1458,28 @@ flex-wrap: wrap;
   display: block;
 }
 
-#navbar-toggle:checked {
-  display: none;
+.navbar__logo--small {
+  z-index: 3;
 }
 
-.navbar__logo--small {
-  z-index: 3; /* Above the hamburger menu and backdrop */
+
+
+
+
+/* HAMBURGER */
+#navbar-toggle:checked ~ .navbar__hamburger-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: var(--theme-light-color-secondary);
+}
+
+#navbar-toggle:checked + .navbar__hamburger-white {
+  display: block;
 }
