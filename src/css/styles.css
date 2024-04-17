@@ -732,6 +732,13 @@ a {
   width: 90%;
 }
 
+#game-image {
+    max-width: 300px;
+    height: auto;
+    display: block;
+}
+
+
 article {
   padding: 50px 0px;
   max-width: 90%;
@@ -1392,13 +1399,22 @@ aside img {
 
 }
 
+@media (max-width: 800px) {
+
+
+.game-page-primary,
+.game-page-text,
+.game-page-secondary {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  text-align: left;
+  margin: 0 0 0 0;
+}
+}
+
 @media (max-width: 1200px) {
-  .game-page-primary,
-  .game-page-text,
-  .game-page-secondary,
-  .game-page-pictures {
-    margin: auto;
-  }
+
 
   .game-page-pictures img {
     max-width: 100%;
