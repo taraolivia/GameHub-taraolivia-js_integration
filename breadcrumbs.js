@@ -1,29 +1,39 @@
-function updateBreadcrumbs(gameTitle, gameGenre) {
+const breadcrumbConfig = {
+  "/": ["Home"], // Assuming 'index.html' is equivalent to the root '/'
+  "/about-us.html": ["Home", "About Us"], // Assuming pages are accessed with '.html' extension
+  "/games.html": ["Home", "Games"],
+  "/single-game.html": ["Home", "Games"],
+  "/blog.html": ["Home", "Blog"],
+  "/blog/blog-post-1.html": ["Home", "Blog", "Blog post 1"],
+  "/blog/blog-post-2.html": ["Home", "Blog", "Blog post 2"],
+  "/blog/blog-post-3.html": ["Home", "Blog", "Blog post 3"],
+  "/contact.html": ["Home", "Contact"],
+  "/testimonies.html": ["Home", "Testimonies"],
+  "/terms-and-conditions.html": ["Home", "Terms and Conditions"],
+};
+
+document.addEventListener("DOMContentLoaded", generateBreadcrumbs);
+
+function generateBreadcrumbs() {
+  console.log("Generating breadcrumbs...");
   const breadcrumbList = document.getElementById("breadcrumb-list");
-  breadcrumbList.innerHTML = ""; // Clear existing breadcrumbs
+  if (!breadcrumbList) {
+    console.error("Breadcrumb list element not found.");
+    return;
+  }
 
-  // Define an array of breadcrumb parts
-  const paths = [
-    { name: "Home", url: "index.html" },
-    { name: "Games", url: "games.html" },
-    { name: gameGenre, url: `games-genre.html?genre=${encodeURIComponent(gameGenre)}` }, // Link to a genre-specific page
-    { name: gameTitle, url: `single-game.html?id=${new URLSearchParams(window.location.search).get("id")}` },
-  ];
+  const path = window.location.pathname;
+  console.log("Current Path:", path);
+  const breadcrumbs = breadcrumbConfig[path] || ["Home"]; // Default to "Home" if no match found
+  console.log("Breadcrumbs:", breadcrumbs);
 
-  // Generate breadcrumb items
-  paths.forEach((path, index) => {
-    const crumb = document.createElement("li");
-    if (index === paths.length - 1) {
-      // Last item is the current page
-      crumb.innerHTML = `<span class="breadcrumbs__item active">${path.name}</span>`;
-    } else {
-      crumb.innerHTML = `<a href="${path.url}" class="breadcrumbs__item">${path.name}</a>`;
-    }
-    breadcrumbList.appendChild(crumb);
-  });
+  breadcrumbList.innerHTML = breadcrumbs
+    .map((crumb, index) => {
+      const isActive = index === breadcrumbs.length - 1;
+      const url = isActive ? "" : "/"; // Placeholder, adjust if you have specific paths
+      return `<li>${isActive ? `<span class="breadcrumbs__item active">${crumb}</span>` : `<a href="${url}" class="breadcrumbs__item">${crumb}</a>`}</li>`;
+    })
+    .join("");
 }
 
-// Call this function when game details are fetched
-fetchGameDetails().then((game) => {
-  updateBreadcrumbs(game.title, game.genre); // Ensure 'title' and 'genre' are the correct properties as received from your API
-});
+

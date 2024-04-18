@@ -1,0 +1,33 @@
+.game-page-pictures {
+    text-align: center;  /* Centers the content */
+}
+
+#game-image {
+    width: 80%;  /* Adjust main image width as needed */
+    height: auto;  /* Maintain aspect ratio */
+    display: block;  /* Ensures it takes up the full width of its container */
+    margin: 0 auto 20px;  /* Center the image and add space below */
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;  /* Center the thumbnails */
+    flex-wrap: wrap;  /* Allow thumbnails to wrap if there's not enough space */
+    gap: 10px;  /* Space between thumbnails */
+}
+
+.thumbnail {
+    width: 100px;  /* Max width for thumbnails */
+    height: auto;  /* Maintain aspect ratio */
+    cursor: pointer;  /* Indicates that thumbnails are clickable */
+    transition: transform 0.2s;  /* Smooth scaling effect on hover */
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);  /* Enlarge thumbnail on hover */
+}
+
+.game-page-pictures {
+    display: flex;
+    flex-direction: column;
+}

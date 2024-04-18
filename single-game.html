@@ -8,6 +8,7 @@
     content="Explore 'Pixel Heart': An indie platformer with captivating pixel art and a heartwarming story. Ideal for lovers of indie games." />
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon2.jpeg" />
   <link rel="stylesheet" href="src/css/styles.css" />
+  <link rel="stylesheet" href="game-image-gallery.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron&family=Press+Start+2P&display=swap"
@@ -77,6 +78,11 @@
           <div class="game-page-pictures">
             <img id="game-image" src="assets/images/games-main-pages/pixel heart.png"
               alt="Loading game image..." />
+               <div class="thumbnails">
+        <img class="thumbnail" src="assets/images/games-main-pages/atlantis-2.png" alt="Thumbnail 1">
+        <img class="thumbnail" src="assets/images/games-main-pages/mythical-arts-2.png" alt="Thumbnail 2">
+        <img class="thumbnail" src="assets/images/games/wildlife-wonderlands.png" alt="Thumbnail 3">
+    </div>
           </div>
   
           <div class="game-page-primary">
@@ -84,19 +90,19 @@
             <h2 id="game-subtitle" class="game-page-text">
               Loading details...
             </h2>
-            <a href="games.html">
-              <div class="game-brag">
-                <img src="assets/images/game-page-brag/top-games.png" alt="icon
-                  of a videogame controller with pink background" />
-                <p class="game-brag-text" id="game-ranking">Loading ranking...</p>
-              </div>
-            </a>
-            <a href="testimonials.html">
-              <div class="game-brag">
-                <img id="star" src="assets/images/game-page-brag/sta¨r.png" alt="icon of a yellow star" />
-                <p class="game-brag-text" id="game-reviews">Loading reviews...</p>
-              </div>
-            </a>
+          <a href="games.html">
+            <div class="game-brag">
+              <img src="assets/images/game-page-brag/top-games.png" alt="icon
+                of a videogame controller with pink background" />
+              <p class="game-brag-text">Top 10 in games right now</p>
+            </div>
+          </a>
+          <a href="testimonials.html">
+            <div class="game-brag">
+              <img id="star" src="assets/images/game-page-brag/sta¨r.png" alt="icon of a yellow star" />
+              <p class="game-brag-text">4,9 - 529 reviews</p>
+            </div>
+          </a>
   
             <p id="game-price" class="game-page-text">Loading price...</p>
           </div>
@@ -113,6 +119,7 @@
   
     <script src="single-game.js"></script>
     <script src="breadcrumbs.js"></script>
+    <script src="game-image-gallery.js"></script>
 
 
   <!-- 4. Blog Carousel -->

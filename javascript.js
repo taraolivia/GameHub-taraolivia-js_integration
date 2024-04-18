@@ -56,8 +56,8 @@ function createElementForGame(game) {
   const imageUrl = game.image || "assets/images/default-image.png";
   const imageAlt = `${game.title} cover`;
 
-  // Correct the href to point to 'single-game.html' with the game's ID as a query parameter
-  const singleGameUrl = `single-game.html?id=${game.id}`; // Construct the URL dynamically
+  // Corrects the href to point to 'single-game.html' with the game's ID as a query parameter
+  const singleGameUrl = `single-game.html?id=${game.id}`; // Constructs the URL dynamically
 
   gameCard.innerHTML = `
         <img class="game-image" src="${imageUrl}" alt="${imageAlt}" />
