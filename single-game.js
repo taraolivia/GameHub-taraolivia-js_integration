@@ -20,20 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("game-title").textContent = game.title || "Title not available";
       document.getElementById("game-subtitle").textContent = game.subtitle || "An exciting game experience.";
       document.getElementById("game-image").src = game.image;
-      document.getElementById("game-image").alt = `${game.title} cover`;
+      document.getElementById("game-image").alt = `${game.name} cover`;
       document.getElementById("game-price").textContent = `€${game.price.toFixed(2)}`;
       document.getElementById("game-description").textContent = game.description;
+      
 
-      const thumbnailsContainer = document.getElementById("thumbnail-container");
-      thumbnailsContainer.innerHTML = ""; // Clear existing thumbnails if any
-      // Create main thumbnail
-      createThumbnail(thumbnailsContainer, game.image, game.title, true);
-
-      // Static thumbnails
-      const staticImages = ["assets/images/static1.jpg", "assets/images/static2.jpg", "assets/images/static3.jpg"];
-      staticImages.forEach((image) => createThumbnail(thumbnailsContainer, image, "Game Image"));
-
-      initializeThumbnailClicks();
+      // Dynamically updates breadcrumbs
       updateBreadcrumbsForGame(game.title, game.genre);
     })
     .catch((error) => {
@@ -82,3 +74,6 @@ function initializeThumbnailClicks() {
     });
   });
 }
+
+
+
