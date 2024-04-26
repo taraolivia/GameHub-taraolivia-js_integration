@@ -1,46 +1,32 @@
-/* Slides and Thumbnails Container */
+
 .thumbnails-container {
   display: flex;
-  flex-direction: column; /* Display thumbnails in a column */
-  align-items: center; /* Center items horizontally within the container */
-  max-width: 450px;
-  height: auto;
+  flex-direction: column;
+  max-width: 300px;
+  min-height: 400px;
+  margin: auto;
+  justify-content: center;
 }
 
 .gallery-container {
   position: relative;
-    max-width: 500px; /* Adjust the value as needed */
+  max-width: 400px;
+min-height: 300px;
+}
 
+.row img{
+  max-height: 200px;
 }
 
 .row {
-  width: 100%; /* Make the row take up the full width */
+  width: 100%; 
   display: flex;
-  justify-content: center; /* Center thumbnails horizontally */
+  justify-content: center; 
 }
 
-/* Hide all slides by default */
 .mySlides {
   display: none;
 }
-
-/* Navigational buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 3px;
-  user-select: none;
-}
-
-.prev { left: 0; }
-.next { right: 0; }
-
 
 
 .demo.cursor {
@@ -54,7 +40,7 @@
 
 .caption-container {
   text-align: center;
-  background-color: black;
+  background-color: #8C74AD;
   color: white;
-  padding: 15px 0px;
+  padding: 10px 0px;
 }

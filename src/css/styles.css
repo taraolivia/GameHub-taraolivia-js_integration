@@ -55,9 +55,43 @@ section {
   padding-bottom: 40px;
 }
 
+.button--add_to_cart {
+  display: flex;
+  flex-direction: row;
+  font-family: var(--button-font-family);
+  color: var(--button-text-color);
+  background: var(--button-bg-color);
+  transition: var(--button-transition);
+  border: var(--button-border);
+  cursor: var(--button-cursor);
+  margin: var(--button-margin);
+  padding: 0px 70px;
+  line-height: 60px;
+  height: 60px;
+  border-radius: 15px;
+  margin: 40px 0px;
+  max-width: fit-content;
+}
 
+.button--add_to_cart:hover {
+  box-shadow: var(--button-hover-box-shadow);
+  transition: var(--button-hover-transition);
+  animation: var(--button-hover-animation);
+}
 
-/* Styles for the genre buttons */
+.button--add_to_cart p {
+  font-size: 14px;
+}
+
+.button--add_to_cart svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 60px;
+  align-self: center;
+  padding-left: 20px;
+}
+
 .genre-button {
   border: 2px solid var(--theme-light-color-accent);
   padding: 1em 2.2em;
@@ -70,7 +104,6 @@ section {
 }
 
 
-/* Styles for the selected genre button */
 .genre-button.selected {
   background-color: var(--theme-light-color-accent);
   color: #ffffff;
@@ -78,27 +111,28 @@ section {
 
 #genre-buttons {
   display: flex;
-  justify-content: center; /* Horizontally center the buttons */
-  align-items: center; /* Vertically center the buttons */
+  justify-content: center; 
+  align-items: center;
   flex-wrap: wrap;
   margin: 1em 0em;
 }
 
 
-
 .tab-container {
-  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .tab-titles {
-  padding: 20px 0px;
+  padding: 30px 0px;
 }
 
 .tab-title {
   background: none;
   border: none;
   padding: 5px;
-  margin-right: 10px;
+  margin-right: 40px;
   cursor: pointer;
   font-size: 20px;
   color: var(--theme-light-color-text);
@@ -111,6 +145,8 @@ section {
 
 .tab-content {
   display: none;
+    max-width: 450px;
+
 }
 
 .tab-content.active {
@@ -801,19 +837,19 @@ a {
   background-color: var(--theme-light-color-secondary);
   display: flex;
   border-radius: 10px;
-  margin-top: 20px;
   margin-top: 5%;
-  max-width: 350px;
+  max-width: 300px;
 }
 
 .game-brag-text {
   color: var(--theme-light-color-text);
-  padding-left: 15px;
+  padding-left: 30px;
   align-self: center;
+  font-size: 18px;
 }
 
 #star {
-  width: 48px;
+  width: 40px;
 }
 
 .blog-post {
