@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Explore 'Pixel Heart': An indie platformer with captivating pixel art and a heartwarming story. Ideal for lovers of indie games." />
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon2.jpeg" />
+    <link rel="icon" type="image/x-icon" href="/assets/images/icons8/icons8-game-controller-96.png" />
     <link rel="stylesheet" href="src/css/styles.css" />
     <link rel="stylesheet" href="game-image-gallery.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -127,7 +127,7 @@
               <h1 id="game-title" class="game-page-text text-left"></h1>
               <a href="testimonials.html">
                 <div class="game-brag">
-                  <img id="star" src="assets/images/game-page-brag/sta¨r.png" alt="icon of a yellow star" />
+                  <img id="star" src="assets/images/icons8/icons8-star-64.png" alt="icon of a yellow star" />
                   <p class="game-brag-text">4,9 - 529 reviews</p>
                 </div>
               </a>
@@ -156,54 +156,87 @@
 
               <a href="games.html">
                 <div class="game-brag">
-                  <img src="assets/images/game-page-brag/top-games.png" alt="icon of a videogame controller with pink background" />
+                  <img id="controller" src="assets/images/icons8/icons8-game-controller-96.png" alt="icon of a videogame controller with pink background" />
                   <p class="game-brag-text">Top 10 in games right now</p>
                 </div>
               </a>
             </div>
+          </div>
 
-            <div class="tab-container">
-              <div class="tab-titles">
-                <button class="tab-title active" onclick="openTab(event, 'About')">ABOUT</button>
-                <button class="tab-title" onclick="openTab(event, 'Details')">DETAILS</button>
-                <button class="tab-title" onclick="openTab(event, 'Compatibility')">COMPATIBILITY</button>
-                <button class="tab-title" onclick="openTab(event, 'Reviews')">REVIEWS</button>
-                <button class="tab-title" onclick="openTab(event, 'FAQ')">FAQ'S</button>
-                <button class="tab-title" onclick="openTab(event, 'similar-games')">SIMILAR GAMES</button>
-              </div>
-              <div id="About" class="tab-content active">
-                <p id="game-description"></p>
-              </div>
-              <div id="Details" class="tab-content">
-                <p>
-                  Age Rating:
-                  <span id="game-age-rating"></span>
-                </p>
-                <p>
-                  Genre:
-                  <span id="game-genre"></span>
-                </p>
-                <p>
-                  Released:
-                  <span id="game-released"></span>
-                </p>
-              </div>
-              <div id="Compatibility" class="tab-content">
-                <p>This game is compatible with PCs running Windows and macOS. Below are the minimum and recommended system requirements to ensure optimal gameplay: Minimum System Requirements: Operating System: Windows 10, macOS 10.14 Processor: Intel Core i5 or AMD equivalent Memory: 8 GB RAM Graphics: NVIDIA GTX 960 or AMD Radeon R9 280 Storage: 50 GB available space Additional Notes: Requires a mouse and keyboard; game controllers are supported but not required. Recommended System Requirements: Operating System: Windows 10 or higher, macOS 10.15 or higher Processor: Intel Core i7 or AMD Ryzen 7 Memory: 16 GB RAM Graphics: NVIDIA GTX 1060 or AMD Radeon RX 580 Storage: 70 GB available space on SSD Additional Notes: SSD recommended for faster loading times; HDR display supported.</p>
-              </div>
-              <div id="Reviews" class="tab-content">
-                <p>This game is compatible with PC platforms.</p>
-              </div>
-              <div id="FAQ" class="tab-content">
-                <p>TQ: Can I play this game on a laptop? A: Yes, as long as your laptop meets the minimum system requirements listed in the Compatibility tab. Q: Is an internet connection required? A: An internet connection is not required to play the game in single-player mode. However, updates and multiplayer modes will require an internet connection. Q: Are there any age restrictions for this game? A: Yes, the game is rated for players aged 12 and above due to fantasy violence and mild language. Q: Can I get a refund if the game doesn't work on my computer? A: Refunds are available within 14 days of purchase if the game has technical issues that cannot be resolved. Ensure your system meets the requirements listed on the Compatibility tab. Q: How do I install the game after purchasing? A: After purchase, you can download the game directly from your account. Detailed installation instructions are provided with your purchase confirmation.</p>
-              </div>
+          <div class="tab-container">
+            <div class="tab-titles">
+              <button class="tab-title active" onclick="openTab(event, 'About')">ABOUT</button>
+              <button class="tab-title" onclick="openTab(event, 'Details')">DETAILS</button>
+              <button class="tab-title" onclick="openTab(event, 'Compatibility')">COMPATIBILITY</button>
+              <button class="tab-title" onclick="openTab(event, 'Reviews')">REVIEWS</button>
+              <button class="tab-title" onclick="openTab(event, 'FAQ')">FAQ'S</button>
+              <button class="tab-title" onclick="openTab(event, 'similar-games')">SIMILAR GAMES</button>
             </div>
-            <div id="similar-games" class="tab-content">
+            <div id="About" class="tab-content active">
+              <p id="game-description"></p>
+            </div>
+            <div id="Details" class="tab-content">
+              <p>
+                Age Rating:
+                <span id="game-age-rating"></span>
+              </p>
+              <p>
+                Genre:
+                <span id="game-genre"></span>
+              </p>
+              <p>
+                Released:
+                <span id="game-released"></span>
+              </p>
+            </div>
+            <div id="Compatibility" class="tab-content">
+              <p>This game is compatible with PCs running Windows and macOS. Below are the minimum and recommended system requirements to ensure optimal gameplay: Minimum System Requirements: Operating System: Windows 10, macOS 10.14 Processor: Intel Core i5 or AMD equivalent Memory: 8 GB RAM Graphics: NVIDIA GTX 960 or AMD Radeon R9 280 Storage: 50 GB available space Additional Notes: Requires a mouse and keyboard; game controllers are supported but not required. Recommended System Requirements: Operating System: Windows 10 or higher, macOS 10.15 or higher Processor: Intel Core i7 or AMD Ryzen 7 Memory: 16 GB RAM Graphics: NVIDIA GTX 1060 or AMD Radeon RX 580 Storage: 70 GB available space on SSD Additional Notes: SSD recommended for faster loading times; HDR display supported.</p>
+            </div>
+            <div id="Reviews" class="tab-content">
               <p>This game is compatible with PC platforms.</p>
             </div>
+            <div id="FAQ" class="tab-content">
+              <p>TQ: Can I play this game on a laptop? A: Yes, as long as your laptop meets the minimum system requirements listed in the Compatibility tab. Q: Is an internet connection required? A: An internet connection is not required to play the game in single-player mode. However, updates and multiplayer modes will require an internet connection. Q: Are there any age restrictions for this game? A: Yes, the game is rated for players aged 12 and above due to fantasy violence and mild language. Q: Can I get a refund if the game doesn't work on my computer? A: Refunds are available within 14 days of purchase if the game has technical issues that cannot be resolved. Ensure your system meets the requirements listed on the Compatibility tab. Q: How do I install the game after purchasing? A: After purchase, you can download the game directly from your account. Detailed installation instructions are provided with your purchase confirmation.</p>
+            </div>
+          </div>
+          <div id="similar-games" class="tab-content">
+            <div class="small-game-card">
+              <div class="small-game-card-left">
+                <img src="assets/images/1rc0i57i.bmp" alt="" />
+              </div>
+              <div class="small-game-card-right">
+                <p>name</p>
+                <p>price</p>
+                <a href="/" class="button">buy now</a>
+              </div>
+            </div>
+            <p></p>
           </div>
 
           <div class="decorative-line"></div>
+          <div class="info-icons-wrapper">
+            <div class="info-icons">
+              <img src="assets/images/icons8/icons8-download-from-cloud-96 (1).png" alt="" />
+              <p>Download in Seconds</p>
+            </div>
+            <div class="info-icons">
+              <img src="assets/images/icons8/icons8-protect-96.png" alt="" />
+              <p>Secure Site</p>
+            </div>
+            <div class="info-icons">
+              <img src="assets/images/icons8/icons8-treasure-chest-96.png" alt="" />
+              <p>Wide Selection</p>
+            </div>
+            <div class="info-icons">
+              <img src="assets/images/icons8/icons8-headphones-96.png" alt="" />
+              <p>Trusted by Gamers</p>
+            </div>
+            <div class="info-icons">
+              <img src="assets/images/icons8/icons8-wallet-96.png" alt="" />
+              <p>Pay Your Way</p>
+            </div>
+          </div>
+
           <div class="decorative-line"></div>
         </div>
       </section>
