@@ -298,7 +298,6 @@ section {
   align-items: center;
   display: flex;
   flex-direction: column;
-  background-image: url(../../assets/images/hero-image-night-sky.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
