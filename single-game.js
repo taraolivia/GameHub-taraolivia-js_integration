@@ -6,7 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
+  fetchGameData(gameId);
+});
+
+function fetchGameData(gameId) {
   const gameURL = `https://api.noroff.dev/api/v1/gamehub/${gameId}`;
+
+  showSpinner(); // Show spinner before fetching data
+
   fetch(gameURL)
     .then((response) => {
       if (!response.ok) {
@@ -15,24 +22,102 @@ document.addEventListener("DOMContentLoaded", function () {
       return response.json();
     })
     .then((game) => {
-      // Set page title and content with fetched game details
-      document.title = `${game.title} | Game Hub`;
-      document.getElementById("game-title").textContent = game.title || "Title not available";
-      document.getElementById("game-subtitle").textContent = game.subtitle || "An exciting game experience.";
-      document.getElementById("game-image").src = game.image;
-      document.getElementById("game-image").alt = `${game.name} cover`;
-      document.getElementById("game-price").textContent = `€${game.price.toFixed(2)}`;
-      document.getElementById("game-description").textContent = game.description;
-      
-
-      // Dynamically updates breadcrumbs
-      updateBreadcrumbsForGame(game.title, game.genre);
+      populateGameDetails(game);
+      initializeThumbnailClicks();
+      hideSpinner(); // Hide spinner after fetching data
     })
     .catch((error) => {
       console.error("Failed to fetch game details:", error);
       document.getElementById("game-title").textContent = "Game details cannot be loaded at this time.";
+      hideSpinner(); // Hide spinner if loading fails
+    })
+    .finally(() => {
+      // After fetching data, show the entire content container
+      showContent();
     });
-});
+}
+
+function showSpinner() {
+  const spinner = document.querySelector(".spinner-container");
+  if (spinner) {
+    spinner.style.display = "flex";
+  } else {
+    console.error("Spinner container not found.");
+  }
+}
+
+function hideSpinner() {
+  const spinner = document.querySelector(".spinner-container");
+  if (spinner) {
+    spinner.style.display = "none";
+  } else {
+    console.error("Spinner container not found.");
+  }
+}
+
+function showContent() {
+  const contentContainer = document.querySelector(".hidden-until-loaded");
+  if (contentContainer) {
+    contentContainer.style.visibility = "visible"; // Make the content visible
+  } else {
+    console.error("Content container not found.");
+  }
+}
+
+function populateGameDetails(game) {
+  console.log("Populating game details with:", game);
+  const gameTitleElement = document.getElementById("game-title");
+  const gameImageElement = document.getElementById("game-image");
+  const thumbnailImageElement = document.getElementById("api-thumbnail");
+
+  if (gameTitleElement && gameImageElement && thumbnailImageElement) {
+    gameTitleElement.textContent = game.title || "Title not available";
+    gameImageElement.src = game.image;
+    gameImageElement.alt = `${game.title} cover`;
+
+    thumbnailImageElement.src = game.image;
+    thumbnailImageElement.alt = `${game.title} thumbnail`;
+
+    // If any essential elements are missing, exit the function
+    if (!gameTitleElement || !gameImageElement) {
+      console.error("One or more required elements not found.");
+      return;
+    }
+
+    // Setting details as elements are confirmed to exist
+    document.title = `${game.title} | Game Hub`;
+    gameTitleElement.textContent = game.title || "Title not available";
+    gameImageElement.src = game.image;
+    gameImageElement.alt = `${game.title} cover`;
+
+    // Continue with other elements, adding checks before accessing
+    updateDetails("game-subtitle", game.subtitle || "An exciting game experience.", false, game);
+    updateDetails("api-thumbnail", game.image, true, game); // true indicates it's an image
+    updateDetails("game-price", `€${game.price.toFixed(2)}`, false, game);
+    updateDetails("game-description", game.description, false, game);
+    updateDetails("game-age-rating", game.ageRating || "Age rating not available", false, game);
+    updateDetails("game-genre", game.genre || "Genre not available", false, game);
+    updateDetails("game-released", game.released || "Release date not available", false, game);
+
+    updateBreadcrumbsForGame(game.title, game.genre);
+  } else {
+    console.error("One or more required elements not found.");
+  }
+}
+
+function updateDetails(id, value, isImage = false, game) {
+  const element = document.getElementById(id);
+  if (element) {
+    if (isImage) {
+      element.src = value;
+      element.alt = `${game.title} main image`;
+    } else {
+      element.textContent = value;
+    }
+  } else {
+    console.error(`${id} element not found.`);
+  }
+}
 
 function updateBreadcrumbsForGame(title, genre) {
   const breadcrumbList = document.getElementById("breadcrumb-list");
@@ -53,14 +138,6 @@ function updateBreadcrumbsForGame(title, genre) {
     .join("");
 }
 
-function createThumbnail(container, src, alt, isActive = false) {
-  const img = document.createElement("img");
-  img.className = "thumbnail" + (isActive ? " active" : "");
-  img.src = src;
-  img.alt = alt;
-  container.appendChild(img);
-}
-
 function initializeThumbnailClicks() {
   const thumbnails = document.querySelectorAll(".thumbnail");
   const mainImage = document.getElementById("game-image");
@@ -75,5 +152,11 @@ function initializeThumbnailClicks() {
   });
 }
 
-
-
+function showGameContent() {
+  const gameContent = document.querySelector(".hidden-until-loaded");
+  if (gameContent) {
+    gameContent.style.display = "block";
+  } else {
+    console.error("Game content container not found.");
+  }
+}
