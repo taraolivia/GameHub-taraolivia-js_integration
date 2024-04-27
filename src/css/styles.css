@@ -3,9 +3,9 @@
 /* This is for trying to implement my root into an html file */
 
 body {
-  font-family: var(--theme-light-font-base);
-  color: var(--theme-light-color-text);
-  background: var(--theme-light-color-background);
+  font-family: var(--font-base);
+  color: var(--color-text);
+  background: var(--color-background);
   margin: 0px auto;
   box-sizing: border-box;
 }
@@ -22,7 +22,7 @@ p {
 }
 
 h1 {
-  font-family: var(--theme-light-font-heading-primary);
+  font-family: var(--font-heading-primary);
   font-size: 35px;
 }
 
@@ -34,12 +34,12 @@ h3 {
 }
 
 h2 {
-  font-family: var(--theme-light-font-heading-secondary);
+  font-family: var(--font-heading-secondary);
   padding-top: 40px;
 }
 
 h3 {
-  font-family: var(--theme-light-font-heading-secondary);
+  font-family: var(--font-heading-secondary);
   font-size: 25px;
 }
 
@@ -54,6 +54,163 @@ a {
 section {
   padding-bottom: 40px;
 }
+
+
+
+.review-card {
+  background: var(--color-accent);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 1000px;
+  min-width: 300px;
+  margin: 60px auto;
+}
+
+.review-icon {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 60px;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.review-name {
+  margin: 0;
+  color: white;
+   margin-top: 20px;
+}
+
+.review-stars {
+margin: auto;
+  color: white;
+}
+
+.review-text {
+  margin: auto;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+
+
+
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.question {
+  background-color: var(--color-secondary);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.answer {
+  display: none;
+  padding: 10px;
+}
+
+.answer.show {
+  display: block;
+}
+
+
+
+.original-price,
+.original-price-smaller {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 5px; 
+}
+
+.discounted-price,
+.discounted-price-smaller {
+  background-color: var(--color-accent);
+  padding: 10px;
+  width: fit-content;
+  font-weight: bold;
+  border-radius: 8px;
+  color: var(--color-text-lighter);
+}
+
+.original-price-smaller,
+.discounted-price-smaller,
+.small-game-card-right p{
+font-size: 20px;
+}
+
+
+
+
+
+.similar-games-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 1em;
+  column-gap: 1em;
+}
+
+.small-game-card {
+display: flex;
+background-color: var(--color-primary);
+border-radius: 5px;
+margin: 1em 0;
+align-items: top;
+justify-content: space-between;
+padding: 8px;
+min-width: 400px;
+}
+
+.small-game-card-left img {
+max-height: 100px;
+align-items: center;
+justify-content: center;
+display: flex;
+}
+
+.small-game-card-middle {
+padding: 0px 50px 0px 0px;
+}
+
+.small-game-card-right {
+display: flex;
+flex-direction: column;
+text-align: right;
+padding-top: 10px;
+}
+
+.small-game-card-right a{
+margin-bottom: 0;
+}
+
+
+.button--small {
+  padding: 0px 10px;
+  line-height: 40px;
+  height: 40px;
+  border-radius: 10px;
+  max-width: fit-content;
+}
+
+.button--small p {
+  font-size: 10px;
+}
+
+
+
+
 
 .button--add_to_cart {
   display: flex;
@@ -93,19 +250,19 @@ section {
 }
 
 .genre-button {
-  border: 2px solid var(--theme-light-color-accent);
+  border: 2px solid var(--color-accent);
   padding: 1em 2.2em;
   border-radius: 2em;
   background-color: transparent;
-  color: var(--theme-light-color-text);
-  font-family: var(--theme-light-font-heading-primary);
+  color: var(--color-text);
+  font-family: var(--font-heading-primary);
   cursor: pointer;
   margin: 1em 1em 0em 0em;
 }
 
 
 .genre-button.selected {
-  background-color: var(--theme-light-color-accent);
+  background-color: var(--color-accent);
   color: #ffffff;
 }
 
@@ -142,17 +299,16 @@ section {
   margin-right: 40px;
   cursor: pointer;
   font-size: 20px;
-  color: var(--theme-light-color-text);
-  font-family: var(--theme-light-font-heading-secondary);
+  color: var(--color-text);
+  font-family: var(--font-heading-secondary);
 }
 
 .tab-title.active {
-  border-bottom: 2px solid #d1008a;
+  border-bottom: 2px solid var(--color-pink);
 }
 
 .tab-content {
   display: none;
-    max-width: 600px;
 line-height: 1.5;
 }
 
@@ -187,8 +343,8 @@ line-height: 1.5;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(220, 209, 232); /* Adjust the background color as needed */
-  z-index: 1000; /* Ensure the loader is on top of other content */
+  background-color: rgba(220, 209, 232);
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -199,7 +355,7 @@ line-height: 1.5;
 }
 
 .page-loader {
-  max-width: 100px; /* Specify the size to keep it manageable */
+  max-width: 100px;
 }
 
 .hidden-until-loaded {
@@ -217,7 +373,7 @@ line-height: 1.5;
 }
 
 .social-media__icons-dark svg {
-  fill: var(--theme-light-color-accent);
+  fill: var(--color-accent);
 }
 
 .footer__social-media {
@@ -242,7 +398,7 @@ line-height: 1.5;
 }
 
 .navbar__primary {
-  background: var(--theme-light-color-secondary);
+  background: var(--color-secondary);
   position: fixed;
   z-index: 1000;
   top: 0;
@@ -295,17 +451,17 @@ line-height: 1.5;
 
 .navbar__links a,
 .navbar__hamburger-links a {
-  color: var(--theme-light-color-text);
+  color: var(--color-text);
   transition: 0.2 ease-in;
   animation: glow 1s ease-in-out infinite alternate;
-  font-family: var(--theme-light-font-heading-secondary);
+  font-family: var(--font-heading-secondary);
   font-size: 22px;
 }
 
 .navbar__links a:hover,
 .navbar__hamburger-links a:hover,
 .breadcrumbs a:hover {
-  text-shadow: 0 0 30px #e60073;
+  text-shadow: 0 0 30px var(--color-pink);
 }
 
 .active a {
@@ -334,7 +490,7 @@ line-height: 1.5;
 }
 
 #hamburger {
-  fill: var(--theme-light-color-text);
+  fill: var(--color-text);
 }
 
 .hero__background {
@@ -376,7 +532,7 @@ line-height: 1.5;
 }
 
 .header {
-  background: var(--theme-light-color-primary);
+  background: var(--color-primary);
   padding-bottom: 30px;
 }
 
@@ -441,7 +597,7 @@ line-height: 1.5;
   display: flex;
   justify-content: center;
   margin-top: auto;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .button--form {
@@ -470,7 +626,7 @@ line-height: 1.5;
 }
 
 .contact-card {
-  background-color: var(--theme-light-color-accent);
+  background-color: var(--color-accent);
   color: #fff;
   border-radius: 15px;
   display: flex;
@@ -530,10 +686,10 @@ textarea {
   margin-top: 10px;
   color: #fff;
   width: 100%;
-  font-family: var(--theme-light-font-base);
+  font-family: var(--font-base);
   font-size: 20px;
   word-break: break-all;
-  caret-color: #e60073;
+  caret-color: var(--color-pink);
   resize: none;
 }
 
@@ -545,7 +701,7 @@ textarea {
 }
 
 .form-text-label {
-  font-family: var(--theme-light-font-base);
+  font-family: var(--font-base);
   font-size: 22px;
   padding-bottom: 10px;
 }
@@ -556,8 +712,8 @@ textarea {
 
 .blog-carousel,
 .footer {
-  background-color: var(--theme-light-color-accent);
-  color: var(--theme-light-color-text-lighter);
+  background-color: var(--color-accent);
+  color: var(--color-text-lighter);
 }
 
 .decorative-line {
@@ -596,7 +752,7 @@ textarea {
 }
 
 .background-primary {
-  background: var(--theme-light-color-primary);
+  background: var(--color-primary);
 }
 
 .trending-games-wrap {
@@ -653,7 +809,7 @@ a {
   gap: 10px;
   text-align: center;
   padding: 20px 10px;
-  color: var(--theme-light-color-text);
+  color: var(--color-text);
 }
 
 .game-image {
@@ -668,7 +824,7 @@ a {
 
 .game-card-price {
   font-size: 20px;
-  font-family: var(--theme-light-font-base);
+  font-family: var(--font-base);
 }
 
 .testimonials-wrap {
@@ -762,7 +918,7 @@ a {
 
 .blog-post-title {
   font-size: 22px;
-  color: var(--theme-light-color-text);
+  color: var(--color-text);
   display: flex;
   margin-top: 15px;
 }
@@ -782,7 +938,7 @@ a {
   padding-top: 130px;
   padding-bottom: 25px;
   margin-bottom: 0px;
-  background: var(--theme-light-color-primary);
+  background: var(--color-primary);
 }
 
 .breadcrumbs__list {
@@ -799,13 +955,13 @@ a {
 
 .breadcrumbs__item {
   font-size: 20px;
-  color: var(--theme-light-color-text);
+  color: var(--color-text);
 }
 
 .breadcrumbs__list li:not(:first-child)::before {
   content: " > ";
   padding: 0 5px;
-  color: var(--theme-light-color-text);
+  color: var(--color-text);
   font-size: 22px;
 }
 
@@ -842,7 +998,7 @@ a {
 }
 
 .game-brag {
-  background-color: var(--theme-light-color-secondary);
+  background-color: var(--color-secondary);
   display: flex;
   border-radius: 10px;
   margin-top: 5%;
@@ -850,7 +1006,7 @@ a {
 }
 
 .game-brag-text {
-  color: var(--theme-light-color-text);
+  color: var(--color-text);
   padding-left: 30px;
   align-self: center;
   font-size: 18px;
@@ -903,7 +1059,7 @@ article {
 }
 
 .aside {
-  background: var(--theme-light-color-primary);
+  background: var(--color-primary);
   padding: 40px;
 }
 
@@ -968,7 +1124,7 @@ aside img {
   display: flex;
   max-width: 100%;
   padding: 20px;
-  background: var(--theme-light-color-secondary);
+  background: var(--color-secondary);
 }
 
 .aside-secondary img {
@@ -1012,7 +1168,7 @@ aside img {
 
 .blog-page-card {
   display: flex;
-  background: var(--theme-light-color-primary);
+  background: var(--color-primary);
   border-radius: 18px;
   margin: 30px 0px;
   padding: 8px;
@@ -1029,7 +1185,7 @@ aside img {
 .blog-page-title {
   text-align: left;
   padding: 20px 25px;
-  color: var(--theme-light-color-text);
+  color: var(--color-text);
 }
 
 .blog-page-title:hover {
@@ -1165,7 +1321,7 @@ aside img {
   }
 
   #alternate-logo {
-    fill: var(--theme-light-color-text);
+    fill: var(--color-text);
   }
 
   .navbar__logo {
@@ -1256,7 +1412,7 @@ aside img {
 
   .about-card-title {
     text-align: center;
-    color: var(--theme-light-color-text);
+    color: var(--color-text);
   }
 
   .about-card-paragraph {
@@ -1420,7 +1576,7 @@ aside img {
   .about-card-title {
     text-align: center;
     padding: 20px 20px;
-    color: var(--theme-light-color-text);
+    color: var(--color-text);
   }
 
   .about-card-paragraph {
@@ -1468,7 +1624,7 @@ aside img {
 
   .about-card-title {
     text-align: center;
-    color: var(--theme-light-color-text);
+    color: var(--color-text);
   }
 
   .about-card-paragraph {
@@ -1512,7 +1668,7 @@ aside img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--theme-light-color-secondary);
+    background-color: var(--color-secondary);
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -1536,7 +1692,7 @@ aside img {
     height: 100%;
     top: 0;
     right: 0;
-    background-color: var(--theme-light-color-secondary);
+    background-color: var(--color-secondary);
   }
 
   #navbar-toggle:checked + .navbar__hamburger-white {
@@ -1599,7 +1755,7 @@ aside img {
     display: flex;
     max-width: 100%;
     padding: 20px;
-    background: var(--theme-light-color-secondary);
+    background: var(--color-secondary);
   }
 
   .aside img {
@@ -1631,7 +1787,7 @@ aside img {
   height: 100%;
   top: 0;
   right: 0;
-  background-color: var(--theme-light-color-secondary);
+  background-color: var(--color-secondary);
 }
 
 #navbar-toggle:checked + .navbar__hamburger {
@@ -1653,7 +1809,7 @@ aside img {
   height: 100%;
   top: 0;
   right: 0;
-  background-color: var(--theme-light-color-secondary);
+  background-color: var(--color-secondary);
 }
 
 #navbar-toggle:checked + .navbar__hamburger-white {

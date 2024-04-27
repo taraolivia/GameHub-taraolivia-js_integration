@@ -15,7 +15,7 @@ function hideSpinner() {
   const spinner = document.querySelector(".spinner-container");
   if (spinner) {
     spinner.style.display = "none";
-    showGameContent(); // Show hidden game content
+    showGameContent(); 
   } else {
     console.error("Spinner container not found.");
   }
@@ -49,8 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll("a");
   links.forEach((link) => {
     link.addEventListener("click", function (event) {
-      // Optionally, only show loading indicator for links that do not have '#' (adjust based on actual requirements)
-      if (!link.href.includes("#")) {
+      // Exclude anchor links that navigate within the same page
+      if (!link.href.includes("#") && !link.href.endsWith(".html")) {
         showSpinner(); // Show spinner when a significant navigation is initiated
       }
     });

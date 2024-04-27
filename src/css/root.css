@@ -5,32 +5,34 @@
 }
 
 :root {
-  /* Light Theme Primary Color Scheme */
-  --theme-light-color-primary: #e7deef;
-  --theme-light-color-secondary: #dcd1e8;
-  --theme-light-color-accent: #8c74ad;
-  --theme-light-color-background: #f1ebf5;
-  --theme-light-color-text: #563182;
-  --theme-light-color-text-secondary: #000000;
-  --theme-light-color-text-lighter: #fff;
+/* Light Mode CSS */
+  --color-primary: #e7deef;
+  --color-secondary: #dcd1e8;
+  --color-accent: #8c74ad;
+  --color-background: #f1ebf5;
+  --color-text: #563182;
+  --color-text-secondary: #000000;
+  --color-text-lighter: #fff;
+  --color-pink: #D1008A;
+
 
   /* Light Theme Typography */
   /* Font Families */
-  --theme-light-font-logo: "Audiowide";
-  --theme-light-font-heading-primary: "Audiowide";
-  --theme-light-font-slogan: "Audiowide";
-  --theme-light-font-heading-secondary: "Orbitron";
-  --theme-light-font-button: "Press Start 2P";
-  --theme-light-font-base: "Roboto Condensed";
+  --font-logo: "Audiowide";
+  --font-heading-primary: "Audiowide";
+  --font-slogan: "Audiowide";
+  --font-heading-secondary: "Orbitron";
+  --font-button: "Press Start 2P";
+  --font-base: "Roboto Condensed";
 
   /* Font Sizes */
-  --theme-light-font-size-logo: 25px;
-  --theme-light-font-size-heading-primary: 20px;
-  --theme-light-font-size-slogan: 20px;
-  --theme-light-font-size-heading-secondary: 18px;
-  --theme-light-font-size-button: 22px;
-  --theme-light-font-size-base: 18px;
-  --theme-light-font-weight: 400;
+  --font-size-logo: 25px;
+  --font-size-heading-primary: 20px;
+  --font-size-slogan: 20px;
+  --font-size-heading-secondary: 18px;
+  --font-size-button: 22px;
+  --font-size-base: 18px;
+  --font-weight: 400;
 
   /* Primary Button Styles */
   --button-primary-height: 70px;
@@ -45,10 +47,11 @@
     90deg,
     #d1008a 0%,
     #563182 100%
+
   ); /* Background color */
-  --button-font-size: var(--theme-light-font-size-button); /* Font size */
-  --button-border-radius: 0px; /* Border radius */
-  --button-transition: background-color 1s, color 1s; /* Transition for hover effect */
+  --button-font-size: var(--font-size-button); 
+  --button-border-radius: 0px; 
+  --button-transition: background-color 1s, color 1s; 
   --button-border: 0; /* Border */
   --button-hover-box-shadow: 0 0 30px #e60073;
   --button-hover-transition: all 0.2s ease-in-out;
@@ -60,4 +63,16 @@
   --central-align: center;
 
   --spacing-inner: 40px;
+}
+
+/* Dark Mode CSS */
+.dark {
+  --color-primary: #28184F;
+  --color-secondary: #DCD1E8;
+  --color-accent: #8C74AD;
+  --color-background: #211142;
+  --color-text: #FFFFFF;
+  --color-text-secondary: #FFFFFF;
+  --color-text-lighter: #FFFFFF;
+  --color-pink: #D1008A;
 }

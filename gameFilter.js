@@ -34,11 +34,34 @@ function generateGenreButtons(games) {
     }); // Add event listener for filtering
     buttonsContainer.appendChild(button);
   });
+
+  // Create the 'On Sale' button
+  const onSaleButton = document.createElement("button");
+  onSaleButton.className = "genre-button";
+  onSaleButton.textContent = "On Sale";
+  onSaleButton.dataset.genre = "on-sale"; // Set the data-genre attribute
+  onSaleButton.addEventListener("click", () => {
+    filterProduct("on-sale");
+    // Remove the "selected" class from all buttons
+    buttonsContainer.querySelectorAll(".genre-button").forEach((button) => button.classList.remove("selected"));
+    // Add the "selected" class to the 'On Sale' button
+    onSaleButton.classList.add("selected");
+  });
+  buttonsContainer.appendChild(onSaleButton); // Add 'On Sale' button
 }
 
 function filterProduct(genre) {
   const games = JSON.parse(sessionStorage.getItem("games")); // Make sure this is being set somewhere after fetching games
-  const filteredGames = genre === "all" ? games : games.filter((game) => game.genre === genre);
+  let filteredGames;
+
+  if (genre === "all") {
+    filteredGames = games;
+  } else if (genre === "on-sale") {
+    filteredGames = games.filter((game) => game.onSale); // Filter games that are on sale
+  } else {
+    filteredGames = games.filter((game) => game.genre === genre);
+  }
+
   updateGamesDisplay(filteredGames, document.getElementById("all-games-container"));
 
   // Remove the "selected" class from all buttons
@@ -47,4 +70,3 @@ function filterProduct(genre) {
   // Add the "selected" class to the clicked button
   document.querySelector(`.genre-button[data-genre="${genre}"]`).classList.add("selected");
 }
-
