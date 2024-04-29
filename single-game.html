@@ -21,6 +21,17 @@
       rel="stylesheet"
     />
     <script defer src="javascript.js"></script>
+    <script defer src="single-game.js"></script>
+    <script defer src="breadcrumbs.js"></script>
+    <script defer src="game-image-gallery.js"></script>
+    <script defer src="loading-indicator.js"></script>
+    <script defer src="game-info-tabs.js"></script>
+    <script defer src="faq.js"></script>
+    <script defer src="reviewCard.js"></script>
+    <script defer src="reviewsAnchorTag.js"></script>
+    <script defer src="themeToggle.js"></script>
+    <script defer src="gameFilter.js"></script>
+
     <title>Single Game | Game Hub</title>
   </head>
 
@@ -120,23 +131,30 @@
     </nav>
 
     <!-- 2. Breadcrumbs -->
-      <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <div class="navbar__content">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <div class="navbar__content">
         <ol id="breadcrumb-list" class="breadcrumbs__list">
           <!-- Dynamic breadcrumbs will be inserted here -->
         </ol>
         <div class="toggle-container">
           <input type="checkbox" id="themeToggle" class="toggle-checkbox" />
           <label for="themeToggle" class="toggle-label">
-              <div class="toggle-handle">
-                  <img src="assets/images/icons8/icons8-night-96.png" alt="Dark Mode Icon" class="dark-mode-icon">
-                  <img src="assets/images/icons8/icons8-sun-96 (1).png" alt="Light Mode Icon" class="light-mode-icon">
-              </div>
+            <div class="toggle-handle">
+              <img
+                src="assets/images/icons8/icons8-moon-96.png"
+                alt="Dark Mode Icon"
+                class="dark-mode-icon"
+              />
+              <img
+                src="assets/images/icons8/icons8-sun-96 (1).png"
+                alt="Light Mode Icon"
+                class="light-mode-icon"
+              />
+            </div>
           </label>
+        </div>
       </div>
-      
-      </div>
-      </nav>
+    </nav>
 
     <!-- 3. Main Content -->
     <main>
@@ -450,15 +468,7 @@
       </div>
     </main>
 
-    <script src="single-game.js"></script>
-    <script src="breadcrumbs.js"></script>
-    <script src="game-image-gallery.js"></script>
-    <script src="loading-indicator.js"></script>
-    <script src="game-info-tabs.js"></script>
-    <script src="faq.js"></script>
-    <script src="reviewCard.js"></script>
-    <script src="reviewsAnchorTag.js"></script>
-    <script src="themeToggle.js"></script>
+
 
     <!-- 4. Blog Carousel -->
     <section class="blog-carousel">

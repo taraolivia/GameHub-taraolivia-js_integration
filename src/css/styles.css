@@ -8,8 +8,7 @@ body {
   background: var(--color-background);
   margin: 0px auto;
   box-sizing: border-box;
-  transition: background-color 1.5s ease, color 4s ease;
-
+  transition: background-color 1s ease, color 2s ease;
 }
 
 main {
@@ -63,50 +62,45 @@ section {
 .toggle-handle {
   position: relative;
   display: inline-block;
-  width: 80px;  /* Width of the handle */
+  width: 80px;
   height: 35px;
   border-radius: 20px;
   cursor: pointer;
-  overflow: visible; /* Allows icons to slightly overflow */
+  overflow: visible;
 }
 
 .dark-mode-icon, .light-mode-icon {
   position: absolute;
-  width: 60px;
-  height: 60px;
-  transition: transform 1s ease, opacity 0.6s ease 0.1s; /* Delay opacity transition */
+  transition: transform 1s ease, opacity 0.6s ease 0.1s; 
 }
 
 .dark-mode-icon {
-  top: -5px; /* Vertically position the moon icon */
-  left: 30px; /* Target position inside the toggle on the right */
-  transform: translateX(-100%); /* Start from the left outside the view */
-  opacity: 0; /* Initially hidden */
+  top: -6px;
+  left: 37px;
+  transform: translateX(-100%);
+  opacity: 0; 
+  width: 48px;
+  height: 48px;
 }
 
 .light-mode-icon {
-  top: -15px; /* Vertically position the sun icon */
-  left: -14px; /* Start position on the left */
-  width: 65px;  /* Slightly larger as per your design */
-  height: 65px;
-  transform: translateX(0); /* Starts in place */
-  opacity: 1; /* Initially visible */
+  top: -20px;
+  left: -20px;
+  width: 75px;  
+  height: 75px;
+  transform: translateX(0); 
+  opacity: 1;
 }
 
 .toggle-checkbox:checked + .toggle-label .dark-mode-icon {
-  transform: translateX(0); /* Slide into view from the left */
-  opacity: 1; /* Become visible */
+  transform: translateX(0); 
+  opacity: 1; 
 }
 
 .toggle-checkbox:checked + .toggle-label .light-mode-icon {
-  transform: translateX(100%); /* Slide to the right and fade out */
+  transform: translateX(100%);
   opacity: 0;
 }
-
-
-
-
-
 
 /* Hide the checkbox visually */
 .toggle-checkbox {
@@ -126,13 +120,10 @@ section {
   background-color: #AD9CC5;
 }
 
-
-
-
-
-
-
-
+.no-transition,
+.no-transition * {
+  transition: none !important;
+}
 
 
 
@@ -211,7 +202,7 @@ margin: auto;
 .original-price,
 .original-price-smaller {
     text-decoration: line-through;
-    color: #888;
+    color: var(--color-text-purple);
     margin-right: 5px; 
 }
 
@@ -324,11 +315,10 @@ align-self: flex-start;
   padding: 0px 12%;
   line-height: 60px;
   height: 60px;
-  border-radius: 15px;
-  max-width: 700px;
-  margin-bottom: 0;
+  border-radius: 14px;
   margin-left: 0;
-  margin-top: 10px;
+  margin-top: auto;
+  margin-bottom: 0;
 }
 
 .button--add_to_cart:hover {
@@ -422,23 +412,18 @@ line-height: 1.5;
 .spinner-container {
   display: flex;
   position: relative;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
+  height: 100%;  
+  width: 100%;   
+  align-items: center; 
+  justify-content: center; 
   z-index: 100;
 }
 
 .spinner {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 100;
-
+  width: 200px; 
+  height: 200px; 
 }
+
 
 #loading-indicator {
   position: fixed;
@@ -446,7 +431,7 @@ line-height: 1.5;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(220, 209, 232);
+  background-color: var(--color-background);
   z-index: 1000;
   display: flex;
   justify-content: center;
@@ -506,6 +491,10 @@ line-height: 1.5;
   z-index: 1000;
   top: 0;
   left: 0;
+}
+
+.hero {
+  padding-bottom: 0px; 
 }
 
 .navbar__hero {
@@ -605,9 +594,9 @@ line-height: 1.5;
   background-size: cover;
   background-position: bottom;
   margin: 0%;
-  height: 600px;
   background-color: #09090c;
   color: #fff;
+  height: 550px;
 }
 
 .hero__title {
@@ -616,6 +605,7 @@ line-height: 1.5;
   line-height: 105px;
   margin-bottom: -0.5%;
   max-width: 100%;
+  padding-top: 1em;
 }
 
 .hero__subtitle {
@@ -631,7 +621,6 @@ line-height: 1.5;
   line-height: 50px;
   margin: auto;
   text-align: center;
-  margin-top: 100px;
 }
 
 .header {
@@ -684,6 +673,10 @@ line-height: 1.5;
   padding: 0 50px;
   border-radius: 15px;
   margin-top: 40px;
+}
+
+.button--start {
+  margin: -1em auto 2em auto;
 }
 
 .button--blog {
@@ -898,7 +891,7 @@ a {
   flex-direction: column;
   flex-basis: 100%;
   position: relative;
-  background: #dcd1e8;
+  background: var(--color-secondary);
   border-radius: 5px;
   max-width: 260px;
   padding: 2px;
@@ -1101,8 +1094,8 @@ a {
 }
 
 .game-page-primary {
-  background-color: var(--color-lighter-dark-mode);
-  padding: 20px;
+  background-color: var(--color-primary);
+  padding: 30px;
   border-radius: 15px;
   justify-content: flex-start; 
   row-gap: 10px;
@@ -1132,10 +1125,13 @@ a {
 
 #star {
   width: 40px;
+  padding-left: 5px;
+  padding-top: 5px;
 }
 
 #controller {
   height: 40px;
+  padding-left: 5px;
 }
 
 .info-icons-wrapper {
@@ -1319,6 +1315,7 @@ aside img {
 .blog-page-image {
   flex: 3;
   height: auto;
+  max-width: 500px;
 }
 
 .about-us-wrap {
@@ -1366,11 +1363,9 @@ aside img {
 
 .game-of-the-month {
   background-color: #020204;
-  padding-top: 50px;
   width: 100vw;
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
 }
 
 .game-of-the-month h2 {
