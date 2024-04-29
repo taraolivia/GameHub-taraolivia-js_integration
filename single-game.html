@@ -30,7 +30,7 @@
     <nav class="navbar navbar__primary" role="navigation">
       <div class="navbar__content">
         <a href="index.html" class="navbar__logo">
-          <svg aria-labelledby="titleId" title="Game Hub Logo" role="img" width="233" height="54" viewBox="0 0 233 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg id="logo" aria-labelledby="titleId" title="Game Hub Logo" role="img" width="233" height="54" viewBox="0 0 233 54" fill="none" xmlns="http://www.w3.org/2000/svg">
             <title id="titleId">Game Hub Logo</title>
 
             <path
@@ -73,6 +73,17 @@
       <ol id="breadcrumb-list" class="breadcrumbs__list">
         <!-- Dynamic breadcrumbs will be inserted here -->
       </ol>
+
+<div class="toggle-container">
+  <input type="checkbox" id="themeToggle" class="toggle-checkbox">
+  <label for="themeToggle" class="toggle-label">
+    <div class="toggle-handle"></div>
+  </label>
+</div>
+
+
+
+
     </nav>
 
     <!-- 3. Main Content -->
@@ -106,7 +117,6 @@
                 <p></p>
               </div>
 
-              <!-- Thumbnails for navigation -->
               <div class="row">
                 <div class="column">
                   <img class="demo cursor" id="api-thumbnail" src="placeholder.jpg" style="width: 100%" onclick="currentSlide(1)" alt="Dynamic Image from API" />
@@ -125,17 +135,20 @@
 
             <div class="game-page-primary">
               <h1 id="game-title" class="game-page-text text-left"></h1>
-<a href="#Reviews" class="game-brag" id="reviews-link">
-  <img id="star" src="assets/images/icons8/icons8-star-64.png" alt="icon of a yellow star" />
-  <p class="game-brag-text">4.9 - 528 reviews</p>
-</a>
-
- <button id="themeToggle">Toggle Dark Mode</button>
-
-
-
-
               <h2 id="game-subtitle" class="game-page-text"></h2>
+
+              <a href="#Reviews" class="game-brag" id="reviews-link">
+                <img id="star" src="assets/images/icons8/icons8-star-64.png" alt="icon of a yellow star" />
+                <p class="game-brag-text">4.9 - 528 reviews</p>
+              </a>
+
+              <a href="games.html">
+                <div class="game-brag">
+                  <img id="controller" src="assets/images/icons8/icons8-game-controller-96.png" alt="icon of a videogame controller with pink background" />
+                  <p class="game-brag-text">Top 10 in games right now</p>
+                </div>
+              </a>
+
 
               <p id="game-price" class="game-page-text"></p>
 
@@ -157,13 +170,6 @@
                   </g>
                 </svg>
               </button>
-
-              <a href="games.html">
-                <div class="game-brag">
-                  <img id="controller" src="assets/images/icons8/icons8-game-controller-96.png" alt="icon of a videogame controller with pink background" />
-                  <p class="game-brag-text">Top 10 in games right now</p>
-                </div>
-              </a>
             </div>
           </div>
 
@@ -239,34 +245,31 @@
           <div id="similar-games" class="tab-content">
             <div id="similar-games-container" class="similar-games-container"></div>
           </div>
-
-          <div class="decorative-line"></div>
-          <div class="info-icons-wrapper">
-            <div class="info-icons">
-              <img src="assets/images/icons8/icons8-download-from-cloud-96 (1).png" alt="" />
-              <p>Download in Seconds</p>
-            </div>
-            <div class="info-icons">
-              <img src="assets/images/icons8/icons8-protect-96.png" alt="" />
-              <p>Secure Site</p>
-            </div>
-            <div class="info-icons">
-              <img src="assets/images/icons8/icons8-treasure-chest-96.png" alt="" />
-              <p>Wide Selection</p>
-            </div>
-            <div class="info-icons">
-              <img src="assets/images/icons8/icons8-headphones-96.png" alt="" />
-              <p>Trusted by Gamers</p>
-            </div>
-            <div class="info-icons">
-              <img src="assets/images/icons8/icons8-wallet-96.png" alt="" />
-              <p>Pay Your Way</p>
-            </div>
-          </div>
-
-          <div class="decorative-line"></div>
         </div>
       </section>
+      <div class="decorative-line"></div>
+      <div class="info-icons-wrapper">
+        <div class="info-icons">
+          <img src="assets/images/icons8/icons8-download-from-cloud-96 (1).png" alt="" />
+          <p>Download in Seconds</p>
+        </div>
+        <div class="info-icons">
+          <img src="assets/images/icons8/icons8-protect-96.png" alt="" />
+          <p>Secure Site</p>
+        </div>
+        <div class="info-icons">
+          <img src="assets/images/icons8/icons8-treasure-chest-96.png" alt="" />
+          <p>Wide Selection</p>
+        </div>
+        <div class="info-icons">
+          <img src="assets/images/icons8/icons8-headphones-96.png" alt="" />
+          <p>Trusted by Gamers</p>
+        </div>
+        <div class="info-icons">
+          <img src="assets/images/icons8/icons8-wallet-96.png" alt="" />
+          <p>Pay Your Way</p>
+        </div>
+      </div>
     </main>
 
     <script src="single-game.js"></script>

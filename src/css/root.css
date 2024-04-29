@@ -9,11 +9,14 @@
   --color-primary: #e7deef;
   --color-secondary: #dcd1e8;
   --color-accent: #8c74ad;
+  --color-nav: #dcd1e8;
   --color-background: #f1ebf5;
+  --color-lighter-dark-mode: #f1ebf5;
   --color-text: #563182;
   --color-text-secondary: #000000;
   --color-text-lighter: #fff;
   --color-pink: #D1008A;
+  --color-text-purple: #563182;
 
 
   /* Light Theme Typography */
@@ -65,14 +68,26 @@
   --spacing-inner: 40px;
 }
 
+
+
 /* Dark Mode CSS */
 .dark {
   --color-primary: #28184F;
-  --color-secondary: #DCD1E8;
+  --color-secondary: #846BA0;
   --color-accent: #8C74AD;
+ --color-nav: #402A69;
   --color-background: #211142;
+  --color-lighter-dark-mode: #28184F;
   --color-text: #FFFFFF;
   --color-text-secondary: #FFFFFF;
   --color-text-lighter: #FFFFFF;
   --color-pink: #D1008A;
+}
+
+.dark #logo path{
+  fill: white;
+}
+
+.dark #alternate-logo path{
+  fill: var(--color-text);
 }
