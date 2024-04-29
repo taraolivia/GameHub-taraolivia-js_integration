@@ -8,6 +8,8 @@ body {
   background: var(--color-background);
   margin: 0px auto;
   box-sizing: border-box;
+  transition: background-color 1.5s ease, color 4s ease;
+
 }
 
 main {
@@ -56,37 +58,55 @@ section {
 }
 
 
-/* Toggle handle (slider) */
+
+
 .toggle-handle {
   position: relative;
   display: inline-block;
-  width: 80px; /* Width of the handle */
-  height: 35px; 
+  width: 80px;  /* Width of the handle */
+  height: 35px;
   border-radius: 20px;
   cursor: pointer;
-  transition: background-color 2s, left 2s; /* Transition effects for smooth color change and sliding animation */
-  overflow: hidden; /* Ensure the handle clips the icon */
+  overflow: visible; /* Allows icons to slightly overflow */
 }
 
-/* Custom icons */
-.dark-mode-icon,
-.light-mode-icon {
-  width: 35px; 
-  height: 35px; 
+.dark-mode-icon, .light-mode-icon {
   position: absolute;
-  top: 0; 
-  left: 2px; 
-  transition: left 2s cubic-bezier(0.42, 0, 0.58, 1); /* Adjust the transition duration and timing function for smoother sliding */
+  width: 60px;
+  height: 60px;
+  transition: transform 1s ease, opacity 0.6s ease 0.1s; /* Delay opacity transition */
 }
 
-/* Adjust icon position based on checkbox state */
+.dark-mode-icon {
+  top: -5px; /* Vertically position the moon icon */
+  left: 30px; /* Target position inside the toggle on the right */
+  transform: translateX(-100%); /* Start from the left outside the view */
+  opacity: 0; /* Initially hidden */
+}
+
+.light-mode-icon {
+  top: -15px; /* Vertically position the sun icon */
+  left: -14px; /* Start position on the left */
+  width: 65px;  /* Slightly larger as per your design */
+  height: 65px;
+  transform: translateX(0); /* Starts in place */
+  opacity: 1; /* Initially visible */
+}
+
 .toggle-checkbox:checked + .toggle-label .dark-mode-icon {
-  left: 50px; 
+  transform: translateX(0); /* Slide into view from the left */
+  opacity: 1; /* Become visible */
 }
 
 .toggle-checkbox:checked + .toggle-label .light-mode-icon {
-  left: 0; 
+  transform: translateX(100%); /* Slide to the right and fade out */
+  opacity: 0;
 }
+
+
+
+
+
 
 /* Hide the checkbox visually */
 .toggle-checkbox {
@@ -95,6 +115,17 @@ section {
   width: 0;
   height: 0;
 }
+
+/* Set background color for dark mode */
+.toggle-checkbox:checked + .toggle-label .toggle-handle {
+  background-color: #402A69;
+}
+
+/* Set background color for light mode */
+.toggle-checkbox + .toggle-label .toggle-handle {
+  background-color: #AD9CC5;
+}
+
 
 
 
@@ -1011,6 +1042,8 @@ a {
   padding-bottom: 25px;
   margin-bottom: 0px;
   background: var(--color-primary);
+  display: flex;
+  flex-direction: row;
 }
 
 .breadcrumbs__list {
