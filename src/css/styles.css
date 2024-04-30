@@ -56,6 +56,120 @@ section {
   padding-bottom: 40px;
 }
 
+.cart-icon {
+  background: transparent;
+  border: none;
+  fill: white;
+}
+
+#cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: none;
+}
+
+#cart-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: var(--color-secondary);
+  padding: 5px;
+  border-radius: 5px;
+  width: 50%;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.cart-item-count {
+  color: var(--color-text);
+  font-size: 18px;
+}
+
+
+
+
+
+#cart-container h2 {
+  margin-top: 0;
+}
+
+#cart-list {
+  list-style: none;
+  padding: 10px;
+}
+
+#cart-list li {
+  margin-bottom: 10px;
+}
+
+#cart-total {
+  font-weight: bold;
+}
+
+.close-cart-btn {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 60px;
+  cursor: pointer;
+  color: #fff;
+}
+
+#go-to-checkout-btn {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#go-to-checkout-btn:hover {
+  background-color: #45a049;
+}
+
+
+
+#product-container {
+width: 100%;
+}
+
+
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 2px solid #ccc;
+}
+
+
+
+.cart-item img {
+  width: 50px;
+  height: auto;
+}
+
+.cart-item-title,
+.cart-item-price {
+  margin: 0;
+}
+
+#cart-overlay.visible {
+  display: block;
+}
+
+
 
 
 
@@ -209,7 +323,7 @@ margin: auto;
 .discounted-price,
 .discounted-price-smaller {
   background-color: var(--color-accent);
-  padding: 10px;
+  padding: 3px 5px;
   width: fit-content;
   font-weight: bold;
   border-radius: 8px;
@@ -1393,15 +1507,23 @@ aside img {
   justify-content: space-between;
 }
 
-.navbar__logo {
+
+.navbar__hamburger-links,
+.navbar__hamburger {
   order: 1;
 }
-.navbar__hamburger {
+
+.navbar__logo {
   order: 2;
 }
-.navbar__links,
-.navbar__hamburger-links {
+
+
+.navbar__links {
   order: 3;
+}
+
+.cart-icon {
+  order: 4;
 }
 
 @media screen and (max-width: 650px) {
@@ -1432,7 +1554,7 @@ aside img {
     padding: 0%;
     margin: auto;
     justify-content: center;
-    padding-left: 75px;
+    padding-left: 0px;
   }
 
   #alternate-logo {
@@ -1445,14 +1567,14 @@ aside img {
 
   .navbar__hamburger,
   .navbar__hamburger-white {
-    order: 3;
+    order: 1;
     display: block;
   }
 
   #hamburger,
   #hamburger-white {
-    -webkit-transform: scaleX(-1, 1);
-    transform: scaleX(-1);
+    -webkit-transform: scaleX(1, 1);
+    transform: scaleX(1);
   }
 
   .navbar__links {

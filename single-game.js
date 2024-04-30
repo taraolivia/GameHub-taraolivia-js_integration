@@ -70,6 +70,9 @@ function populateGameDetails(game) {
   const gameImageElement = document.getElementById("game-image");
   const thumbnailImageElement = document.getElementById("api-thumbnail");
 
+  
+  
+
   if (gameTitleElement && gameImageElement && thumbnailImageElement) {
     gameTitleElement.textContent = game.title || "Title not available";
     gameImageElement.src = game.image;
@@ -77,6 +80,8 @@ function populateGameDetails(game) {
 
     thumbnailImageElement.src = game.image;
     thumbnailImageElement.alt = `${game.title} thumbnail`;
+
+    
 
     // If any essential elements are missing, exit the function
     if (!gameTitleElement || !gameImageElement) {
@@ -94,7 +99,7 @@ function populateGameDetails(game) {
 
     // Continue with other elements, adding checks before accessing
     updateDetails("game-subtitle", game.subtitle || "An exciting game experience.", false, game);
-    updateDetails("api-thumbnail", game.image, true, game); // true indicates it's an image
+    updateDetails("api-thumbnail", game.image, true, game); 
     updateDetails("game-description", game.description, false, game);
     updateDetails("game-age-rating", game.ageRating || "Age rating not available", false, game);
     updateDetails("game-genre", game.genre || "Genre not available", false, game);
