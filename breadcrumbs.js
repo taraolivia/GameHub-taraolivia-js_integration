@@ -1,14 +1,14 @@
 const breadcrumbConfig = {
-  "/": ["Home"], // Assuming 'index.html' is equivalent to the root '/'
-  "/about-us.html": ["Home", "About Us"], // Assuming pages are accessed with '.html' extension
+  "/": ["Home"],
+  "/about-us.html": ["Home", "About Us"],
   "/games.html": ["Home", "Games"],
   "/single-game.html": ["Home", "Games"],
   "/blog.html": ["Home", "Blog"],
-  "/blog/blog-post-1.html": ["Home", "Blog", "Blog post 1"],
-  "/blog/blog-post-2.html": ["Home", "Blog", "Blog post 2"],
-  "/blog/blog-post-3.html": ["Home", "Blog", "Blog post 3"],
+  "/blog-post-1.html": ["Home", "Blog", "Blog post 1"],
+  "/blog-post-2.html": ["Home", "Blog", "Blog post 2"],
+  "/blog-post-3.html": ["Home", "Blog", "Blog post 3"],
   "/contact.html": ["Home", "Contact"],
-  "/testimonies.html": ["Home", "Testimonies"],
+  "/testimonials.html": ["Home", "Testimonials"],
   "/terms-and-conditions.html": ["Home", "Terms and Conditions"],
 };
 
