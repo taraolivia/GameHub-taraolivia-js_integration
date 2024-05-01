@@ -9,6 +9,7 @@ const breadcrumbConfig = {
   "/blog-post-3.html": ["Home", "Blog", "Blog post 3"],
   "/contact.html": ["Home", "Contact"],
   "/testimonials.html": ["Home", "Testimonials"],
+  "/checkout.html": ["Home", "Checkout"],
   "/terms-and-conditions.html": ["Home", "Terms and Conditions"],
 };
 

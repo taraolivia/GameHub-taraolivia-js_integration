@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Curl up with Game Hub's cozy winter games. From eco-adventures to mystical puzzles, find heartwarming titles for chilly nights."
+      content="Checkout"
     />
     <link
       rel="icon"
@@ -13,13 +13,13 @@
       href="/assets/images/icons8/icons8-game-controller-96.png"
     />
     <link rel="stylesheet" href="src/css/styles.css" />
+    <link rel="stylesheet" href="game-image-gallery.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron&family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
-    <title>QUIZ: What type of gamer are you? | Game Hub</title>
     <script defer src="javascript.js"></script>
     <script defer src="single-game.js"></script>
     <script defer src="breadcrumbs.js"></script>
@@ -32,6 +32,7 @@
     <script defer src="themeToggle.js"></script>
     <script defer src="cart.js"></script>
 
+    <title>Checkout | Game Hub</title>
   </head>
 
   <body>
@@ -49,6 +50,7 @@
         />
       </div>
     </div>
+
     <!-- 1. Navigation Bar -->
     <nav class="navbar navbar__primary" role="navigation">
       <div class="navbar__content">
@@ -126,28 +128,39 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <button id="cart-icon" class="cart-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="45" viewBox="0 0 50 45" fill="">
-            <path d="M2.63455 0.0152132C1.81515 0.174289 1.08138 0.721805 0.59468 1.53731C0.107977 2.35282 -0.0917951 3.36952 0.0393099 4.36374C0.170415 5.35797 0.621658 6.24828 1.29377 6.83882C1.96588 7.42936 2.80381 7.67175 3.62322 7.51268H12.8919L13.4481 9.38704L15.9815 18.7589L18.515 28.1307C18.7621 29.1054 19.8126 30.0051 20.6159 30.0051H42.2429C43.108 30.0051 44.0967 29.1054 44.3438 28.1307L49.3489 9.38704C49.5961 8.41237 49.2254 7.51268 48.3603 7.51268H20.9248L18.5768 2.1145C18.3267 1.49491 17.9405 0.971069 17.4608 0.600672C16.9811 0.230274 16.4264 0.0276854 15.8579 0.0152132L3.49963 0.0152132C3.31464 -0.00507108 3.12851 -0.00507108 2.94351 0.0152132C2.82004 0.00620817 2.69623 0.00620817 2.57276 0.0152132L2.63455 0.0152132ZM22.1607 37.5025C20.4305 37.5025 19.0711 39.152 19.0711 41.2513C19.0711 43.3506 20.4305 45 22.1607 45C23.8908 45 25.2502 43.3506 25.2502 41.2513C25.2502 39.152 23.8908 37.5025 22.1607 37.5025ZM40.6981 37.5025C38.968 37.5025 37.6086 39.152 37.6086 41.2513C37.6086 43.3506 38.968 45 40.6981 45C42.4283 45 43.7877 43.3506 43.7877 41.2513C43.7877 39.152 42.4283 37.5025 40.6981 37.5025Z" fill=""/>
-            <path d="M2.7154 0.508906C2.77933 0.50757 2.84328 0.509231 2.90714 0.513889L2.95265 0.517208L2.99801 0.512235C3.14678 0.495922 3.29636 0.495922 3.44514 0.512235L3.4723 0.515213H3.49963H15.8522C16.3049 0.526295 16.7557 0.687933 17.1552 0.996428C17.5576 1.30712 17.8928 1.75572 18.1131 2.30165L18.1129 2.30172L18.1183 2.31394L20.4663 7.71212L20.5971 8.01268H20.9248H48.3603C48.586 8.01268 48.7295 8.11411 48.8227 8.30438C48.9277 8.51855 48.9664 8.85907 48.865 9.26134C48.8647 9.26227 48.8645 9.26321 48.8643 9.26414L43.8608 28.0017L43.8607 28.0017L43.8592 28.0078C43.7638 28.3839 43.5159 28.7697 43.191 29.0613C42.8608 29.3578 42.5113 29.5051 42.2429 29.5051H20.6159C20.3824 29.5051 20.0322 29.3617 19.6873 29.0581C19.3505 28.7616 19.093 28.3759 18.9996 28.0078L18.9997 28.0078L18.9976 28.0002L16.4642 18.6284L13.9307 9.25656L13.9309 9.25653L13.9274 9.24482L13.3713 7.37046L13.2651 7.01268H12.8919H3.62322H3.57513L3.52793 7.02184C2.87268 7.14905 2.18928 6.96006 1.6238 6.46321C1.05379 5.96238 0.652341 5.18808 0.535019 4.29838C0.417747 3.40906 0.598399 2.50673 1.02403 1.79355C1.44585 1.08676 2.06102 0.640681 2.7154 0.508906ZM19.5711 41.2513C19.5711 39.3333 20.7928 38.0025 22.1607 38.0025C23.5286 38.0025 24.7502 39.3333 24.7502 41.2513C24.7502 43.1692 23.5286 44.5 22.1607 44.5C20.7928 44.5 19.5711 43.1692 19.5711 41.2513ZM38.1086 41.2513C38.1086 39.3333 39.3302 38.0025 40.6981 38.0025C42.066 38.0025 43.2877 39.3333 43.2877 41.2513C43.2877 43.1692 42.066 44.5 40.6981 44.5C39.3302 44.5 38.1086 43.1692 38.1086 41.2513Z" stroke="#F15BF4" stroke-opacity="0.1"/>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="45"
+            viewBox="0 0 50 45"
+            fill=""
+          >
+            <path
+              d="M2.63455 0.0152132C1.81515 0.174289 1.08138 0.721805 0.59468 1.53731C0.107977 2.35282 -0.0917951 3.36952 0.0393099 4.36374C0.170415 5.35797 0.621658 6.24828 1.29377 6.83882C1.96588 7.42936 2.80381 7.67175 3.62322 7.51268H12.8919L13.4481 9.38704L15.9815 18.7589L18.515 28.1307C18.7621 29.1054 19.8126 30.0051 20.6159 30.0051H42.2429C43.108 30.0051 44.0967 29.1054 44.3438 28.1307L49.3489 9.38704C49.5961 8.41237 49.2254 7.51268 48.3603 7.51268H20.9248L18.5768 2.1145C18.3267 1.49491 17.9405 0.971069 17.4608 0.600672C16.9811 0.230274 16.4264 0.0276854 15.8579 0.0152132L3.49963 0.0152132C3.31464 -0.00507108 3.12851 -0.00507108 2.94351 0.0152132C2.82004 0.00620817 2.69623 0.00620817 2.57276 0.0152132L2.63455 0.0152132ZM22.1607 37.5025C20.4305 37.5025 19.0711 39.152 19.0711 41.2513C19.0711 43.3506 20.4305 45 22.1607 45C23.8908 45 25.2502 43.3506 25.2502 41.2513C25.2502 39.152 23.8908 37.5025 22.1607 37.5025ZM40.6981 37.5025C38.968 37.5025 37.6086 39.152 37.6086 41.2513C37.6086 43.3506 38.968 45 40.6981 45C42.4283 45 43.7877 43.3506 43.7877 41.2513C43.7877 39.152 42.4283 37.5025 40.6981 37.5025Z"
+              fill=""
+            />
+            <path
+              d="M2.7154 0.508906C2.77933 0.50757 2.84328 0.509231 2.90714 0.513889L2.95265 0.517208L2.99801 0.512235C3.14678 0.495922 3.29636 0.495922 3.44514 0.512235L3.4723 0.515213H3.49963H15.8522C16.3049 0.526295 16.7557 0.687933 17.1552 0.996428C17.5576 1.30712 17.8928 1.75572 18.1131 2.30165L18.1129 2.30172L18.1183 2.31394L20.4663 7.71212L20.5971 8.01268H20.9248H48.3603C48.586 8.01268 48.7295 8.11411 48.8227 8.30438C48.9277 8.51855 48.9664 8.85907 48.865 9.26134C48.8647 9.26227 48.8645 9.26321 48.8643 9.26414L43.8608 28.0017L43.8607 28.0017L43.8592 28.0078C43.7638 28.3839 43.5159 28.7697 43.191 29.0613C42.8608 29.3578 42.5113 29.5051 42.2429 29.5051H20.6159C20.3824 29.5051 20.0322 29.3617 19.6873 29.0581C19.3505 28.7616 19.093 28.3759 18.9996 28.0078L18.9997 28.0078L18.9976 28.0002L16.4642 18.6284L13.9307 9.25656L13.9309 9.25653L13.9274 9.24482L13.3713 7.37046L13.2651 7.01268H12.8919H3.62322H3.57513L3.52793 7.02184C2.87268 7.14905 2.18928 6.96006 1.6238 6.46321C1.05379 5.96238 0.652341 5.18808 0.535019 4.29838C0.417747 3.40906 0.598399 2.50673 1.02403 1.79355C1.44585 1.08676 2.06102 0.640681 2.7154 0.508906ZM19.5711 41.2513C19.5711 39.3333 20.7928 38.0025 22.1607 38.0025C23.5286 38.0025 24.7502 39.3333 24.7502 41.2513C24.7502 43.1692 23.5286 44.5 22.1607 44.5C20.7928 44.5 19.5711 43.1692 19.5711 41.2513ZM38.1086 41.2513C38.1086 39.3333 39.3302 38.0025 40.6981 38.0025C42.066 38.0025 43.2877 39.3333 43.2877 41.2513C43.2877 43.1692 42.066 44.5 40.6981 44.5C39.3302 44.5 38.1086 43.1692 38.1086 41.2513Z"
+              stroke="#F15BF4"
+              stroke-opacity="0.1"
+            />
           </svg>
           <span id="cartItemCount" class="cart-item-count">0</span>
         </button>
       </div>
     </nav>
 
-      <div id="cart-overlay">
-        <div id="cart-container">
-          <button class="close-cart-btn">×</button>
-          <h2>Your Cart</h2>
-          <ul id="cart-list">
-            <!-- Cart items will be dynamically added here -->
-          </ul>
-          <p><span id="cart-total">0</span></p>
-          <button id="go-to-checkout-btn">Go to Checkout</button>
-        </div>
+    <div id="cart-overlay">
+      <div id="cart-container">
+        <button class="close-cart-btn">×</button>
+        <h2>Your Cart</h2>
+        <ul id="cart-list">
+          <!-- Cart items will be dynamically added here -->
+        </ul>
+        <p><span id="cart-total"></span></p>
+        <button id="go-to-checkout-btn" class="button button--primary">Go to Checkout</button>
       </div>
-
-    <!-- 2. Page Header -->
+    </div>
 
     <!-- 2. Breadcrumbs -->
     <nav class="breadcrumbs" aria-label="Breadcrumb">
@@ -175,284 +188,30 @@
       </div>
     </nav>
 
-    <header class="header">
-      <div class="header__content">
-        <h1>QUIZ: What type of gamer are you?</h1>
-        <h2 class="header__subtitle">
-          Every gamer is unique, with their own preferences and playstyles.
-          Wondering what's your gamer type and which game would be a perfect
-          match for you? Take our quiz to find out! Answer a few fun questions,
-          and we'll reveal not just the type of gamer you are, but also suggest
-          a game from our collection that you'll love.
-        </h2>
-      </div>
-    </header>
-
-    <aside class="aside aside-secondary">
-      <div class="aside__content aside__content-secondary">
-        <div class="aside__content-secondary-text">
-          <p>Published January 13, 2024</p>
-          <p>Author: Lucky</p>
-        </div>
-
-        <img
-          src="assets/images/about-us/4.jpg"
-          alt="AI-created poodle with a light brown fur coat, wearing gaming headphones with a mic, sitting at a computer desk with a keyboard, screen displaying a game in the background."
-        />
-      </div>
-    </aside>
-
     <!-- 3. Main Content -->
     <main>
-      <div class="blog-post-section blog-post-secondary">
-        <article>
-          <h3 class="text-left">How to Play:</h3>
-          <ol class="blog-post-p">
-            <li>
-              Choose the answer that best matches your preference for each
-              question.
-            </li>
-            <li>
-              Keep track of the most frequent letters you choose (A, B, C, D, E,
-              F, G)
-            </li>
-            <li>
-              Discover your gamer type and get a game recommendation at the end!
-            </li>
-          </ol>
+      <section class="main-content__section">
+        <div class="spinner-container">
+          <img
+            src="assets/images/loading-indicator/Bean Eater@1.25x-1.0s-200px-200px (1).gif"
+            alt="Loading..."
+            class="spinner"
+          />
+        </div>
+        <div class="hidden-until-loaded">
 
-          <h3 class="text-left">Questions:</h3>
+            <h1>Checkout</h1>
 
-          <h4 class="blog-post-question header__subtitle">
-            What's your preferred way to unwind with a game?
-          </h4>
-          <div class="about-card-secondary">
-            <ol class="blog-post-quiz">
-              <li>Diving into fast-paced action.</li>
-              <li>Solving puzzles and riddles.</li>
-              <li>Embarking on an epic story.</li>
-              <li>Relaxing and building something beautiful.</li>
-              <li>Strategizing and planning.</li>
-              <li>Competing in intense battles.</li>
-              <li>Exploring and interacting in a vast world.</li>
-            </ol>
-            <img
-              class="about-card-image"
-              src="assets/images/blog/blog-post-2/fantasy-realm.webp"
-              alt="Expansive multiplayer game world showing diverse mythological characters and ancient structures."
-            />
-          </div>
+            <div id="checkout-cart-container">
+                <ul id="checkout-cart-list">
+                </ul>
+                <p><span id="checkout-cart-total">0</span></p>
+            </div>
 
-          <h4 class="blog-post-question header__subtitle">
-            Which fantasy setting do you prefer?
-          </h4>
-          <div class="about-card-secondary image-left">
-            <img
-              class="about-card-image"
-              src="assets/images/blog/blog-post-2/atlantis-3.webp"
-              alt="Intricate underwater ruins of Atlantis with marine life, depicting a lost ancient city's mystery."
-            />
-            <ol class="blog-post-quiz">
-              <li>High-tech future and space exploration.</li>
-              <li>Underwater mysteries and ancient cities.</li>
-              <li>Mythical lands and magical realms.</li>
-              <li>A peaceful, natural environment.</li>
-              <li>A world of fantasy and fairy tales.</li>
-              <li>Historical settings with a twist of magic.</li>
-              <li>A diverse universe with multiple mythologies.</li>
-            </ol>
-          </div>
 
-          <h4 class="blog-post-question header__subtitle">
-            What's your favorite game aspect?
-          </h4>
-          <div class="about-card-secondary">
-            <ol class="blog-post-quiz">
-              <li>Thrilling combat and action.</li>
-              <li>Clever puzzles and brain teasers.</li>
-              <li>Deep, immersive storylines.</li>
-              <li>Creativity and freedom to design.</li>
-              <li>Complex strategy and resource management.</li>
-              <li>Fast-paced competition and reflex challenges.</li>
-              <li>Social interaction and team play.</li>
-            </ol>
-            <img
-              class="about-card-image"
-              src="assets/images/blog/blog-post-2/fantasy-castle.webp"
-              alt="Bustling fantasy world with magical castles, mythical creatures, and an enchanted forest landscape."
-            />
-          </div>
-
-          <h4 class="blog-post-question header__subtitle">
-            What motivates you to keep playing a game?
-          </h4>
-          <div class="about-card-secondary image-left">
-            <img
-              class="about-card-image"
-              src="assets/images/blog/blog-post-2/eco-resort-2.webp"
-              alt="Lush eco-resort with green landscapes, eco-friendly buildings, and a lake."
-            />
-            <ol class="blog-post-quiz">
-              <li>Constant action and adrenaline.</li>
-              <li>A sense of mystery and discovery.</li>
-              <li>Emotional engagement and character development.</li>
-              <li>A feeling of peace and fulfillment.</li>
-              <li>Mastering the game through tactics and planning.</li>
-              <li>Achieving high scores and victories.</li>
-              <li>Building connections and friendships.</li>
-            </ol>
-          </div>
-
-          <h4 class="blog-post-question header__subtitle">
-            How do you prefer to play games?
-          </h4>
-          <div class="about-card-secondary">
-            <ol class="blog-post-quiz">
-              <li>Solo, focusing on my skills.</li>
-              <li>Solo, to unwind and relax.</li>
-              <li>Solo, for a narrative experience.</li>
-              <li>At my own pace, creating and exploring.</li>
-              <li>With a focus on thinking and strategizing.</li>
-              <li>Competitively, against others.</li>
-              <li>Collaboratively, with a community.</li>
-            </ol>
-            <img
-              class="about-card-image"
-              src="assets/images/blog/blog-post-2/space-pirate-scene.webp"
-              alt="Dynamic space battle scene with colorful laser beams and sleek spaceships against a galaxy backdrop."
-            />
-          </div>
-
-          <h3 class="text-left">Results:</h3>
-
-          <h4 class="blog-post-question header__subtitle">
-            Mostly A's - The Action Enthusiast:
-          </h4>
-          <p class="blog-post-p">
-            Your Game: Space Pirate - Get ready for an adrenaline-pumping
-            journey through the cosmos. As the leader of a crew of daring space
-            pirates, you'll engage in intense space battles, navigate through
-            asteroid fields, and outsmart intergalactic law enforcement. This
-            game offers a mix of strategy, fast-paced combat, and an engaging
-            storyline set in a vast, explorable universe.
-          </p>
-
-          <h4 class="blog-post-question header__subtitle">
-            Mostly B's - The Puzzle Solver:
-          </h4>
-          <p class="blog-post-p">
-            Your Game: Elemental Alchemy - Delve into the mystical world of
-            alchemy where every puzzle is a gate to new discoveries. Combining
-            elements to form new compounds, you'll unlock the secrets of this
-            ancient practice. Each level brings more challenging puzzles,
-            requiring logic and creativity to advance. It's a brain-teasing
-            journey that rewards ingenuity and thoughtfulness.
-          </p>
-
-          <h4 class="blog-post-question header__subtitle">
-            Mostly C's - The Story Seeker:
-          </h4>
-          <p class="blog-post-p">
-            Your Game: Lost in Atlantis - Embark on a captivating adventure in
-            the sunken city of Atlantis. This game blends exploration with
-            narrative, taking you through underwater caverns, ancient ruins, and
-            forgotten temples. With each artifact you uncover, more of the
-            city's mysterious past is revealed, creating a rich, story-driven
-            experience that's as intriguing as it is beautiful.
-          </p>
-
-          <h4 class="blog-post-question header__subtitle">
-            Mostly D's - The Creative Spirit:
-          </h4>
-          <p class="blog-post-p">
-            Your Game: Eco-Resort Paradise - Create, manage, and grow your very
-            own eco-resort. This game focuses on sustainability and creativity,
-            allowing you to design a picturesque retreat in harmony with nature.
-            Balance the needs of your guests with environmental conservation,
-            creating a tranquil and beautiful getaway that evolves over time.
-          </p>
-
-          <h4 class="blog-post-question header__subtitle">
-            Mostly E's - The Strategic Thinker:
-          </h4>
-          <p class="blog-post-p">
-            Your Game: Fantasy Civilization - Step into a realm of high fantasy
-            where your decisions shape the fate of kingdoms. Command armies,
-            manage resources, and engage in diplomatic relations or epic
-            battles. With a focus on deep strategy and tactical prowess, this
-            game offers a complex and rewarding experience for those who love to
-            think several steps ahead.
-          </p>
-
-          <h4 class="blog-post-question header__subtitle">
-            Mostly F's - The Competitive Gamer:
-          </h4>
-          <p class="blog-post-p">
-            Your Game: Fantasy Racing League - Experience the thrill of racing
-            like never before. This game combines traditional racing elements
-            with a fantasy twist, where you'll race not just cars but mythical
-            creatures. Upgrade your dragon or griffin, navigate through magical
-            landscapes, and compete against others in high-speed races that test
-            your reflexes and strategy.
-          </p>
-
-          <h4 class="blog-post-question header__subtitle">
-            Mostly G's - The Social Explorer:
-          </h4>
-          <p class="blog-post-p">
-            Your Game: Mythical Realms Online - Dive into a massive multiplayer
-            world rich with mythology and legend. Choose your character from
-            various mythological backgrounds and embark on quests, form
-            alliances, and participate in epic battles. This game is about
-            community, exploration, and the shared experience of adventure in a
-            vast, ever-evolving online world.
-          </p>
-
-          <p class="blog-post-p">
-            Your gaming preferences reflect your unique personality, and our
-            diverse range of games caters to every type of gamer. Whether you're
-            strategizing for the next big battle, solving complex puzzles, or
-            exploring mythical realms with friends, there's a game on our
-            website that's just perfect for you. Visit us to start your next
-            great gaming adventure!
-          </p>
-          <a href="games.html" class="button button--secondary">start</a>
-        </article>
-      </div>
+        </div>
+      </section>
     </main>
-
-    <!-- 4. Blog Carousel -->
-    <section class="blog-carousel">
-      <h2>More from Our Blog</h2>
-
-      <div class="blog-carousel-wrap">
-        <a href="blog-post-1.html">
-          <div class="blog-card">
-            <img
-              alt="A girl is sitting in front of a computer in a room with plushies and a neon sign that reads “the coziest games to play this fall”."
-              class="blog-image"
-              src="assets/images/blog/cozy.png"
-            />
-            <h3 class="blog-post-title">
-              The coziest games to play this winter
-            </h3>
-          </div>
-        </a>
-        <a href="blog-post-1.html">
-          <div class="blog-card">
-            <img
-              alt="text reading hot new releases this week surrounded by gaming consoles, video game covers and fire. "
-              class="blog-image"
-              src="assets/images/blog/hot.png"
-            />
-            <h3 class="blog-post-title">HOT new releases this week</h3>
-          </div>
-        </a>
-      </div>
-
-      <a href="blog.html" class="button button--blog">read blog</a>
-      <div class="decorative-line"></div>
-    </section>
 
     <!-- 5. Footer -->
     <footer class="footer">

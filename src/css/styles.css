@@ -56,6 +56,28 @@ section {
   padding-bottom: 40px;
 }
 
+
+
+.checkout-cart-container {
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .cart-icon {
   background: transparent;
   border: none;
@@ -76,12 +98,15 @@ section {
 
 #cart-container {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   top: 0;
   right: 0;
   background-color: var(--color-secondary);
   padding: 5px;
   border-radius: 5px;
-  width: 50%;
+  min-width: 50%;
+  min-height: 80%;
   max-height: 100%;
   overflow-y: auto;
 }
@@ -92,11 +117,9 @@ section {
 }
 
 
-
-
-
 #cart-container h2 {
   margin-top: 0;
+  padding-bottom: 1em;
 }
 
 #cart-list {
@@ -120,22 +143,32 @@ section {
   border: none;
   font-size: 60px;
   cursor: pointer;
-  color: #fff;
+  color: var(--color-text);
 }
 
 #go-to-checkout-btn {
-  display: block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #4CAF50; /* Green */
-  color: white;
+  display: flex;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+  align-self: flex-end; 
+  width: 100%;
+  margin-bottom: 0;
 }
 
-#go-to-checkout-btn:hover {
-  background-color: #45a049;
+
+
+.remove-item-button {
+  background: none;
+  cursor: pointer;
+  color: var(--color-text);
+  font-size: 20px;
+  height: 35px;
+  width: 35px;
+}
+
+.cart-item-right {
+  display: flex;
+  column-gap: 15px;
 }
 
 
@@ -152,6 +185,12 @@ width: 100%;
   margin-bottom: 10px;
   padding: 10px;
   border-bottom: 2px solid #ccc;
+  text-align: center;
+}
+
+.cart-item p {
+  font-size: 18px;
+  max-width: 150px;
 }
 
 
@@ -200,10 +239,10 @@ width: 100%;
 }
 
 .light-mode-icon {
-  top: -20px;
-  left: -20px;
-  width: 75px;  
-  height: 75px;
+  top: -15px;
+  left: -15px;
+  width: 65px;  
+  height: 65px;
   transform: translateX(0); 
   opacity: 1;
 }
@@ -801,17 +840,85 @@ line-height: 1.5;
   line-height: 80px;
 }
 
-.game-card-button {
-  width: 257px;
+
+
+.action-buttons {
+  display: flex;
+  width: 102%;
+  border-radius: 0px 0px 5px 5px;
+margin-right: -2px;
+margin-left: -2px;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  margin-bottom: 0;
+  box-shadow: none;
+  transition: none;
+  animation: none;
+}
+
+
+.view-details {
+  flex: 3;
+  padding: 10px 20px;
   height: 60px;
   line-height: 60px;
-  border-radius: 1px 1px 5px 5px;
   display: flex;
   justify-content: center;
-  align-self: flex-end;
+  align-items: center;
   font-size: 14px;
-  margin-bottom: 0;
 }
+
+.view-details:hover {
+  color: rgb(175, 229, 175);
+  cursor: pointer;
+  box-shadow: var(--button-hover-box-shadow);
+  transition: var(--button-hover-transition);
+  animation: var(--button-hover-animation);
+}
+
+
+.add-to-cart-icon-in-button {
+  flex: 1;
+  border-radius: 0 5px 5px 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+border: none;
+  border-left: 1px solid var(--color-pink);
+  cursor: pointer;
+}
+
+.cart-icon-in-button {
+  width: 40px;
+  height: auto;
+  fill: white;
+}
+
+.add-to-cart-icon-in-button:hover .cart-icon-in-button {
+  fill: rgb(175, 229, 175);
+  cursor: pointer;
+}
+
+.add-to-cart-icon-in-button:hover {
+  box-shadow: var(--button-hover-box-shadow);
+  transition: var(--button-hover-transition);
+  animation: var(--button-hover-animation);
+}
+
+
+.cart-icon-added {
+  fill: #41A535 !important;  /* Overrides other fill settings */
+}
+
+
+
+
+
+
+
 
 .game-card-title {
   padding-bottom: 20px;
@@ -954,6 +1061,10 @@ textarea {
   margin: auto;
 }
 
+.social-media__icons svg {
+  height: 60px;
+}
+
 .social-media__icons a {
   margin: auto;
 }
@@ -1013,9 +1124,10 @@ a {
   max-width: 1800px;
 }
 
-.game-card a {
+.game-link {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .game-card {
@@ -1026,7 +1138,7 @@ a {
   background: var(--color-secondary);
   border-radius: 5px;
   max-width: 260px;
-  padding: 2px;
+  padding: 2px 2px 0px 2px;
   height: auto;
   box-shadow: 0 4px 8px rgba(0,0,0,0.5);
 }
