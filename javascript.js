@@ -118,7 +118,6 @@ function updateGamesDisplay(games, container) {
   });
 }
 
-// Helper function to create an HTML element for each game
 function createElementForGame(game) {
   const gameCard = document.createElement("div");
   gameCard.className = "game-card";
@@ -127,20 +126,23 @@ function createElementForGame(game) {
   const singleGameUrl = `single-game.html?id=${game.id}`; // Constructs the URL dynamically
 
   gameCard.innerHTML = `
-        <img class="game-image" src="${imageUrl}" alt="${imageAlt}" />
-        <div class="game-card-text-flex">
-            <h3 class="game-card-title">${game.title}</h3>
-            <p class="game-card-price">
-                ${game.onSale ? 
-                    `<span class="original-price">€${game.price.toFixed(2)}</span> 
-                     <span class="discounted-price">€${game.discountedPrice.toFixed(2)}</span>` 
-                    : 
-                    `€${game.price.toFixed(2)}`
-                }
-            </p>
-        </div>
-        <a href="${singleGameUrl}" class="button game-card-button" alt="Buy ${game.title} now">View now</a>
-    `;
+    <a href="${singleGameUrl}">
+      <img class="game-image" src="${imageUrl}" alt="${imageAlt}" />
+      <div class="game-card-text-flex">
+        <h3 class="game-card-title">${game.title}</h3>
+        <p class="game-card-price">
+          ${game.onSale ? 
+              `<span class="original-price">€${game.price.toFixed(2)}</span> 
+               <span class="discounted-price">€${game.discountedPrice.toFixed(2)}</span>` 
+              : 
+              `€${game.price.toFixed(2)}`
+          }
+        </p>
+      </div>
+    </a>
+    <a href="${singleGameUrl}" class="button game-card-button" alt="Buy ${game.title} now">View now</a>
+  `;
   return gameCard;
 }
+
 

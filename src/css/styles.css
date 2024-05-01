@@ -60,6 +60,7 @@ section {
   background: transparent;
   border: none;
   fill: var(--color-text);
+  cursor: pointer;
 }
 
 #cart-overlay {
@@ -807,8 +808,19 @@ line-height: 1.5;
   border-radius: 1px 1px 5px 5px;
   display: flex;
   justify-content: center;
-  margin-top: auto;
+  align-self: flex-end;
   font-size: 14px;
+  margin-bottom: 0;
+}
+
+.game-card-title {
+  padding-bottom: 20px;
+}
+
+.game-card-price {
+  align-content: flex-end;
+  margin-bottom: 0px;
+  margin-top: 0;
 }
 
 .button--form {
@@ -1001,6 +1013,11 @@ a {
   max-width: 1800px;
 }
 
+.game-card a {
+  display: flex;
+  flex-direction: column;
+}
+
 .game-card {
   display: flex;
   flex-direction: column;
@@ -1010,15 +1027,18 @@ a {
   border-radius: 5px;
   max-width: 260px;
   padding: 2px;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
 }
 
 .game-card-text-flex {
+  flex: 1;
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  position: relative;
   gap: 10px;
   text-align: center;
+  justify-content: space-between;
   padding: 20px 10px;
   color: var(--color-text);
 }
@@ -1036,6 +1056,7 @@ a {
 .game-card-price {
   font-size: 20px;
   font-family: var(--font-base);
+  margin-top: auto;
 }
 
 .testimonials-wrap {

@@ -10,7 +10,6 @@ function updateCartItemCount() {
 
 
 function addToCart(productId) {
-    // Your existing addToCart logic goes here
     const games = JSON.parse(sessionStorage.getItem('games')) || [];
     const product = games.find(game => game.id === productId);
     if (!product) {
@@ -31,6 +30,7 @@ function addToCart(productId) {
 
     cart.push(product);
     localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartItemCount();
     displayCart();
 }
 
@@ -110,7 +110,6 @@ function updateCartTotal() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Display the cart when the DOM is fully loaded
     displayCart();
   
     // Event listener for cart icon click

@@ -5,11 +5,11 @@ function toggleTheme() {
   const darkMode = !body.classList.contains("dark");
   localStorage.setItem("mode", darkMode ? "dark" : "light");
   body.classList.toggle("dark", darkMode);
-  toggleButton.checked = darkMode; // Ensures checkbox is in sync with the theme
+  toggleButton.checked = darkMode;
 }
 
 function applyInitialTheme() {
-  body.classList.add('no-transition'); // Disable transitions initially
+  body.classList.add('no-transition');
 
   const storedTheme = localStorage.getItem("mode");
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -26,8 +26,8 @@ function applyInitialTheme() {
   }
 
   setTimeout(() => {
-    body.classList.remove('no-transition'); // Enable transitions after the page is loaded
-  }, 100); // Remove the class after a very short delay
+    body.classList.remove('no-transition'); 
+  }, 300); 
 }
 
 toggleButton.addEventListener("click", toggleTheme);
