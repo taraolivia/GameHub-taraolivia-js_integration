@@ -1,15 +1,10 @@
 function updateIconColors() {
+    const icons = document.querySelectorAll('.cart-icon-in-button');
     const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-    const allIcons = document.querySelectorAll('.cart-icon-in-button');
 
-    console.log("Cart Items in updateIconColors:", cartItems);
-    console.log("Icons in updateIconColors:", allIcons);
-
-    allIcons.forEach(icon => {
+    icons.forEach(icon => {
         const gameId = icon.getAttribute('data-game-id');
         const isInCart = cartItems.some(item => item.id === gameId);
-        console.log(`Game ID: ${gameId}, In Cart: ${isInCart}`);
-
         if (isInCart) {
             icon.classList.add('cart-icon-added');
         } else {
@@ -18,13 +13,13 @@ function updateIconColors() {
     });
 }
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
-    // Possibly delay execution to ensure all elements have loaded
-    setTimeout(() => {
         displayCart();
         updateCartItemCount();
         updateIconColors();
-    }, 500);  // Adjust time as needed based on when elements are available
+        updateButtonText();
 });
 
 
@@ -62,42 +57,80 @@ function addToCart(productId, buttonElement) {
     const games = JSON.parse(sessionStorage.getItem('games')) || [];
     const product = games.find(game => game.id === productId);
     if (!product) {
-        console.error('Product not found!');
+        console.error('Product not found!', productId);
         return;
     }
+
+    function addToCart(productId, buttonElement) {
+        const games = JSON.parse(sessionStorage.getItem('games')) || [];
+        const product = games.find(game => game.id === productId);
+        if (!product) {
+            console.error('Product not found!', productId);
+            return;
+        }
+
+        
+    
+        const isInCart = isInShoppingCart(productId);
+    
+        if (isInCart) {
+            removeGameFromCart(productId);
+        } else {
+            addGameToCart(product);
+        }
+    
+    }
+
+    function updateButtonIcon(isInCart, buttonElement) {
+        if (isInCart) {
+            buttonElement.classList.add('cart-icon-added');
+        } else {
+            buttonElement.classList.remove('cart-icon-added');
+        }
+    }
+    
+
+    
+    function isInShoppingCart(gameId) {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        return cart.some(item => item.id === gameId);
+    }
+    
+    function addGameToCart(game) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push(game);
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+    
+    function removeGameFromCart(gameId) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const updatedCart = cart.filter(item => item.id !== gameId);
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
+    }
+    
 
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const existingProductIndex = cart.findIndex(item => item.id === productId);
     if (existingProductIndex !== -1) {
-        // If the product is already in the cart, remove it
         cart.splice(existingProductIndex, 1);
-        localStorage.setItem('cart', JSON.stringify(cart));
-        updateCartItemCount();
-        displayCart();
-        
-        // Remove the green fill from the icon
-        const icon = buttonElement.querySelector('.cart-icon-in-button');
-        if (icon) {
-            icon.classList.remove('cart-icon-added');
-        }
+        buttonElement.classList.remove('cart-icon-added');
     } else {
-        // If the product is not in the cart, add it
         cart.push(product);
-        localStorage.setItem('cart', JSON.stringify(cart));
-        updateCartItemCount();
-        displayCart();
+        buttonElement.classList.add('cart-icon-added');
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartItemCount();
+    displayCart();
 
-        // Add the green fill to the icon
-        const icon = buttonElement.querySelector('.cart-icon-in-button');
-        if (icon) {
-            icon.classList.add('cart-icon-added');
-        }
+    if (document.body.classList.contains('games-page')) {
+        updateIconColors();
     }
 }
 
 
+
+
 function displayCart() {
-    console.log("Displaying cart...");
     const overlayCartList = document.getElementById('cart-list');
     const checkoutCartList = document.getElementById('checkout-cart-list');
 
@@ -199,6 +232,13 @@ document.addEventListener("DOMContentLoaded", function () {
     displayCart();
     updateCartItemCount();
 
+        // Conditional icon updates based on the presence of a certain class in the body
+        if (document.body.classList.contains('games-page')) {
+            setTimeout(() => {
+                updateIconColors();
+            }, 500);
+        }
+
     const cartIcon = document.getElementById("cart-icon");
     const cartOverlay = document.getElementById("cart-overlay");
     const closeCartBtn = document.querySelector(".close-cart-btn");
@@ -228,7 +268,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-console.log("Updating icon colors...");
-allIcons.forEach(icon => {
-    console.log(icon.getAttribute('data-game-id'));
-});
+
+
+// Set onclick attribute to call addToCart function
+button.onclick = function() {
+    addToCart('${game.id}', this);
+};
+
+// Create the button element
+const button = document.createElement("button");
+button.classList.add("add-to-cart-icon-in-button");
+
+
+
+
+
+
+
+// Append the button to the desired location in the DOM
+const container = document.querySelector(".button.action-buttons");
+container.appendChild(button);
+
+    // Conditional icon color update
+    if (document.body.classList.contains('games-page')) {
+        updateIconColors();
+    }
