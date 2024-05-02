@@ -23,11 +23,11 @@ function applyInitialTheme() {
     localStorage.setItem("mode", "dark");
   } else {
     toggleButton.checked = false;
-  }
+  } 
 
   setTimeout(() => {
     body.classList.remove('no-transition'); 
-  }, 300); 
+  }, 500); 
 }
 
 toggleButton.addEventListener("click", toggleTheme);
