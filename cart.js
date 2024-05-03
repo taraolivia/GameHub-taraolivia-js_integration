@@ -24,13 +24,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// Update the cart item count and check each cart icon
 function updateCartItemCount() {
     const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
     const cartItemCount = document.getElementById('cartItemCount');
     const allIcons = document.querySelectorAll('.cart-icon-in-button');
 
-    // Ensure each icon reflects whether its item is in the cart
     allIcons.forEach(icon => {
         const gameId = icon.getAttribute('data-game-id');
         if (cartItems.some(item => item.id === gameId)) {
@@ -40,14 +38,13 @@ function updateCartItemCount() {
         }
     });
 
-    // Update the display of cart item count
     if (cartItemCount) {
         if (cartItems.length > 0) {
             cartItemCount.textContent = cartItems.length;
-            cartItemCount.style.display = 'inline'; // Ensure it is visible when there are items
+            cartItemCount.style.display = 'inline';
         } else {
-            cartItemCount.textContent = ''; // Clear the count text
-            cartItemCount.style.display = 'none'; // Hide the count when there are no items
+            cartItemCount.textContent = '';
+            cartItemCount.style.display = 'none';
         }
     }
 }
