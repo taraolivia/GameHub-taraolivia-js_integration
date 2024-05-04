@@ -10,7 +10,7 @@ const breadcrumbConfig = {
   "/contact.html": ["Home", "Contact"],
   "/testimonials.html": ["Home", "Testimonials"],
   "/checkout.html": ["Home", "Checkout"],
-  "/terms-and-conditions.html": ["Home", "Terms and Conditions"],
+  "/terms-and-conditions.html": ["Home", "Terms and Conditions"]
 };
 
 document.addEventListener("DOMContentLoaded", generateBreadcrumbs);
@@ -25,13 +25,13 @@ function generateBreadcrumbs() {
 
   const path = window.location.pathname;
   console.log("Current Path:", path);
-  const breadcrumbs = breadcrumbConfig[path] || ["Home"]; // Default to "Home" if no match found
+  const breadcrumbs = breadcrumbConfig[path] || ["Home"];
   console.log("Breadcrumbs:", breadcrumbs);
 
   breadcrumbList.innerHTML = breadcrumbs
     .map((crumb, index) => {
       const isActive = index === breadcrumbs.length - 1;
-      const url = isActive ? "" : "/"; // Placeholder, adjust if you have specific paths
+      const url = isActive ? "" : "/";
       return `<li>${isActive ? `<span class="breadcrumbs__item active">${crumb}</span>` : `<a href="${url}" class="breadcrumbs__item">${crumb}</a>`}</li>`;
     })
     .join("");

@@ -1,4 +1,5 @@
 @import url(root.css);
+@import url(/themeSwitcherTest/color-theme.css);
 
 /* This is for trying to implement my root into an html file */
 
@@ -294,6 +295,14 @@ input::-ms-input-placeholder { /* Microsoft Edge */
   display: block;
 }
 
+.toggle-container {
+display: flex;
+column-gap: 1em;
+margin-right: 1em;
+justify-content: center;
+align-items: center;
+}
+
 .toggle-handle {
   position: relative;
   display: inline-block;
@@ -555,7 +564,7 @@ input::-ms-input-placeholder { /* Microsoft Edge */
   padding: 1em 2.2em;
   border-radius: 2em;
   background-color: transparent;
-  color: var(--color-text);
+  color: var(--color-text-secondary);
   font-family: var(--font-heading-primary);
   cursor: pointer;
   margin: 1em 1em 0em 0em;
@@ -762,8 +771,17 @@ input::-ms-input-placeholder { /* Microsoft Edge */
   align-items: center;
   margin: 0px auto;
   max-width: 1300px;
-  width: 100%;
+  width: 90%;
   justify-content: space-between;
+}
+
+.navbar__content-second-row {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0px auto;
+max-width: 1300px;
+width: 90%;
 }
 
 .navbar__logo--small {
@@ -1109,10 +1127,13 @@ textarea {
   padding: 40px 5px;
 }
 
-.blog-carousel,
 .footer {
   background-color: var(--color-accent);
   color: var(--color-text-lighter);
+}
+
+.blog-carousel {
+  background-color: var(--color-secondary);
 }
 
 .decorative-line {
@@ -1180,7 +1201,7 @@ textarea {
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--color-text-lighter);
 }
 
 .all-games-wrap {
@@ -1221,7 +1242,7 @@ a {
   text-align: center;
   justify-content: space-between;
   padding: 20px 10px;
-  color: var(--color-text);
+  color: var(--color-text-secondary);
 }
 
 .game-image {
@@ -1249,7 +1270,7 @@ a {
 }
 
 .testimonial-card {
-  background: linear-gradient(180deg, #d1008a 0%, #563182 64.58%);
+  background: var(--linear-gradient);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1268,7 +1289,7 @@ a {
 }
 
 .testimonial-card-text {
-  color: white;
+  color: var(--color-text-lighter);
   display: flex;
   padding: 30px;
   padding-top: 80px;
@@ -1323,7 +1344,7 @@ a {
   flex-direction: column;
   flex-basis: 100%;
   position: relative;
-  background: #dcd1e8;
+  background: var(--color-primary);
   border-radius: 10px;
   max-width: 350px;
   padding: 20px;
@@ -1331,7 +1352,7 @@ a {
 
 .blog-post-title {
   font-size: 22px;
-  color: var(--color-text-purple);
+  color: var(--color-text-secondary);
   display: flex;
   margin-top: 15px;
 }
@@ -1348,7 +1369,7 @@ a {
 }
 
 .breadcrumbs {
-  padding-top: 130px;
+  padding-top: 100px;
   padding-bottom: 25px;
   margin-bottom: 0px;
   background: var(--color-primary);

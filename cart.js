@@ -153,7 +153,6 @@ function displayCart() {
 
 
 function createCartItem(product, index) {
-    // Building HTML for each cart item
     const cartItem = document.createElement('div');
     cartItem.className = 'cart-item';
 
@@ -170,38 +169,43 @@ function createCartItem(product, index) {
     cartItemTitle.textContent = product.title;
     cartItemMiddle.appendChild(cartItemTitle);
 
-    const cartItemRight = document.createElement('div');
-    cartItemRight.className = 'cart-item-right';
-    const cartItemPrice = document.createElement('p');
-    cartItemPrice.textContent = getCartItemPrice(product);
-    cartItemRight.appendChild(cartItemPrice);
-
-    const removeButton = document.createElement('button');
-    removeButton.textContent = '×';
-    removeButton.className = 'remove-item-button';
-    removeButton.onclick = () => removeFromCart(index);
-    cartItemRight.appendChild(removeButton);
+    const isCheckoutSuccess = document.body.classList.contains('checkout-success');
 
     cartItem.appendChild(cartItemLeft);
     cartItem.appendChild(cartItemMiddle);
-    cartItem.appendChild(cartItemRight);
+
+    if (!isCheckoutSuccess) {
+        const cartItemRight = document.createElement('div');
+        cartItemRight.className = 'cart-item-right';
+        const cartItemPrice = document.createElement('p');
+        cartItemPrice.textContent = getCartItemPrice(product);
+        cartItemRight.appendChild(cartItemPrice);
+
+        const removeButton = document.createElement('button');
+        removeButton.textContent = '×';
+        removeButton.className = 'remove-item-button';
+        removeButton.onclick = () => removeFromCart(index);
+        cartItemRight.appendChild(removeButton);
+
+        cartItem.appendChild(cartItemRight);
+    }
 
     return cartItem;
 }
 
-// Function to get the correct price for a cart item
+
+
 function getCartItemPrice(product) {
     return product.onSale ? `€${product.discountedPrice.toFixed(2)}` : `€${product.price.toFixed(2)}`;
 }
 
-// Simplified removal based on updated script context
 function removeFromCart(index) {
     const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
     cartItems.splice(index, 1);
     localStorage.setItem('cart', JSON.stringify(cartItems));
     displayCart();
     updateCartItemCount();
-    updateIconColors();  // Update icons after removing item from cart
+    updateIconColors();
 
 }
 
@@ -229,7 +233,6 @@ document.addEventListener("DOMContentLoaded", function () {
     displayCart();
     updateCartItemCount();
 
-        // Conditional icon updates based on the presence of a certain class in the body
         if (document.body.classList.contains('games-page')) {
             setTimeout(() => {
                 updateIconColors();
