@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function applyTheme(theme, iconSrc) {
     document.documentElement.setAttribute('data-theme', theme);
-    console.log("Applying theme:", theme, "with icon:", iconSrc); // Debug output
 
     const currentThemeIcon = document.getElementById('current-theme-icon');
     currentThemeIcon.src = iconSrc;

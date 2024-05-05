@@ -16,7 +16,6 @@ const breadcrumbConfig = {
 document.addEventListener("DOMContentLoaded", generateBreadcrumbs);
 
 function generateBreadcrumbs() {
-  console.log("Generating breadcrumbs...");
   const breadcrumbList = document.getElementById("breadcrumb-list");
   if (!breadcrumbList) {
     console.error("Breadcrumb list element not found.");
@@ -24,9 +23,7 @@ function generateBreadcrumbs() {
   }
 
   const path = window.location.pathname;
-  console.log("Current Path:", path);
   const breadcrumbs = breadcrumbConfig[path] || ["Home"];
-  console.log("Breadcrumbs:", breadcrumbs);
 
   breadcrumbList.innerHTML = breadcrumbs
     .map((crumb, index) => {

@@ -11,24 +11,24 @@ document.addEventListener("DOMContentLoaded", function () {
   displaySimilarGames(gameId);
 });
 
-function fetchGameData(gameId) {
+async function fetchGameData(gameId) {
   showSpinner();
   const gameURL = `https://api.noroff.dev/api/v1/gamehub/${gameId}`;
-  fetch(gameURL)
-      .then(response => {
-          if (!response.ok) throw new Error(`Failed to fetch: ${response.statusText}`);
-          return response.json();
-      })
-      .then(game => {
-          populateGameDetails(game);
-          hideSpinner();
-      })
-      .catch(error => {
-          console.error("Failed to fetch game details:", error);
-          document.getElementById("game-title").textContent = "Game details cannot be loaded at this time.";
-          hideSpinner();
-      });
+  
+  try {
+    const response = await fetch(gameURL);
+    if (!response.ok) throw new Error(`Failed to fetch: ${response.statusText}`);
+    
+    const game = await response.json();
+    populateGameDetails(game);
+    hideSpinner();
+  } catch (error) {
+    console.error("Failed to fetch game details:", error);
+    document.getElementById("game-title").textContent = "Game details cannot be loaded at this time.";
+    hideSpinner();
+  }
 }
+
 
 function showSpinner() {
   const spinner = document.querySelector(".spinner-container");
@@ -58,7 +58,6 @@ function showContent() {
 }
 
 function populateGameDetails(game) {
-  console.log("Populating game details with:", game);
   const gameTitleElement = document.getElementById("game-title");
   const gameImageElement = document.getElementById("game-image");
   const thumbnailImageElement = document.getElementById("api-thumbnail");
@@ -81,14 +80,12 @@ function populateGameDetails(game) {
 
   // Set data-product-id for the add to cart button
   addToCartButton.setAttribute('data-product-id', game.id);
-  console.log("Set data-product-id:", game.id);
  updateButtonText()
 
 
 
   // Add event listener for adding to cart
   addToCartButton.addEventListener('click', function() {
-      console.log("Add to Cart clicked:", game.id);
       addToCart(game.id, addToCartButton);
       updateButtonText();
   });
@@ -99,7 +96,6 @@ function populateGameDetails(game) {
     const singleGameButton = document.getElementById('add-to-cart-btn');
     const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
     const isInCart = cartItems.some(item => item.id === singleGameId);
-    console.log(isInCart);
 
     if (isInCart) {
       singleGameButton.innerHTML = `
