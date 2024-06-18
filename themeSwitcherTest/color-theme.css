@@ -67,7 +67,7 @@ html[data-theme="nature"] {
   );
   --linear-gradient: linear-gradient(180deg, #4a7c59 0%, #2d472c 64.58%);
   --button-hover-box-shadow: 0 0 30px #a58f68;
-  --background-image: url('../themeSwitcherTest/patterns/Design\ uten\ navn\ \(18\).png');
+  --background-image: url('../themeSwitcherTest/patterns/18.png');
 
 }
 
@@ -91,7 +91,7 @@ html[data-theme="neon"] {
   --linear-gradient: linear-gradient(180deg, #4BFF36 0%, #FF3EA5 65.58%);
   --button-hover-box-shadow: 0 0 30px #a58f68;
 
-  --background-image: url('../themeSwitcherTest/patterns/Design\ uten\ navn\ \(21\).png');
+  --background-image: url('../themeSwitcherTest/patterns/21.png');
 
 
 }
@@ -119,7 +119,7 @@ html[data-theme="pink"] {
   --color-text-lighter: #fff;
   --color-text-secondary: #7c0089;
 
-  --background-image: url('../themeSwitcherTest/patterns/Design\ uten\ navn\ \(20\).png');
+  --background-image: url('../themeSwitcherTest/patterns/20.png');
 
 
 
@@ -194,7 +194,7 @@ html[data-theme="pastel"] {
   );
   --linear-gradient: linear-gradient(180deg, #ffd6ff 0%, #c8b6ff 64.58%);
 --button-text-color: var(--color-text-lighter);
---background-image: url('../themeSwitcherTest/patterns/Design\ uten\ navn\ \(19\).png');
+--background-image: url('../themeSwitcherTest/patterns/19.png');
 
 }
 
@@ -331,6 +331,7 @@ main {
 .neon-accent {
   background-color: #f368e0;
 }
+
 
 
 
