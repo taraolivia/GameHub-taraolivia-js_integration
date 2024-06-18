@@ -67,7 +67,8 @@ html[data-theme="nature"] {
   );
   --linear-gradient: linear-gradient(180deg, #4a7c59 0%, #2d472c 64.58%);
   --button-hover-box-shadow: 0 0 30px #a58f68;
-  --background-image: url('/themeSwitcherTest/patterns/Design\ uten\ navn\ \(18\).png');
+  --background-image: url('../themeSwitcherTest/patterns/Design\ uten\ navn\ \(18\).png');
+
 }
 
 
@@ -90,7 +91,7 @@ html[data-theme="neon"] {
   --linear-gradient: linear-gradient(180deg, #4BFF36 0%, #FF3EA5 65.58%);
   --button-hover-box-shadow: 0 0 30px #a58f68;
 
-  --background-image: url('/themeSwitcherTest/patterns/Design\ uten\ navn\ \(21\).png');
+  --background-image: url('../themeSwitcherTest/patterns/Design\ uten\ navn\ \(21\).png');
 
 
 }
@@ -118,7 +119,7 @@ html[data-theme="pink"] {
   --color-text-lighter: #fff;
   --color-text-secondary: #7c0089;
 
-  --background-image: url('/themeSwitcherTest/patterns/Design\ uten\ navn\ \(20\).png');
+  --background-image: url('../themeSwitcherTest/patterns/Design\ uten\ navn\ \(20\).png');
 
 
 
@@ -193,7 +194,7 @@ html[data-theme="pastel"] {
   );
   --linear-gradient: linear-gradient(180deg, #ffd6ff 0%, #c8b6ff 64.58%);
 --button-text-color: var(--color-text-lighter);
---background-image: url('/themeSwitcherTest/patterns/Design\ uten\ navn\ \(19\).png');
+--background-image: url('../themeSwitcherTest/patterns/Design\ uten\ navn\ \(19\).png');
 
 }
 
@@ -336,12 +337,6 @@ main {
 
 
 
-
-
-
-
-
-
 .theme-display img {
   height: 60px;
 }
@@ -355,7 +350,6 @@ main {
   margin-right: 2em;
 }
 
-/* Styling the theme picker to appear as a dropdown */
 .theme-picker {
   display: none;
   position: absolute;
@@ -363,7 +357,7 @@ main {
   left: 50%;
   transform: translateX(-50%);
   padding: 15px;
-  width: 430px; /* Adjust width as needed */
+  width: 430px; 
   white-space: nowrap;
   z-index: 1000;
   background-color: #2b2b2b;
@@ -390,11 +384,10 @@ main {
   position: relative;
   display: inline-block;
   padding: 10px;
-  transition: opacity 0.3s, transform 0.3s; /* Add transition for smooth effects */
+  transition: opacity 0.3s, transform 0.3s; 
   text-align: center;
 }
 
-/* Adjust the size of the theme option icon */
 .theme-option img {
   width: 30px; 
   height: 30px;
@@ -404,21 +397,18 @@ main {
   margin: auto;
 }
 
-/* Style for the theme name */
 .theme-option .theme-name {
   display: none; 
   margin-top: 15px; 
   color: whitesmoke;
 }
 
-/* Style for the color previews */
 .theme-option .color-preview {
   display: none;
   width: 40px;
   height: 40px;
 }
 
-/* Show the theme name and color previews on hover */
 .theme-option:hover .theme-name,
 .theme-option:hover .color-preview {
   display: flex;
@@ -436,9 +426,8 @@ main {
 
 
 
-/* Enlarge the icon and display the theme name on hover */
 .theme-option:hover img {
-  transform: scale(1.5); /* Enlarge the icon on hover */
+  transform: scale(1.5); 
 }
 
 
