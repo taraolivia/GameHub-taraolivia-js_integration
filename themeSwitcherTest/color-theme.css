@@ -14,6 +14,7 @@ html {
   --color-pink: #D1008A;
   --color-text-purple: #563182;
   --color-icons: #ad9cc5;
+  --text-background: transparent;
 }
 
 /* Light Theme */
@@ -68,6 +69,7 @@ html[data-theme="nature"] {
   --linear-gradient: linear-gradient(180deg, #4a7c59 0%, #2d472c 64.58%);
   --button-hover-box-shadow: 0 0 30px #a58f68;
   --background-image: url('../themeSwitcherTest/patterns/18.png');
+  --text-background: var(--color-primary);
 
 }
 
