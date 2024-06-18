@@ -2,65 +2,84 @@
 
 /* Base Theme Styles - ensures default colors are set before any theme is selected */
 html {
-  --color-primary: #e7deef;
-  --color-secondary: #dcd1e8;
-  --color-accent: #8c74ad;
-  --color-nav: ##DCD1E8;
-  --color-background: #f1ebf5;
-  --color-lighter-dark-mode: #f1ebf5;
-  --color-text: #563182;
-  --color-text-secondary: #000000;
-  --color-text-lighter: #fff;
-  --color-pink: #D1008A;
-  --color-text-purple: #563182;
-  --color-icons: #ad9cc5;
-  --text-background: transparent;
+  /* Text Colors */
+  --text-color-primary: #563182;
+  --text-color-secondary: #563182;
+  --text-color-tertiary: #fff;
+  --text-color-purple: #563182;
+  --text-color-pink: #D1008A;
+
+  /* Background Colors */
+  --background-color-primary: #f1ebf5;
+  --background-color-secondary: #dcd1e8;
+  --background-color-tertiary: #f1ebf5;
+
+  /* Accent Colors */
+  --accent-color-primary: #e7deef;
+  --accent-color-secondary: #b8a6cc;
+  --accent-color-tertiary: #8c74ad;
+
+  /* Navigation and Button Colors */
+  --nav-color: #dcd1e8;
+  --button-bg-color: linear-gradient(90deg, #e7deef 0%, #b8a6cc 100%);
+  --linear-gradient: linear-gradient(180deg, #d1008a 0%, #563182 64.58%);
 }
 
 /* Light Theme */
 html[data-theme="light"] {
-  --color-primary: #e7deef;
-  --color-secondary: #b8a6cc;
-  --color-accent: #8c74ad;
-  --color-nav: #dcd1e8;
-  --color-background: #f1ebf5;
-  --color-lighter-dark-mode: #f1ebf5;
-  --color-text: #563182;
-  --color-text-secondary: #563182;
-  --color-text-lighter: #fff;
-  --color-pink: #D1008A;
-  --color-text-purple: #563182;
+  --text-color-primary: #563182;
+  --background-color-primary: #f1ebf5;
+
+  --text-color-secondary: #563182;
+  --background-color-secondary: #dcd1e8;
+
+  --text-color-tertiary: #fff;
+  --background-color-tertiary: #8c74ad;
+
+  --accent-color-primary: #e7deef;
+  --accent-color-secondary: #b8a6cc;
+  --accent-color-tertiary: #8c74ad;
+
+  --nav-color: #dcd1e8;
   --linear-gradient: linear-gradient(180deg, #d1008a 0%, #563182 64.58%)
 }
 
 /* Dark Theme */
 html[data-theme="dark"] {
-  --color-primary: #28184F;
-  --color-secondary: #846BA0;
-  --color-accent: #8C74AD;
- --color-nav: #402A69;
-  --color-background: #211142;
-  --color-lighter-dark-mode: #28184F;
-  --color-text: #FFFFFF;
-  --color-text-secondary: #FFFFFF;
-  --color-text-lighter: #FFFFFF;
-  --color-pink: #D1008A;
-  --color-text-purple: #563182;
+  --text-color-primary: #FFFFFF;
+  --background-color-primary: #211142;
+
+  --text-color-secondary: #FFFFFF;
+  --background-color-secondary: #402A69;
+
+  --text-color-tertiary: #FFFFFF;
+  --background-color-tertiary: #846BA0;
+
+  --accent-color-primary: #28184F;
+  --accent-color-secondary: #846BA0;
+  --accent-color-tertiary: #8C74AD;
+
+  --nav-color: #402A69;
   --linear-gradient: linear-gradient(180deg, #d1008a 0%, #563182 64.58%)
 
 }
 
 /* Nature Theme */
 html[data-theme="nature"] {
-  --color-primary: #4a7c59;
-  --color-secondary: #a58f68;
-  --color-accent: #2d472c;
-  --color-nav: #2d472c;
-  --color-background: #abccae;
-  --color-text: #e8f5e9;
-  --color-lighter-dark-mode: #e8f5e9; 
-  --color-text-secondary: #2d472c; 
-  --color-text-purple: #2d472c;
+  --text-color-primary: #e8f5e9;
+  --background-color-primary: #abccae;
+
+  --text-color-secondary: #e8f5e9;
+  --background-color-secondary: #a58f68;
+
+  --text-color-tertiary: #e8f5e9;
+  --background-color-tertiary: #4a7c59;
+
+  --accent-color-primary: #7BA484;
+  --accent-color-secondary: #a58f68;
+  --accent-color-tertiary: #4a7c59;
+
+  --nav-color: #4a7c59;
   --button-bg-color: linear-gradient(
     90deg,
     #4a7c59 0%,
@@ -76,20 +95,21 @@ html[data-theme="nature"] {
 
 
 html[data-theme="neon"] {
-  --color-primary: #FF3EA5; 
-  --color-secondary: #4BFF36;
-  --color-accent: #FFEF06;
-  --color-nav: #4BFF36;
-  --color-background: #211951; 
-  --color-text: #27005D; 
-  --color-text-secondary: #27005D;
-  --color-lighter-dark-mode: #101010;
-  --color-text-lighter: #101010;
-  --button-bg-color: linear-gradient(
-    90deg,
-    #FF3EA5 0%,
-    #27005D 100%
-  );
+  --text-color-primary: #4BFF36;
+  --background-color-primary: #211951;
+
+  --text-color-secondary: #211951;
+  --background-color-secondary: #4BFF36;
+
+  --text-color-tertiary: #101010;
+  --background-color-tertiary: #ff54af;
+
+  --accent-color-primary: #FFEF06;
+  --accent-color-secondary: #4BFF36;
+  --accent-color-tertiary: #FFEF06;
+
+  --nav-color: #fb53ad;
+  --button-bg-color: linear-gradient(90deg, #FF3EA5 0%, #27005D 100%);
   --linear-gradient: linear-gradient(180deg, #4BFF36 0%, #FF3EA5 65.58%);
   --button-hover-box-shadow: 0 0 30px #a58f68;
 
@@ -101,25 +121,22 @@ html[data-theme="neon"] {
 
 /* Pink Theme */
 html[data-theme="pink"] {
-  --color-primary: #ffc0cb;
-  --color-secondary: #ff69b4;
-  --color-accent: #FF3EA5;
-  --color-background: #f2cfd5;
-  --color-nav: #f9aebb;
-  --color-lighter-dark-mode: #fff0f5; 
- 
-  --button-bg-color: linear-gradient(
-    90deg,
-    #ffc0cb 0%,
-    #FF3EA5 100%
-  );
+  --text-color-primary: #7c0089;
+  --background-color-primary: #f2cfd5;
+
+  --text-color-secondary: #7c0089;
+  --background-color-secondary: #f9aebb;
+
+  --text-color-tertiary: #fff;
+  --background-color-tertiary: #ff69b4;
+
+  --accent-color-primary: #ffc0cb;
+  --accent-color-secondary: #fe9ece;
+  --accent-color-tertiary: #FF3EA5;
+
+  --nav-color: #f9aebb;
+  --button-bg-color: linear-gradient(90deg, #ffc0cb 0%, #FF3EA5 100%);
   --linear-gradient: linear-gradient(180deg, #ff69b4 0%, #FF3EA5 64.58%);
-  --button-hover-box-shadow: 0 0 30px #FF3EA5;
-
-
-  --color-text: #7c0089;
-  --color-text-lighter: #fff;
-  --color-text-secondary: #7c0089;
 
   --background-image: url('../themeSwitcherTest/patterns/20.png');
 
@@ -131,21 +148,21 @@ html[data-theme="pink"] {
 
 /* Black Theme */
 html[data-theme="black"] {
-  --color-primary: #222222;   
-  --color-secondary: #333333;     
-  --color-accent: #444444;     
-  --color-nav: #5b5b5b;    
-  --color-background: #121212;   
-  --color-lighter-dark-mode: #121212; 
-  --color-text: #ffffff;          
-  --color-text-secondary: #ffffff; 
-  --color-text-purple: #ffff;
-  --color-text-purple: #e8f5e9;
-  --button-bg-color: linear-gradient(
-    90deg,
-    #5b5b5b 0%,
-    #121212 100%
-  );
+  --text-color-primary: #ffffff;
+  --background-color-primary: #121212;
+
+  --text-color-secondary: #ffffff;
+  --background-color-secondary: #333333;
+
+  --text-color-tertiary: #ffffff;
+  --background-color-tertiary: #444444;
+
+  --accent-color-primary: #222222;
+  --accent-color-secondary: #333333;
+  --accent-color-tertiary: #444444;
+
+  --nav-color: #5b5b5b;
+  --button-bg-color: linear-gradient(90deg, #5b5b5b 0%, #121212 100%);
   --linear-gradient: linear-gradient(180deg, #5b5b5b 0%, #444444 64.58%);
   --button-hover-box-shadow: 0 0 30px #fff;
 
@@ -156,20 +173,21 @@ html[data-theme="black"] {
 
 /* White Theme */
 html[data-theme="white"] {
-  --color-primary: #eceaea;
-  --color-secondary: #bebebe;
-  --color-accent: #222222;
-  --color-background: #ffffff98;
-  --color-text: #222222;
-  --color-nav: #dddddd; 
-  --color-lighter-dark-mode: #ffffff; 
-  --color-text-secondary: #222222; 
-  --color-text-purple: #222222;
-  --button-bg-color: linear-gradient(
-    90deg,
-    #c6c4c4 0%,
-    #222222 100%
-  );
+  --text-color-primary: #222222;
+  --background-color-primary: #ffffff98;
+
+  --text-color-secondary: #222222;
+  --background-color-secondary: #dddddd;
+
+  --text-color-tertiary: #222222;
+  --background-color-tertiary: #bebebe;
+
+  --accent-color-primary: #eceaea;
+  --accent-color-secondary: #bebebe;
+  --accent-color-tertiary: #959595;
+
+  --nav-color: #dddddd;
+  --button-bg-color: linear-gradient(90deg, #c6c4c4 0%, #222222 100%);
   --linear-gradient: linear-gradient(180deg, #c6c4c4 0%, #222222 64.58%);
   --button-hover-box-shadow: 0 0 30px #ffffff;
 
@@ -177,55 +195,51 @@ html[data-theme="white"] {
 
 /* Pastel Theme */
 html[data-theme="pastel"] {
-  --color-primary: #D1EBC9;
-  --color-secondary: #FDCEDF;
-  --color-accent: #d5bdaf; 
-  --color-nav: #c8b6ff; 
-  --color-background: #FFF3DA; 
-  --color-lighter-dark-mode: #F7D9C4; 
-  --color-text: #2b2622; 
-  --color-text-secondary: #222222; 
-  --color-text-lighter: #2b2622; 
-  --color-pink: #EEA5A6; 
-  --color-text-purple: #22222;
-  --button-hover-box-shadow: 0 0 30px #a58f68;
-  --button-bg-color: linear-gradient(
-    90deg,
-    #D1EBC9 0%,
-    #c8b6ff 100%
-  );
-  --linear-gradient: linear-gradient(180deg, #ffd6ff 0%, #c8b6ff 64.58%);
---button-text-color: var(--color-text-lighter);
---background-image: url('../themeSwitcherTest/patterns/19.png');
+  --text-color-primary: #2b2622;
+  --background-color-primary: #FFF3DA;
 
+  --text-color-secondary: #2b2622;
+  --background-color-secondary: #FDCEDF;
+
+  --text-color-tertiary: #2b2622;
+  --background-color-tertiary: #D1EBC9;
+
+  --accent-color-primary: #D1EBC9;
+  --accent-color-secondary: #FDCEDF;
+  --accent-color-tertiary: #d5bdaf;
+
+  --nav-color: #c8b6ff;
+  --button-bg-color: linear-gradient(90deg, #D1EBC9 0%, #c8b6ff 100%);
+  --linear-gradient: linear-gradient(180deg, #ffd6ff 0%, #c8b6ff 64.58%);
+--background-image: url('../themeSwitcherTest/patterns/19.png');
 }
 
-main {
+body {
   background-image: var(--background-image);
   background-repeat: repeat;
-  background-size: 2000px;
+  background-size: 1000px;
   background-position: center;
 }
 
   
   #logo path{
-    fill: var(--color-text);
+    fill: var(--text-color-primary);
   }
   
   .dark #alternate-logo path{
-    fill: var(--color-text);
+    fill: var(--text-color-primary);
   }
 
   .footer__logo path {
-    fill: var(--color-text-lighter);
+    fill: var(--text-color-tertiary);
   }
 
   .footer__social-media path {
-    fill: var(--color-text-lighter);
+    fill: var(--text-color-tertiary);
   }
 
   .navbar__logo--small path{
-    fill: var(--color-text);
+    fill: var(--text-color-primary);
   }
 
 
@@ -445,31 +459,31 @@ main {
 
 /* Additional hover effects to preview theme colors 
 .theme-option[data-theme="light"]:hover {
-  background-color: var(--color-text);
+  background-color: var(text-color-primary);
 }
 
 .theme-option[data-theme="dark"]:hover {
-  background-color: var(--color-text); 
+  background-color: var(text-color-primary); 
 }
 
 .theme-option[data-theme="nature"]:hover {
-  background-color: var(--color-text); 
+  background-color: var(text-color-primary); 
 }
 
 .theme-option[data-theme="pink"]:hover {
-  background-color: var(--color-text);
+  background-color: var(text-color-primary);
 }
 
 .theme-option[data-theme="pastel"]:hover {
-  background-color: var(--color-text);
+  background-color: var(text-color-primary);
 }
 
 .theme-option[data-theme="black"]:hover {
-  background-color: var(--color-text); 
+  background-color: var(text-color-primary); 
 }
 
 .theme-option[data-theme="white"]:hover {
-  background-color: var(--color-text); 
+  background-color: var(text-color-primary); 
 }
 
 .theme-option[data-theme="neon"]:hover {

@@ -4,8 +4,8 @@
 
 body {
   font-family: var(--font-base);
-  color: var(--color-text);
-  background: var(--color-background);
+  color: var(--text-color-primary);
+  background: var(--background-color-primary);
   margin: 0px auto;
   box-sizing: border-box;
   transition: background-color 1s ease, color 2s ease;
@@ -75,7 +75,7 @@ section {
 
 .checkout-wrapper {
   display: flex;
-  background-color: var(--color-nav);
+  background-color: var(--background-color-secondary);
   margin-top: 1em;
 }
 
@@ -93,7 +93,7 @@ section {
 
 #checkout-cart-list {
   width: 100%;
-  background-color: var(--color-secondary);
+  background-color: var(--accent-color-secondary);
   margin: 1em auto;
 }
 
@@ -168,7 +168,7 @@ input::-ms-input-placeholder { /* Microsoft Edge */
 .cart-icon {
   background: transparent;
   border: none;
-  fill: var(--color-text);
+  fill: var(--text-color-primary);
   cursor: pointer;
 }
 
@@ -188,7 +188,7 @@ input::-ms-input-placeholder { /* Microsoft Edge */
     display: flex;
     flex-direction: column;
     right: 0;
-    background-color: var(--color-secondary);
+    background-color: var(--accent-color-secondary);
     padding: 5px;
     border-radius: 5px;
     min-width: 40%;
@@ -205,7 +205,7 @@ input::-ms-input-placeholder { /* Microsoft Edge */
   }
 
 .cart-item-count {
-  color: var(--color-text);
+  color: var(--text-color-primary);
   font-size: 18px;
 }
 
@@ -235,7 +235,7 @@ input::-ms-input-placeholder { /* Microsoft Edge */
   border: none;
   font-size: 60px;
   cursor: pointer;
-  color: var(--color-text);
+  color: var(--text-color-primary);
 }
 
 #go-to-checkout-btn {
@@ -250,7 +250,7 @@ input::-ms-input-placeholder { /* Microsoft Edge */
 .remove-item-button {
   background: none;
   cursor: pointer;
-  color: var(--color-text);
+  color: var(--text-color-primary);
   font-size: 20px;
   height: 35px;
   width: 35px;
@@ -368,7 +368,7 @@ align-items: center;
 }
 
 .review-card {
-  background: var(--color-accent);
+  background: var(--accent-color-tertiary);
   border-radius: 10px;
   padding: 20px;
   display: flex;
@@ -417,7 +417,7 @@ align-items: center;
 }
 
 .question {
-  background-color: var(--color-secondary);
+  background-color: var(--accent-color-secondary);
   padding: 10px;
   cursor: pointer;
 }
@@ -434,18 +434,18 @@ align-items: center;
 .original-price,
 .original-price-smaller {
   text-decoration: line-through;
-  color: var(--color-text-purple);
+  color: var(--text-color-primary-purple);
   margin-right: 5px;
 }
 
 .discounted-price,
 .discounted-price-smaller {
-  background-color: var(--color-accent);
+  background-color: var(--accent-color-tertiary);
   padding: 3px 5px;
   width: fit-content;
   font-weight: bold;
   border-radius: 8px;
-  color: var(--color-text-lighter);
+  color: var(--text-color-primary-lighter);
 }
 
 .original-price-smaller,
@@ -464,7 +464,7 @@ align-items: center;
 
 .small-game-card {
   display: flex;
-  background-color: var(--color-primary);
+  background-color: var(--accent-color-primary);
   border-radius: 5px;
   margin: 1em 0;
   align-items: center;
@@ -554,24 +554,24 @@ align-items: center;
 }
 
 .background-color-darkened {
-  background: var(--color-secondary);
-  color: var(--color-text);
+  background: var(--accent-color-secondary);
+  color: var(--text-color-primary);
 }
 
 .genre-button {
-  border: 2px solid var(--color-accent);
+  border: 2px solid var(--accent-color-tertiary);
   padding: 1em 2.2em;
   border-radius: 2em;
   background-color: transparent;
-  color: var(--color-text-secondary);
+  color: var(--text-color-primary);
   font-family: var(--font-heading-primary);
   cursor: pointer;
   margin: 1em 1em 0em 0em;
 }
 
 .genre-button.selected {
-  background-color: var(--color-accent);
-  color: #ffffff;
+  background-color: var(--accent-color-tertiary);
+  color: var(--text-color-tertiary);
 }
 
 #genre-buttons {
@@ -586,7 +586,7 @@ align-items: center;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  background-color: var(--color-lighter-dark-mode);
+  background-color: var(--background-color-tertiary);
   margin-top: 30px;
   padding: 20px;
   border-radius: 15px;
@@ -609,12 +609,12 @@ align-items: center;
   margin-right: 40px;
   cursor: pointer;
   font-size: 20px;
-  color: var(--color-text);
+  color: var(--text-color-primary);
   font-family: var(--font-heading-secondary);
 }
 
 .tab-title.active {
-  border-bottom: 2px solid var(--color-pink);
+  border-bottom: 2px solid var(--text-color-pink);
 }
 
 .tab-content {
@@ -637,13 +637,13 @@ align-items: center;
 .tab-content th,
 .tab-content td {
   padding: 8px 12px;
-  border: 1px solid var(--color-secondary);
+  border: 1px solid var(--accent-color-secondary);
   text-align: left;
 }
 
 .tab-content th {
-  background-color: var(--color-accent);
-  color: var(--color-text-lighter);
+  background-color: var(--accent-color-tertiary);
+  color: var(--text-color-primary-lighter);
   min-width: 300px;
 }
 
@@ -675,7 +675,7 @@ align-items: center;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-background);
+  background-color: var(--background-color-primary);
   z-index: 1000;
   display: flex;
   justify-content: center;
@@ -705,7 +705,7 @@ align-items: center;
 }
 
 .social-media__icons-dark svg {
-  fill: var(--color-accent);
+  fill: var(--accent-color-tertiary);
 }
 
 .footer__social-media {
@@ -730,7 +730,7 @@ align-items: center;
 }
 
 .navbar__primary {
-  background: var(--color-nav);
+  background: var(--nav-color);
   position: fixed;
   z-index: 1000;
   top: 0;
@@ -796,7 +796,7 @@ width: 90%;
 
 .navbar__links a,
 .navbar__hamburger-links a {
-  color: var(--color-text);
+  color: var(--text-color-secondary);
   transition: 0.2 ease-in;
   animation: glow 1s ease-in-out infinite alternate;
   font-family: var(--font-heading-secondary);
@@ -806,7 +806,7 @@ width: 90%;
 .navbar__links a:hover,
 .navbar__hamburger-links a:hover,
 .breadcrumbs a:hover {
-  text-shadow: 0 0 30px var(--color-pink);
+  text-shadow: 0 0 30px var(--text-color-pink);
 }
 
 .active a {
@@ -835,7 +835,7 @@ width: 90%;
 }
 
 #hamburger {
-  fill: var(--color-text);
+  fill: var(--text-color-primary);
 }
 
 .hero__background {
@@ -877,7 +877,7 @@ width: 90%;
 }
 
 .header {
-  background: var(--color-primary);
+  background: var(--accent-color-primary);
   padding-bottom: 30px;
 }
 
@@ -981,7 +981,7 @@ width: 90%;
   justify-content: center;
   background-color: transparent;
   border: none;
-  border-left: 1px solid var(--color-pink);
+  border-left: 1px solid var(--text-color-pink);
   cursor: pointer;
 }
 
@@ -1042,7 +1042,7 @@ width: 90%;
 }
 
 .contact-card {
-  background-color: var(--color-accent);
+  background-color: var(--accent-color-tertiary);
   color: #fff;
   border-radius: 15px;
   display: flex;
@@ -1105,7 +1105,7 @@ textarea {
   font-family: var(--font-base);
   font-size: 20px;
   word-break: break-all;
-  caret-color: var(--color-pink);
+  caret-color: var(--text-color-pink);
   resize: none;
 }
 
@@ -1127,12 +1127,14 @@ textarea {
 }
 
 .footer {
-  background-color: var(--color-accent);
-  color: var(--color-text-lighter);
+  background-color: var(--accent-color-tertiary);
+  color: var(--text-color-tertiary);
 }
 
 .blog-carousel {
-  background-color: var(--color-secondary);
+  background-color: var(--accent-color-secondary);
+  color: var(--text-color-secondary);
+  padding: 50px 0px;
 }
 
 .decorative-line {
@@ -1175,7 +1177,7 @@ textarea {
 }
 
 .background-primary {
-  background: var(--color-primary);
+  background: var(--accent-color-primary);
 }
 
 .trending-games-wrap {
@@ -1200,7 +1202,7 @@ textarea {
 
 a {
   text-decoration: none;
-  color: var(--color-text-lighter);
+  color: var(--text-color-tertiary);
 }
 
 .all-games-wrap {
@@ -1224,7 +1226,7 @@ a {
   flex-direction: column;
   flex-basis: 100%;
   position: relative;
-  background: var(--color-secondary);
+  background: var(--accent-color-secondary);
   border-radius: 5px;
   max-width: 260px;
   padding: 2px 2px 0px 2px;
@@ -1241,7 +1243,7 @@ a {
   text-align: center;
   justify-content: space-between;
   padding: 20px 10px;
-  color: var(--color-text-secondary);
+  color: var(--text-color-primary-secondary);
 }
 
 .game-image {
@@ -1288,7 +1290,7 @@ a {
 }
 
 .testimonial-card-text {
-  color: var(--color-text-lighter);
+  color: var(--text-color-primary-lighter);
   display: flex;
   padding: 30px;
   padding-top: 80px;
@@ -1343,7 +1345,7 @@ a {
   flex-direction: column;
   flex-basis: 100%;
   position: relative;
-  background: var(--color-primary);
+  background: var(--accent-color-primary);
   border-radius: 10px;
   max-width: 350px;
   padding: 20px;
@@ -1351,7 +1353,7 @@ a {
 
 .blog-post-title {
   font-size: 22px;
-  color: var(--color-text-secondary);
+  color: var(--text-color-primary);
   display: flex;
   margin-top: 15px;
 }
@@ -1363,15 +1365,13 @@ a {
   border-radius: 15px;
 }
 
-.blog-carousel {
-  padding: 50px 0px;
-}
+
 
 .breadcrumbs {
   padding-top: 100px;
   padding-bottom: 25px;
   margin-bottom: 0px;
-  background: var(--color-primary);
+  background: var(--accent-color-primary);
   display: flex;
   flex-direction: row;
 }
@@ -1390,13 +1390,13 @@ a {
 
 .breadcrumbs__item {
   font-size: 20px;
-  color: var(--color-text);
+  color: var(--text-color-primary);
 }
 
 .breadcrumbs__list li:not(:first-child)::before {
   content: " > ";
   padding: 0 5px;
-  color: var(--color-text);
+  color: var(--text-color-primary);
   font-size: 22px;
 }
 
@@ -1431,7 +1431,7 @@ a {
 }
 
 .game-page-primary {
-  background-color: var(--color-primary);
+  background-color: var(--accent-color-primary);
   padding: 30px;
   border-radius: 15px;
   justify-content: flex-start;
@@ -1444,7 +1444,7 @@ a {
 }
 
 .game-brag {
-  background-color: var(--color-secondary);
+  background-color: var(--accent-color-secondary);
   display: flex;
   border-radius: 10px;
   margin-top: 5%;
@@ -1452,7 +1452,7 @@ a {
 }
 
 .game-brag-text {
-  color: var(--color-text);
+  color: var(--text-color-primary);
   padding-left: 30px;
   align-self: center;
   font-size: 18px;
@@ -1477,7 +1477,7 @@ a {
   flex-wrap: wrap;
   row-gap: 2em;
   width: 100%;
-  background-color: var(--color-secondary);
+  background-color: var(--accent-color-secondary);
   padding: 20px 20px;
 }
 
@@ -1510,7 +1510,7 @@ article {
 }
 
 .aside {
-  background: var(--color-primary);
+  background: var(--accent-color-primary);
   padding: 40px;
 }
 
@@ -1575,7 +1575,7 @@ aside img {
   display: flex;
   max-width: 100%;
   padding: 20px;
-  background: var(--color-secondary);
+  background: var(--accent-color-secondary);
 }
 
 .aside-secondary img {
@@ -1619,7 +1619,7 @@ aside img {
 
 .blog-page-card {
   display: flex;
-  background: var(--color-primary);
+  background: var(--accent-color-primary);
   border-radius: 18px;
   margin: 30px 0px;
   padding: 8px;
@@ -1636,7 +1636,7 @@ aside img {
 .blog-page-title {
   text-align: left;
   padding: 20px 25px;
-  color: var(--color-text);
+  color: var(--text-color-primary);
 }
 
 .blog-page-title:hover {
@@ -1777,7 +1777,7 @@ aside img {
   }
 
   #alternate-logo {
-    fill: var(--color-text);
+    fill: var(--text-color-primary);
   }
 
   .navbar__logo {
@@ -1868,7 +1868,7 @@ aside img {
 
   .about-card-title {
     text-align: center;
-    color: var(--color-text);
+    color: var(--text-color-primary);
   }
 
   .about-card-paragraph {
@@ -2032,7 +2032,7 @@ aside img {
   .about-card-title {
     text-align: center;
     padding: 20px 20px;
-    color: var(--color-text);
+    color: var(--text-color-primary);
   }
 
   .about-card-paragraph {
@@ -2080,7 +2080,7 @@ aside img {
 
   .about-card-title {
     text-align: center;
-    color: var(--color-text);
+    color: var(--text-color-primary);
   }
 
   .about-card-paragraph {
@@ -2124,7 +2124,7 @@ aside img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--color-secondary);
+    background-color: var(--accent-color-secondary);
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -2148,7 +2148,7 @@ aside img {
     height: 100%;
     top: 0;
     right: 0;
-    background-color: var(--color-secondary);
+    background-color: var(--accent-color-secondary);
   }
 
   #navbar-toggle:checked + .navbar__hamburger-white {
@@ -2211,7 +2211,7 @@ aside img {
     display: flex;
     max-width: 100%;
     padding: 20px;
-    background: var(--color-secondary);
+    background: var(--accent-color-secondary);
   }
 
   .aside img {
@@ -2243,7 +2243,7 @@ aside img {
   height: 100%;
   top: 0;
   right: 0;
-  background-color: var(--color-secondary);
+  background-color: var(--accent-color-secondary);
 }
 
 #navbar-toggle:checked + .navbar__hamburger {
@@ -2265,7 +2265,7 @@ aside img {
   height: 100%;
   top: 0;
   right: 0;
-  background-color: var(--color-secondary);
+  background-color: var(--accent-color-secondary);
 }
 
 #navbar-toggle:checked + .navbar__hamburger-white {
