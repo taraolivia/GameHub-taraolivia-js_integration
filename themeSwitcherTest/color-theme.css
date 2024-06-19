@@ -23,6 +23,22 @@ html {
   --nav-color: #dcd1e8;
   --button-bg-color: linear-gradient(90deg, #e7deef 0%, #b8a6cc 100%);
   --linear-gradient: linear-gradient(180deg, #d1008a 0%, #563182 64.58%);
+
+  --text-color-primary: #563182;
+  --background-color-primary: #f1ebf5;
+
+  --text-color-secondary: #563182;
+  --background-color-secondary: #dcd1e8;
+
+  --text-color-tertiary: #fff;
+  --background-color-tertiary: #8c74ad;
+
+  --accent-color-primary: #e7deef;
+  --accent-color-secondary: #b8a6cc;
+  --accent-color-tertiary: #8c74ad;
+
+  --nav-color: #dcd1e8;
+  --linear-gradient: linear-gradient(180deg, #d1008a 0%, #563182 64.58%)
 }
 
 /* Light Theme */
@@ -61,7 +77,6 @@ html[data-theme="dark"] {
 
   --nav-color: #402A69;
   --linear-gradient: linear-gradient(180deg, #d1008a 0%, #563182 64.58%)
-
 }
 
 /* Nature Theme */
