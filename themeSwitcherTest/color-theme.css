@@ -95,7 +95,7 @@ html[data-theme="nature"] {
 
 
 html[data-theme="neon"] {
-  --text-color-primary: #4BFF36;
+  --text-color-primary: #211951;
   --background-color-primary: #211951;
 
   --text-color-secondary: #211951;
@@ -104,8 +104,8 @@ html[data-theme="neon"] {
   --text-color-tertiary: #101010;
   --background-color-tertiary: #ff54af;
 
-  --accent-color-primary: #FFEF06;
-  --accent-color-secondary: #4BFF36;
+  --accent-color-primary: #4BFF36;
+  --accent-color-secondary: #ff54af;
   --accent-color-tertiary: #FFEF06;
 
   --nav-color: #fb53ad;
@@ -179,7 +179,7 @@ html[data-theme="white"] {
   --text-color-secondary: #222222;
   --background-color-secondary: #dddddd;
 
-  --text-color-tertiary: #222222;
+  --text-color-tertiary: #ffffff;
   --background-color-tertiary: #bebebe;
 
   --accent-color-primary: #eceaea;

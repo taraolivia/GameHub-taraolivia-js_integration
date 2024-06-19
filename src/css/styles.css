@@ -1290,7 +1290,7 @@ a {
 }
 
 .testimonial-card-text {
-  color: var(--text-color-primary-lighter);
+  color: var(--text-color-tertiary);
   display: flex;
   padding: 30px;
   padding-top: 80px;
